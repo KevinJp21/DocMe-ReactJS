@@ -1,0 +1,65 @@
+.ContainerDashboar{
+    margin-left: 24px;
+}
+
+.ContentArea .greeting{
+    color: var(--white-font);
+    padding: 20px 0 0 0;
+
+}
+
+.containerCardSummary{
+    display: flex;
+    width: 100%;
+}
+
+.CardSummary{
+    width: 20%;
+    margin: 24px 0 0;
+}
+
+.cardBody{
+    background-color: var(--white);
+    color: var(--black);
+    padding: 16px 16px 0;
+    border-radius: 12px;
+    height: 100px;
+}
+
+.ContainerTableSummary{
+    margin-top: 20px;
+}
+
+table{
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+th a{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+th, td{
+    padding: 10px;
+    color: #0f5268;
+    border-radius: 10px;
+}
+
+.dt-search, .dt-length, .dt-info, .dt-paging{
+    display: none;
+}
+
+.titleTable{
+    height: 20px !important;
+}
+
+.titleTable span{
+    height: 20px;
+    color: #0f5268;
+}
+
