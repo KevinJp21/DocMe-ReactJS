@@ -7,7 +7,7 @@ function App() {
   return (
     <main className='ContainerDashboar'>
      <Dashboard />
-    <ChatBot />
+     <ChatBot />
 
     </main>
   )

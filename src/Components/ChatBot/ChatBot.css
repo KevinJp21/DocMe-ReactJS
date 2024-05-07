@@ -27,13 +27,14 @@
 .ChatBotContainer {
     position: fixed;
     width: 500px;
-    height: 800px;
+    height: 80vh;
     right: 0px;
     bottom: 0;
     background-color: var(--white-font);
     border-top-left-radius:10px;
     transform: translateX(100%);
     transition: transform .3s ease-in-out;
+    overflow: auto;
 }
 
 .ChatBotOpen{
@@ -41,10 +42,13 @@
 }
 
 .ContentChatBot{
-    padding: 15px 15px 0;
+    height: 100%;
+
 }
 
 .HeaderChatBot{
+    padding: 15px;
+    background-color: var(--black-font);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,12 +57,153 @@
 
 .TitleChatBot span{
     font-size: 20px;
-    color: var(--black-font);
+    color: var(--white-font);
 }
 
 .CloseChatBot{
     border: none;
     background-color: transparent;
     font-size: 20px;
-    color: var(--black-font);
+    color: var(--white-font);
 }
+
+.bodyChatBot{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-between;
+    
+}
+
+.conversation {
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    height: 90%;
+    margin: 0;
+  }
+
+.conversation::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.conversation::-webkit-scrollbar-thumb{
+    background: var(--blue-font);
+    border-radius: 10px;
+}
+
+.conversation::-webkit-scrollbar{
+    width: 10px;
+}
+
+  .message.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+  }
+  
+  .message.user .message-text{
+    background-color: #f0f0f0;
+    text-align: right;
+    margin: 10px 5px;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    word-break: break-word;
+  }
+
+  .message.user .message-sender span{
+    padding: 5px;
+    margin: 0px 5px;
+  }
+
+.message.user .message-text span,.message.bot .message-text span {
+    padding: 5px;
+    margin: 0px 5px;
+  }
+
+
+
+  
+  .message.bot .message-text{
+    background-color: #d1e7dd;
+    text-align: left;
+    margin: 10px 5px;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    word-break: break-word;
+    
+  }
+
+.message.bot .message-sender span{
+    padding: 5px;
+    margin: 0px 5px;
+  }
+
+
+  .message.bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    max-height: 20%;
+    word-break: break-word;
+  }
+  
+  
+  .message-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px 15px 15px;
+  }
+  
+  .message-form textarea {
+ 
+    background-color: var(--white-font);
+    border: 1px solid var(--black-font);
+    height: 40px;
+    border-radius: 10px;
+    width: 90%;
+    word-break: break-word;
+    max-height: 100%;
+    resize: none;
+    padding: 5px 0 0 10px ;
+  }
+
+  .message-form textarea:focus {
+    outline: none;
+  }
+
+  .message-form textarea::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.message-form textarea::-webkit-scrollbar{
+    width: 10px;
+}
+  
+  .message-form button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--blue-font);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .message-form button i{
+    font-size: 15px;
+    color: var(--white-font);
+  }
+

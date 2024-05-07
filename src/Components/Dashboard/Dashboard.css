@@ -2,6 +2,10 @@
     padding-left: 70px;
 }
 
+.ContentArea{
+    height: 100%;
+}
+
 .ContentArea .greeting{
     color: var(--white-font);
     padding: 20px 0 0 0;
