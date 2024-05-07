@@ -1,0 +1,58 @@
+
+.btnChatBot{
+    height: 50px;
+    width: 200px;
+    border: none;
+    background-color: var(--white-font);
+    position: fixed;
+    transform: rotate(-90deg);
+    right: -80px;
+    top: 80%;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+
+    transition: background-color .3s ease-in-out;
+    
+}
+
+.btnChatBot:hover{
+    background-color: rgb(214, 214, 214);
+}
+
+.btnChatBot span{
+    padding: 12px;
+    color: var(--blue-font);
+}
+
+.ChatBotContainer{
+    position: fixed;
+    width: 500px;
+    height: 800px;
+    right: 0px;
+    bottom: 0;
+    background-color: var(--white-font);
+    border-top-left-radius:10px ;
+}
+
+.ContentChatBot{
+    padding: 15px 15px 0;
+}
+
+.HeaderChatBot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.TitleChatBot span{
+    font-size: 20px;
+    color: var(--black-font);
+}
+
+.CloseChatBot{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: var(--black-font);
+}

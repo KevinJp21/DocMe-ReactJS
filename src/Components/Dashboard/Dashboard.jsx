@@ -5,7 +5,7 @@ import DataTable from 'datatables.net-dt'
 const Dashboard = () => {
     let table = new DataTable('#table')
   return (
-    <main className='ContainerDashboar'>
+    
         <div className='ContentArea'>
             <div className='greeting'>
                 <span className='fs-5'>Bienvenido(a), Dario54</span>
@@ -26,34 +26,48 @@ const Dashboard = () => {
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th scope="col">ID</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido</th>
-                                <th scope="col">Identificación</th>
+                                <th scope="col">MOTIVO</th>
+                                <th scope="col">FECHA</th>
+                                <th scope="col">HORA</th>
+                                <th scope="col">MEDICO</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>23</td>
-                                <td>Dario</td>
-                                <td>Gomez</td>
-                                <td>10924124124</td>
+                                <td>Odontología</td>
+                                <td>2023/11/23</td>
+                                <td>11:16:34</td>
+                                <td>Luiz Mendoza</td>
                             </tr>
 
                             <tr>
                                 <td>2</td>
-                                <td>56</td>
-                                <td>Kevin</td>
-                                <td>Julio</td>
-                                <td>474574</td>
+                                <td>Dolor crónico o agudo</td>
+                                <td>2024/05/24</td>
+                                <td>13:30:01</td>
+                                <td>Jose Miguel</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Psicología</td>
+                                <td>2024/04/10</td>
+                                <td>18:12:54</td>
+                                <td>Juan Gomez</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Consulta general</td>
+                                <td>2024/07/18</td>
+                                <td>16:16:11</td>
+                                <td>Enrique Garcia</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-    </main>
   )
 }
 
