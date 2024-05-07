@@ -24,14 +24,20 @@
     color: var(--blue-font);
 }
 
-.ChatBotContainer{
+.ChatBotContainer {
     position: fixed;
     width: 500px;
     height: 800px;
     right: 0px;
     bottom: 0;
     background-color: var(--white-font);
-    border-top-left-radius:10px ;
+    border-top-left-radius:10px;
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out;
+}
+
+.ChatBotOpen{
+    transform: translateX(0);
 }
 
 .ContentChatBot{
