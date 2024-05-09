@@ -32,7 +32,7 @@ const ChatBot = () => {
             setConversation([...newConversation, { text: data.response, sender: 'bot' }]);
         } catch (error) {
             console.error('Error sending message:', error);
-            setConversation([...newConversation, { text: 'Error connecting to the chatbot', sender: 'bot' }]);
+            setConversation([...newConversation, { text: 'Error al conectar al chatbot', sender: 'bot' }]);
         }
     };
 

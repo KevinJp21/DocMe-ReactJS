@@ -79,7 +79,7 @@
     overflow-y: auto;
     margin-bottom: 10px;
     border: 1px solid #ddd;
-    padding: 5px;
+    padding: 15px 20px 0 20px;
     height: 90%;
     margin: 0;
   }
@@ -137,7 +137,6 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: left;
     word-break: break-word;
     
   }
@@ -153,7 +152,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    max-height: 20%;
+    max-height: 30%;
     word-break: break-word;
   }
   
