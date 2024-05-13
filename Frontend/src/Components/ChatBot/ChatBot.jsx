@@ -1,10 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ChatBot.css';
 
 const ChatBot = () => {
     const [message, setMessage] = useState('');
     const [conversation, setConversation] = useState([]);
     const [isOpenChatBot, setIsOpenChatBot] = useState(false);
+    const [isTyping, setIsTyping] = useState(false);
+    const messagesEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [conversation]);
+
+    const simulateTyping = async (text, sender) => {
+        setIsTyping(true);
+        let currentText = '';
+        for (let i = 0; i < text.length; i++) {
+            currentText += text[i];
+            // Actualiza el último mensaje de la conversación en vez de añadir uno nuevo
+            setConversation(conv => {
+                const newConv = [...conv];
+                if (newConv.length && newConv[newConv.length - 1].sender === sender) {
+                    newConv[newConv.length - 1].text = currentText;
+                } else {
+                    newConv.push({ text: currentText, sender });
+                }
+                return newConv;
+            });
+            await new Promise(resolve => setTimeout(resolve, 50)); // Ajusta la velocidad de "tipeo"
+        }
+        setIsTyping(false);
+    };
 
     const handleMessageChange = (event) => {
         setMessage(event.target.value);
@@ -12,13 +42,12 @@ const ChatBot = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!message.trim()) return;  // Evita enviar el mensaje
+        if (!message.trim()) return;
 
-        const newConversation = [...conversation, { text: message, sender: 'user' }];
-        setConversation(newConversation);
+        const userMessage = { text: message, sender: 'user' };
+        setConversation(conv => [...conv, userMessage]);
         setMessage('');
 
-        // Envia el mensaje al servidor y espera la respuesta
         try {
             const response = await fetch('http://localhost:8080/message', {
                 method: 'POST',
@@ -28,18 +57,19 @@ const ChatBot = () => {
                 body: JSON.stringify({ message }),
             });
             const data = await response.json();
-            
-            setConversation([...newConversation, { text: data.response, sender: 'bot' }]);
+
+            // Comienza a simular el tipeo para la respuesta del bot
+            simulateTyping(data.response, 'bot');
         } catch (error) {
             console.error('Error sending message:', error);
-            setConversation([...newConversation, { text: 'Error al conectar al chatbot', sender: 'bot' }]);
+            simulateTyping('Error al conectar al chatbot', 'bot');
         }
     };
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();  // Previene que al presionar enter haga un salto de linea en el textarea
-            handleSubmit(event);    // Envia el mensaje cuando la tecla enter se presione
+            event.preventDefault();
+            handleSubmit(event);
         }
     };
 
@@ -82,6 +112,7 @@ const ChatBot = () => {
                                     </p>
                                 </div>
                             ))}
+                            <div ref={messagesEndRef} />
                         </div>
 
                         <form onSubmit={handleSubmit} className="message-form">
