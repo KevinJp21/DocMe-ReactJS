@@ -6,8 +6,11 @@ import ChatBot from './Components/ChatBot/ChatBot';
 import LoginForm from './Components/Login/Login';
 
 function App() {
-  const { isLoggedIn } = useContext(AuthContext); // Acceder al estado de autenticación desde el contexto
+  const { isLoggedIn, loading } = useContext(AuthContext);
 
+  if (loading) {
+    return <div></div>; //Muestra esto al recargar la pagina
+  }
   return (
     <Router>
       <Routes>

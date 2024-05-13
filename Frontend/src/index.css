@@ -8,14 +8,26 @@
 }
 
 :root{
---azul-bg: #164757;
---white-font: #DEDEDE;
---blue-font: #0F5268;
---black-font: #212529;
---white: #fff;
+  --azul-bg: #164757;
+  --white-font: #DEDEDE;
+  --blue-font: #0F5268;
+  --black-font: #212529;
+  --white: #fff;
+  --green:hsl(162, 45%, 56%);
+  --lead: hsl(162, 2%, 56%);
+  --blue: hsl(220, 85%, 57%);
+  --violet: hsl(272, 92%, 32%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-light-gray:hsl(0, 0%, 90%);
+  --body-bg-color:#176B87;
+  --glass-bg-color:hsla(0, 0%, 100%, 0.05);
+  --border-color:hsla(0, 0%, 100%,0.25);
+  --blur:blur(10px);
+  --button-hover-color:hsla(0, 0%, 0%, 0.3);
+
 }
 
 body{
-  background-color: var(--azul-bg);
+  background-color: var(--body-bg-color);
 }
 

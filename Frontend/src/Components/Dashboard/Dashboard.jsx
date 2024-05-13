@@ -1,14 +1,36 @@
 import React from 'react'
 import './Dashboard.css'
 import DataTable from 'datatables.net-dt'
+import { AuthContext } from '../AuthContext/AuthContext'
+import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+
 
 const Dashboard = () => {
+    const { setIsLoggedIn } = useContext(AuthContext);
+    const navigate = useNavigate();
     let table = new DataTable('#table')
+
+    const handleLogout = async () => {
+        // Aquí añadirías la lógica para llamar a tu API y cerrar la sesión en el backend
+        const response = await fetch('http://localhost:5000/logout', {
+            method: 'POST',
+            credentials: 'include', // Importante para manejar las cookies de sesión
+        });
+
+        if (response.ok) {
+            setIsLoggedIn(false);
+            navigate('/login');
+        } else {
+            console.error('Failed to logout');
+        }
+    }
   return (
     
         <div className='ContentArea'>
             <div className='greeting'>
                 <span className='fs-5'>Bienvenido(a), Dario54</span>
+                <button className="btn btn-secondary" onClick={handleLogout}>Cerrar Sesión</button>
             </div>
 
             <div className='containerCardSummary'>

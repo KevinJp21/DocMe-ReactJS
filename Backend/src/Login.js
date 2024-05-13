@@ -35,14 +35,14 @@ app.get('/check-session', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
-    return res.status(400).json({ message: 'Username and password are required' });
+    return res.status(400).send('Username and password are required');
   }
 
   const sql = `SELECT * FROM usuarios WHERE User_Name = ?`;
   db.query(sql, [username], (err, result) => {
     if (err) throw err;
     if (result.length === 0) {
-      return res.status(401).json({ message: 'User not found' });
+      return res.status(401).send('Usuario o contraseña incorrectos');
     }
 
     const user = result[0];
@@ -52,8 +52,22 @@ app.post('/login', (req, res) => {
       req.session.username = username;
       res.json({ message: 'Login successful', user: { id: user.ID_Usu, username } });
     } else {
-      res.status(401).json({ message: 'Password incorrect' });
+      res.status(401).send('Usuario o contraseña incorrectos');
     }
+  });
+});
+
+app.post('/logout', (req, res) => {
+  req.session.destroy(err => {
+      if (err) {
+          // Manejar el error si la sesión no se puede destruir
+          console.error('Failed to destroy session:', err);
+          res.status(500).send('Could not log out');
+      } else {
+          // Si no hay error, la sesión se destruye correctamente
+          res.clearCookie('connect.sid'); // Asegúrate de que el nombre de la cookie coincide con tu configuración
+          res.send({ isLoggedIn: false });
+      }
   });
 });
 
