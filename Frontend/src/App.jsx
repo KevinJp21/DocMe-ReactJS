@@ -6,7 +6,7 @@ import ChatBot from './Components/ChatBot/ChatBot';
 import LoginForm from './Components/Login/Login';
 
 function App() {
-  const { isLoggedIn, loading } = useContext(AuthContext);
+  const { isLoggedIn, loading, userRole } = useContext(AuthContext);
 
   if (loading) {
     return <div></div>; //Muestra esto al recargar la pagina
@@ -14,9 +14,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to="/dashboard" />} />
-        <Route path="/dashboard" element={isLoggedIn ? <DashboardAndChatBot /> : <Navigate to="/login" />} />
-        <Route path="*" element={<Navigate to={isLoggedIn ? "/dashboard" : "/login"} />} />
+        <Route path="/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={`/dashboard/${userRole}`} />} />
+        <Route path={`/dashboard/${userRole}`}  element={isLoggedIn ? <DashboardAndChatBot /> : <Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to={isLoggedIn ? `/dashboard/${userRole}` : "/login"} />} />
       </Routes>
     </Router>
   );

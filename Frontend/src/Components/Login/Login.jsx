@@ -40,7 +40,7 @@ function LoginForm() {
         <div className="containerForm">
             <img src={LogoDocmeSVG} alt="Logo DocMe" className="img-fluid logoIMG" />
             <div className="contentLogin">
-                <form onSubmit={handleLogin}>
+                <form className="FormLogin" onSubmit={handleLogin}>
                     {errMsg && <div style={{ color: "#FF0000", textAlign: "left", fontSize: "20px" }}>{errMsg}</div>}
                     <h3>Bienvenido a DocMe</h3>
                     <div className="contentInputLogin ">
@@ -52,6 +52,7 @@ function LoginForm() {
                                 onChange={(e) => setUsername(e.target.value)}
                                 autoComplete="off"
                                 placeholder="Usuario"
+                                id="inputLogin"
                             />
                         </div>
                     </div>
@@ -65,6 +66,7 @@ function LoginForm() {
                                 required
                                 placeholder="Contraseña"
                                 autoComplete="current-password"
+                                id="inputLogin"
                             />
                         </div>
                     </div>
