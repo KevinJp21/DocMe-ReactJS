@@ -5,10 +5,9 @@ import DashboardPac from '../Paciente/DashboardPac';
 
 
 const Dashboard = () => {
-    const { setIsLoggedIn, userRole } = useContext(AuthContext);
+    const { userRole } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    
 
     const renderComponentByRole = () => {
         switch (userRole) {

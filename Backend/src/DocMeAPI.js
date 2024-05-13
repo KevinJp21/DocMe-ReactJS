@@ -38,42 +38,32 @@ app.get('/check-session', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
-      return res.status(400).send('Username and password are required');
+    return res.status(400).send('Username and password are required');
   }
 
   const sql = `SELECT ID_Usu, u.User_Name, u.Password, r.Rol FROM usuarios u JOIN roles r ON r.ID_Rol = u.ID_Rol WHERE User_Name = ?`;
   db.query(sql, [username], (err, result) => {
-      if (err) throw err;
-      if (result.length === 0) {
-          return res.status(401).send('Usuario o contraseña incorrectos');
-      }
+    if (err) throw err;
+    if (result.length === 0) {
+      return res.status(401).send('Usuario o contraseña incorrectos');
+    }
 
-      const user = result[0];
-      if (password === user.Password) {
-          req.session.regenerate((err) => {
-              if (err) {
-                  console.error('Session regeneration failed:', err);
-                  return res.status(500).send('Internal server error');
-              }
-
-              req.session.userId = user.ID_Usu;
-              req.session.username = username;
-              req.session.userRole = user.Rol;
-
-              console.log('New Session:', req.session);
-
-              res.json({
-                  message: 'Login successful',
-                  user: {
-                      id: user.ID_Usu,
-                      username,
-                      role: user.Rol
-                  }
-              });
-          });
-      } else {
-          res.status(401).send('Usuario o contraseña incorrectos');
-      }
+    const user = result[0];
+    if (password === user.Password) {
+      req.session.userId = user.ID_Usu;
+      req.session.username = username;
+      req.session.userRole = user.Rol;  // Asegúrate de que este valor se está asignando correctamente
+      res.json({
+        message: 'Login successful',
+        user: {
+          id: user.ID_Usu,
+          username,
+          role: user.Rol
+        }
+      });
+    } else {
+      res.status(401).send('Usuario o contraseña incorrectos');
+    }
   });
 });
 

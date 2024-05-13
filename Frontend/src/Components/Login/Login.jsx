@@ -7,13 +7,15 @@ import LogoDocmeSVG from '../../assets/img/logo_docme.svg'; // Asegúrate de que
 function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [errMsg, setErrMsg] = useState(""); // Estado para manejar mensajes de error
+    const [errMsg, setErrMsg] = useState("");
+    const [loading, setLoading] = useState(false); // Agregar estado de carga
 
-    const { setIsLoggedIn } = useContext(AuthContext);
+    const { setIsLoggedIn, userRole } = useContext(AuthContext);
     const navigate = useNavigate();
-
+    const dashboardPath = `/DocMe/${userRole}/dashboard`;
     const handleLogin = async (event) => {
         event.preventDefault();
+        setLoading(true); // Iniciar la carga
 
         try {
             const response = await fetch("http://localhost:5000/login", {
@@ -25,14 +27,17 @@ function LoginForm() {
 
             if (response.ok) {
                 setIsLoggedIn(true);
-                navigate("/dashboard");
+                setLoading(false); // Finalizar la carga
+                navigate(dashboardPath);
             } else {
                 const errorMsg = await response.text();
                 setErrMsg(errorMsg);
+                setLoading(false); // Finalizar la carga
             }
         } catch (error) {
-            console.error("Error de inicio de sesión:");
+            console.error("Error de inicio de sesión:", error);
             setErrMsg("Error al iniciar sesión, intente de nuevo");
+            setLoading(false); // Finalizar la carga
         }
     };
 

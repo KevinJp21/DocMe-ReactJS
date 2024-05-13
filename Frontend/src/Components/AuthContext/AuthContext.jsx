@@ -3,37 +3,46 @@ import React, { createContext, useState, useEffect } from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado para autenticar el login
-    const [userRole, setUserRole] = useState(null); // Estado para almacenar el rol del usuario
-    const [loading, setLoading] = useState(true); // Estado para manejar el loading de la autenticación
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userRole, setUserRole] = useState(null);
+    const [userName, setUserName] = useState(""); // Estado para almacenar el nombre del usuario
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const checkSession = async () => {
             try {
                 const response = await fetch('http://localhost:5000/check-session', {
                     method: 'GET',
-                    credentials: 'include' // Importante para cookies
+                    credentials: 'include'
                 });
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
                 setIsLoggedIn(data.isLoggedIn);
-                setUserRole(data.role); // Actualizar el estado con el rol del usuario
+                setUserRole(data.role);
+                setUserName(data.username); // Asegúrate de que tu API devuelva el nombre
             } catch (error) {
                 console.error('Failed to check session:', error);
                 setIsLoggedIn(false);
-                setUserRole(null); // Asegurar que el rol se resetea si hay un error
+                setUserRole(null);
+                setUserName(""); // Resetear el nombre si hay un error
             } finally {
-                setLoading(false); // Establece el loading a false cuando termina la verificación
+                setLoading(false);
             }
         };
 
         checkSession();
     }, []);
 
+    // Incluir todos los setters en el valor proporcionado por el Provider
     return (
-        <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, userRole, loading }}>
+        <AuthContext.Provider value={{
+            isLoggedIn, setIsLoggedIn,
+            userRole, setUserRole,
+            userName, setUserName,
+            loading, setLoading
+        }}>
             {children}
         </AuthContext.Provider>
     );

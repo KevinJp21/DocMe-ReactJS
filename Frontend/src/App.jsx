@@ -9,14 +9,18 @@ function App() {
   const { isLoggedIn, loading, userRole } = useContext(AuthContext);
 
   if (loading) {
-    return <div></div>; //Muestra esto al recargar la pagina
+    return <div></div>; // Improved loading indication
   }
+
+  // Construct the dynamic dashboard route based on user role
+  const dashboardPath = `/DocMe/${userRole}/dashboard`;
+
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={`/dashboard/${userRole}`} />} />
-        <Route path={`/dashboard/${userRole}`}  element={isLoggedIn ? <DashboardAndChatBot /> : <Navigate to="/login" />} />
-        <Route path="*" element={<Navigate to={isLoggedIn ? `/dashboard/${userRole}` : "/login"} />} />
+        <Route path="/DocMe/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={dashboardPath} />} />
+        <Route path={dashboardPath} element={isLoggedIn ? <DashboardAndChatBot /> : <Navigate to="/DocMe/login" />} />
+        <Route path="*" element={<Navigate to={isLoggedIn ? dashboardPath : "/DocMe/login"} />} />
       </Routes>
     </Router>
   );
