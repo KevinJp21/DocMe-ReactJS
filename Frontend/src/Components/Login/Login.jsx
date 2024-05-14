@@ -1,22 +1,30 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthContext";
-import './Login.css'; // Asegúrate de que los estilos en este archivo correspondan a los del CSS original
-import LogoDocmeSVG from '../../assets/img/logo_docme.svg'; // Asegúrate de que la ruta es correcta
+import './Login.css';
+import LogoDocmeSVG from '../../assets/img/logo_docme.svg';
 
 function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [errMsg, setErrMsg] = useState("");
-    const [loading, setLoading] = useState(false); // Agregar estado de carga
+    const [loading, setLoading] = useState(false);
 
-    const { setIsLoggedIn, userRole } = useContext(AuthContext);
+    const { setIsLoggedIn, setUserRole, isLoggedIn, userRole } = useContext(AuthContext);
     const navigate = useNavigate();
-    const dashboardPath = `/DocMe/${userRole}/dashboard`;
+
+    // Observamos los cambios en isLoggedIn y userRole
+    useEffect(() => {
+        if (isLoggedIn && userRole) {
+            navigate(`/DocMe/${userRole}/dashboard`);
+        }
+    }, [isLoggedIn, userRole, navigate]);
+
     const handleLogin = async (event) => {
         event.preventDefault();
-        setLoading(true); // Iniciar la carga
-
+        setLoading(true);
+        setErrMsg("");
+    
         try {
             const response = await fetch("http://localhost:5000/login", {
                 method: "POST",
@@ -24,22 +32,23 @@ function LoginForm() {
                 credentials: "include",
                 body: JSON.stringify({ username, password }),
             });
-
+    
+            const data = await response.json(); // Aquí se recibe la respuesta JSON
+    
             if (response.ok) {
                 setIsLoggedIn(true);
-                setLoading(false); // Finalizar la carga
-                navigate(dashboardPath);
+                setUserRole(data.user.role); // Extraemos el role desde user.role
             } else {
-                const errorMsg = await response.text();
-                setErrMsg(errorMsg);
-                setLoading(false); // Finalizar la carga
+                setErrMsg(data.message || "Error al iniciar sesión");
             }
         } catch (error) {
             console.error("Error de inicio de sesión:", error);
             setErrMsg("Error al iniciar sesión, intente de nuevo");
-            setLoading(false); // Finalizar la carga
+        } finally {
+            setLoading(false);
         }
     };
+    
 
     return (
         <div className="containerForm">
@@ -47,6 +56,7 @@ function LoginForm() {
             <div className="contentLogin">
                 <form className="FormLogin" onSubmit={handleLogin}>
                     {errMsg && <div style={{ color: "#FF0000", textAlign: "left", fontSize: "20px" }}>{errMsg}</div>}
+                    {loading && <div>Cargando...</div>}
                     <h3>Bienvenido a DocMe</h3>
                     <div className="contentInputLogin ">
                         <div className="BodyInput">
@@ -75,7 +85,7 @@ function LoginForm() {
                             />
                         </div>
                     </div>
-                    <button className="btn btnLogin" type="submit">Iniciar sesión</button>
+                    <button className="btn btnLogin" type="submit" disabled={loading}>Iniciar sesión</button>
                     <a className="link" href="/recovery_pass">¿Olvidaste tu contraseña?</a>
                     <span>¿No tienes cuenta? <a className="signUp" href="/signup">Regístrate aquí</a></span>
                 </form>
@@ -85,4 +95,3 @@ function LoginForm() {
 }
 
 export default LoginForm;
-
