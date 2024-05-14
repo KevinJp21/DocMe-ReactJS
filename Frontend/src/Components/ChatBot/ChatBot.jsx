@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import './ChatBot.css';
+import { AuthContext } from '../AuthContext/AuthContext';
 
 const ChatBot = () => {
     const [message, setMessage] = useState('');
@@ -7,6 +8,7 @@ const ChatBot = () => {
     const [isOpenChatBot, setIsOpenChatBot] = useState(false);
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
+    const {userData} = useContext(AuthContext);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -54,11 +56,11 @@ const ChatBot = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ message }),
+                body: JSON.stringify({ user_id: userData.id, message }), // Asegúrate de que userData.id es accesible
             });
             const data = await response.json();
 
-            // Comienza a simular el tipeo para la respuesta del bot
+            // Simular la respuesta del bot
             simulateTyping(data.response, 'bot');
         } catch (error) {
             console.error('Error sending message:', error);

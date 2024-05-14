@@ -81,4 +81,31 @@ app.post('/logout', (req, res) => {
   });
 });
 
+app.get('/user-details', (req, res) => {
+    if (!req.session.userId) {
+        return res.status(403).json({ error: 'No authenticated user' });
+    }
+
+    const sql = `SELECT * FROM usuarios WHERE ID_Usu = ?`;
+    db.query(sql, [req.session.userId], (err, result) => {
+        if (err) {
+            console.error('Database error:', err);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+        if (result.length === 0) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        const user = result[0];
+        res.json({
+            id: user.ID_Usu,
+            username: user.User_Name,
+            role: user.Rol,
+            name: user.Nombre,
+            lastName: user.Apellido
+            // Añade más campos según sea necesario
+        });
+    });
+});
+
 module.exports = app;

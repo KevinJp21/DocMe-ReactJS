@@ -1,23 +1,37 @@
-import React from 'react'
-import './HomePac.css'
-import HomeIMG from '../../../assets/img/HomeIMG.webp'
+import React from 'react';
+import useFetchUsers from '../../AuthContext/FetchUsers';
+import './HomePac.css';
+import HomeIMG from '../../../assets/img/HomeIMG.webp';
+
+
 const HomePac = () => {
+    const { userData, loading, error } = useFetchUsers();
+
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
+
     return (
         <section className='HomePac'
-        style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url('${HomeIMG}')`
-        }}
-    >
-        <div className="contentHomePac">
-            <h3>Su salud, nuestra prioridad.<br />Gestione sus citas con eficiencia y facilidad.</h3>
-            <p>Bienvenido, [Nombre del Usuario]! Tienes 3 citas programadas para esta semana.</p>
-            <div>
-                <button >Visitar blog</button>
+            style={{
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url('${HomeIMG}')`
+            }}
+        >
+
+            <div className="contentHomePac">
+                <div className="greeting">
+                    <p>Bienvenido, {userData ? `${userData.name} ${userData.lastName}` : "Usuario"}</p>
+                </div>
+                <div className="welcomeText">
+                    <h3>Su salud, nuestra prioridad.<br />Gestione sus citas con eficiencia y facilidad.</h3>
+                </div>
+
+                <div className='BlogHome'>
+                <button><span>Visitar blog</span></button>
+                </div>
+               
             </div>
-            <p>Recuerda revisar nuestros últimos consejos de salud en nuestro blog.</p>
-        </div>
-    </section>
-    )
+        </section>
+    );
 }
 
-export default HomePac
+export default HomePac;

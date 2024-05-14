@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import DashboardPac from '../Paciente/DashboardPac';
+import { useLogout } from '../LogOut/logOut';
 
 
 const Dashboard = () => {
-    const { userRole } = useContext(AuthContext);
+    const logout = useLogout()
+        ; const { userRole } = useContext(AuthContext);
     const navigate = useNavigate();
 
 
@@ -14,9 +16,15 @@ const Dashboard = () => {
             case 'Paciente':
                 return <DashboardPac />;
             case 'Medico':
-                return <div>Dahsboard Medico</div>;
+                return <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <p>Disponible en proximas actualizaciones</p>
+                            <button style={{width:'200px'}} className="btn btn-secondary" onClick={logout}>Cerrar Sesión</button>
+                         </div>;
             case 'Administrador':
-                return <div>Dashboard Administrador</div>;;
+                return <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <p>Disponible en proximas actualizaciones</p>
+                            <button style={{width:'200px'}} className="btn btn-secondary" onClick={logout}>Cerrar Sesión</button>
+                        </div>;
             default:
                 return <div>No tiene acceso a esta sección</div>;
         }
