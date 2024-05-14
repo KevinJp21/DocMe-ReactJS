@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthContext";
 import './Login.css';
 import LogoDocmeSVG from '../../assets/img/logo_docme.svg';
+import { Link } from "react-router-dom";
 
 function LoginForm() {
     const [username, setUsername] = useState("");
@@ -10,7 +11,7 @@ function LoginForm() {
     const [errMsg, setErrMsg] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const { setIsLoggedIn, setUserRole, isLoggedIn, userRole } = useContext(AuthContext);
+    const { setIsLoggedIn, setUserRole, setUserID, isLoggedIn, userRole } = useContext(AuthContext);
     const navigate = useNavigate();
 
     // Observamos los cambios en isLoggedIn y userRole
@@ -37,7 +38,8 @@ function LoginForm() {
     
             if (response.ok) {
                 setIsLoggedIn(true);
-                setUserRole(data.user.role); // Extraemos el role desde user.role
+                setUserRole(data.user.role); // Ajustar el rol
+                setUserID(data.user.id); // Asegúrate de ajustar el ID de usuario también
             } else {
                 setErrMsg(data.message || "Error al iniciar sesión");
             }
@@ -49,6 +51,7 @@ function LoginForm() {
         }
     };
     
+    
 
     return (
         <div className="containerForm">
@@ -56,7 +59,7 @@ function LoginForm() {
             <div className="contentLogin">
                 <form className="FormLogin" onSubmit={handleLogin}>
                     {errMsg && <div style={{ color: "#FF0000", textAlign: "left", fontSize: "20px" }}>{errMsg}</div>}
-                    {loading && <div>Cargando...</div>}
+                    {loading && <div>Espere un momento...</div>}
                     <h3>Bienvenido a DocMe</h3>
                     <div className="contentInputLogin ">
                         <div className="BodyInput">
@@ -87,7 +90,7 @@ function LoginForm() {
                     </div>
                     <button className="btn btnLogin" type="submit" disabled={loading}>Iniciar sesión</button>
                     <a className="link" href="/recovery_pass">¿Olvidaste tu contraseña?</a>
-                    <span>¿No tienes cuenta? <a className="signUp" href="/signup">Regístrate aquí</a></span>
+                    <span>¿No tienes cuenta? <Link className="signUp" to="/DocMe/signup">Regístrate aquí</Link></span>
                 </form>
             </div>
         </div>
