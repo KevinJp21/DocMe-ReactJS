@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthContext";
-import './Login.css'; // Asegúrate de que los estilos en este archivo correspondan a los del CSS original
-import LogoDocmeSVG from '../../assets/img/logo_docme.svg'; // Asegúrate de que la ruta es correcta
+import './Login.css'; 
+import LogoDocmeSVG from '../../assets/img/logo_docme.svg'; 
 
 function LoginForm() {
     const [username, setUsername] = useState("");
