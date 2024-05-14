@@ -81,6 +81,46 @@ app.post('/logout', (req, res) => {
   });
 });
 
+app.post('/signup', (req, res) => {
+  const { name, lastName, email, password, userName, birthDate, phoneNum, ID, role = 2 } = req.body;
+
+  if (!name || !lastName || !email || !password || !userName || !birthDate || !phoneNum || !ID) {
+      return res.status(400).json({ message: 'Todos los campos son requeridos' });
+  }
+
+  // Calcular la edad
+  const birthday = new Date(birthDate);
+  const ageDiff = Date.now() - birthday.getTime();
+  const ageDate = new Date(ageDiff); 
+  const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+
+  // Verificar si el usuario es menor de 18 años
+  if (age < 18) {
+    return res.status(400).json({ message: 'Debes tener al menos 18 años para registrarte' });
+  }
+
+  const sqlCheck = `SELECT * FROM usuarios WHERE User_Name = ? OR Correo = ? OR Identificacion = ?`;
+  db.query(sqlCheck, [userName, email, ID], (err, result) => {
+      if (err) {
+          console.error('Database error:', err);
+          return res.status(500).json({ error: 'Internal server error checking user existence' });
+      }
+      if (result.length > 0) {
+          return res.status(409).json({ message: 'El nombre de usuario, correo o identificación ya está en uso' });
+      }
+
+      const sqlInsert = `INSERT INTO usuarios (Nombre, Apellido, Correo, Password, User_Name, FechaNac, Telefono, Identificacion, ID_Rol) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+      db.query(sqlInsert, [name, lastName, email, password, userName, birthday, phoneNum, ID, role], (error, results) => {
+          if (error) {
+              console.error('Database error:', error);
+              return res.status(500).json({ error: 'Internal server error creating user' });
+          }
+          res.status(201).json({ message: 'Usuario registrado con éxito' });
+      });
+  });
+});
+
+
 app.get('/user-details', (req, res) => {
     if (!req.session.userId) {
         return res.status(403).json({ error: 'No authenticated user' });

@@ -4,6 +4,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userID, setUserID] = useState(null);
     const [userRole, setUserRole] = useState(null);
     const [userName, setUserName] = useState("");
     const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ export const AuthProvider = ({ children }) => {
                 }
                 const sessionData = await sessionResponse.json();
                 setIsLoggedIn(sessionData.isLoggedIn);
+                setUserID(sessionData.userID);
                 setUserRole(sessionData.role);
 
                 // Si el usuario está autenticado, entonces carga los datos del usuario
@@ -34,6 +36,7 @@ export const AuthProvider = ({ children }) => {
                     }
                     const userData = await userResponse.json();
                     setUserData(userData);
+                    
                 } else {
                     setUserData(null);
                 }
@@ -42,6 +45,7 @@ export const AuthProvider = ({ children }) => {
                 setIsLoggedIn(false);
                 setUserRole(null);
                 setUserData(null); 
+                setUserID(null);
             } finally {
                 setLoading(false);
             }
@@ -54,6 +58,7 @@ export const AuthProvider = ({ children }) => {
         <AuthContext.Provider value={{
             isLoggedIn, setIsLoggedIn,
             userRole, setUserRole,
+            userID, setUserID,
             userName, setUserName,
             loading, setLoading,
             userData, setUserData

@@ -4,6 +4,7 @@ import { AuthContext } from './Components/AuthContext/AuthContext';
 import Dashboard from './Components/Dashboard/Dashboard';
 import ChatBot from './Components/ChatBot/ChatBot';
 import LoginForm from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
 
 function App() {
   const { isLoggedIn, loading, userRole } = useContext(AuthContext);
@@ -19,6 +20,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/DocMe/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={dashboardPath} />} />
+        <Route path="/DocMe/signup" element={!isLoggedIn ? <SignUp /> : <Navigate to={dashboardPath} />} />
         <Route path={dashboardPath} element={isLoggedIn ? <DashboardAndChatBot /> : <Navigate to="/DocMe/login" />} />
         <Route path="*" element={<Navigate to={isLoggedIn ? dashboardPath : "/DocMe/login"} />} />
       </Routes>
