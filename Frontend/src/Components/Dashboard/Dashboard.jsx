@@ -6,8 +6,8 @@ import { useLogout } from '../LogOut/logOut';
 
 
 const Dashboard = () => {
-    const logout = useLogout()
-        ; const { userRole } = useContext(AuthContext);
+    const logout = useLogout(); 
+    const { userRole } = useContext(AuthContext);
     const navigate = useNavigate();
 
 
