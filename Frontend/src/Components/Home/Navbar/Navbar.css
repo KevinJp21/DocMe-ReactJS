@@ -99,6 +99,10 @@ header{
     border:1px solid var(--blue-font);
 }
 
+.StartNow:hover{
+    color: var(--blue-font);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -106,11 +110,24 @@ header{
 }
 
 .hamburger .bar {
-    width: 25px;
+    width: 30px;
     height: 3px;
     margin: 4px 0;
     background-color: #000; /* Color de la barra */
     transition: 0.4s;
+}
+
+/*Convertir las barras en una x*/
+.hamburger.NavHomeOpen .bar1 {
+    transform: rotate(-45deg) translate(-10px, 10px);
+}
+
+.hamburger.NavHomeOpen .bar2 {
+    opacity: 0;
+}
+
+.hamburger.NavHomeOpen .bar3 {
+    transform: rotate(45deg) translate(-5px, -5px);
 }
 
 @media screen and (max-width: 1300px) {

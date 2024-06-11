@@ -25,10 +25,10 @@ const NavBar = () => {
                             <li className='BTNStart ms-2'><Link className="LinkNavHome StartNow" to="/DocMe/login"><span className='linkText'>¡Comienza Ahora!</span></Link></li>
                         </ul>
                     </div>
-                    <div className="hamburger" onClick={toggleMenu}>
-                        <span className="bar"></span>
-                        <span className="bar"></span>
-                        <span className="bar"></span>
+                    <div className={`hamburger ${menuOpen ? 'NavHomeOpen' : ''}`} onClick={toggleMenu}>
+                        <span className="bar bar1"></span>
+                        <span className="bar bar2"></span>
+                        <span className="bar bar3"></span>
                     </div>
                 </div>
             </nav>
