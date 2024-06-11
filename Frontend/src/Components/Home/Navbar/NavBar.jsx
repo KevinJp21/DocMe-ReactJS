@@ -22,7 +22,7 @@ const NavBar = () => {
                             <li><Link className="LinkNavHome Contact" to="/DocMe/#"><span className='linkText'>Contactanos</span></Link></li>
                             <li><Link className="LinkNavHome LoginBTN" to="/DocMe/login"><span className='linkText'>Iniciar Sesión</span></Link></li>
                             <li><Link className="LinkNavHome SignUpBTN" to="/DocMe/signup"><span className='linkText'>Regístrate</span></Link></li>
-                            <li className='BTNStart'><Link className="LinkNavHome StartNow" to="/DocMe/login"><span className='linkText'>¡Comienza Ahora!</span></Link></li>
+                            <li className='BTNStart ms-2'><Link className="LinkNavHome StartNow" to="/DocMe/login"><span className='linkText'>¡Comienza Ahora!</span></Link></li>
                         </ul>
                     </div>
                     <div className="hamburger" onClick={toggleMenu}>
