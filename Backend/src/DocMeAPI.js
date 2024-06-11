@@ -24,7 +24,7 @@ app.use(session({
 }));
 
 app.get('/check-session', (req, res) => {
-  console.log(req.session); // Esto te mostrará qué hay en la sesión
+
   if (req.session.userId) {
     res.json({
       isLoggedIn: true,
@@ -143,7 +143,6 @@ app.get('/user-details', (req, res) => {
             role: user.Rol,
             name: user.Nombre,
             lastName: user.Apellido
-            // Añade más campos según sea necesario
         });
     });
 });

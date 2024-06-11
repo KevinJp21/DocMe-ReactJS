@@ -1,4 +1,4 @@
-// useFetchUsers.js
+
 import { useState, useEffect } from 'react';
 
 function useFetchUsers() {

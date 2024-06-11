@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import './ChatBot.css';
-import { AuthContext } from '../AuthContext/AuthContext';
+import useFetchUsers from '../AuthContext/FetchUsers';
 
 const ChatBot = () => {
     const [message, setMessage] = useState('');
@@ -8,7 +8,7 @@ const ChatBot = () => {
     const [isOpenChatBot, setIsOpenChatBot] = useState(false);
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
-    const {userData} = useContext(AuthContext);
+    const {userData} = useFetchUsers();
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });

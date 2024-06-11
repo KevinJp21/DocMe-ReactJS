@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthContext } from './Components/AuthContext/AuthContext';
 import Dashboard from './Components/Dashboard/Dashboard';
-import ChatBot from './Components/ChatBot/ChatBot';
 import LoginForm from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 
@@ -33,7 +32,6 @@ function DashboardAndChatBot() {
   return (
     <>
       <Dashboard />
-      <ChatBot />
     </>
   );
 }

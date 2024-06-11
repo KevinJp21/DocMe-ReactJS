@@ -34,12 +34,12 @@ function LoginForm() {
                 body: JSON.stringify({ username, password }),
             });
     
-            const data = await response.json(); // Aquí se recibe la respuesta JSON
+            const data = await response.json();
     
             if (response.ok) {
                 setIsLoggedIn(true);
-                setUserRole(data.user.role); // Ajustar el rol
-                setUserID(data.user.id); // Asegúrate de ajustar el ID de usuario también
+                setUserRole(data.user.role);
+                setUserID(data.user.id); // Ajustar el ID de usuario también
             } else {
                 setErrMsg(data.message || "Error al iniciar sesión");
             }
@@ -70,7 +70,7 @@ function LoginForm() {
                                 onChange={(e) => setUsername(e.target.value)}
                                 autoComplete="off"
                                 placeholder="Usuario"
-                                id="inputLogin"
+                                id="inputLoginUser"
                             />
                         </div>
                     </div>
@@ -84,7 +84,7 @@ function LoginForm() {
                                 required
                                 placeholder="Contraseña"
                                 autoComplete="current-password"
-                                id="inputLogin"
+                                id="inputLoginPass"
                             />
                         </div>
                     </div>

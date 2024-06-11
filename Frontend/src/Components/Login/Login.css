@@ -43,7 +43,7 @@ body{
     color: var(--text-white);
 }
 
-#inputLogin::placeholder{
+#inputLoginUser::placeholder, #inputLoginPass::placeholder{
     color: rgb(175, 170, 170);
     font-weight: bold;
 }
