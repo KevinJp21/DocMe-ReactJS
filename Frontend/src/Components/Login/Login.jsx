@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthContext";
 import './Login.css';
-import LogoDocmeSVG from '../../assets/img/logo_docme.svg';
+import LogoDocmeSVG from '../../assets/img/DocMe_logo.png';
 import { Link } from "react-router-dom";
 
 function LoginForm() {

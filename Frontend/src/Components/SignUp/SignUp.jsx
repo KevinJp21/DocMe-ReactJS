@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
-import LogoDocmeSVG from '../../assets/img/logo_docme.svg';
+import LogoDocmeSVG from '../../assets/img/DocMe_logo.png';
 
 function SignUp() {
     const [formData, setFormData] = useState({

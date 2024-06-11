@@ -1,7 +1,6 @@
 import React from 'react';
 import useFetchUsers from '../../AuthContext/FetchUsers';
 import './HomePac.css';
-import HomeIMG from '../../../assets/img/HomeIMG.webp';
 
 
 const HomePac = () => {

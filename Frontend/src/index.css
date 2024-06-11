@@ -10,16 +10,16 @@
 :root{
   --azul-bg: #164757;
   --white-font: #DEDEDE;
-  --blue-font: #0F5268;
+  --blue-font: #272B4C;
   --black-font: #212529;
   --white: #fff;
-  --green:hsl(162, 45%, 56%);
+  --green:#128F8B;
   --lead: hsl(162, 2%, 56%);
-  --blue: hsl(220, 85%, 57%);
+  --blue: #1B81FE;
   --violet: hsl(272, 92%, 32%);
   --text-white: hsl(0, 0%, 100%);
   --text-light-gray:hsl(0, 0%, 90%);
-  --body-bg-color:#176B87;
+  --bg-color:#E8F1FF;
   --glass-bg-color:hsla(0, 0%, 100%, 0.05);
   --border-color:hsla(0, 0%, 100%,0.25);
   --blur:blur(10px);
