@@ -8,8 +8,8 @@ const Home = () => {
 
     return (
         <>
-         <section className='ContainerHome'>
-            <div className="ContentHome" style={{ backgroundImage: `url(${HomeBG})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+         <section className='ContainerHome' style={{ backgroundImage: `url(${HomeBG})`}}>
+            <div className="ContentHome">
                 <div className="HomeTextWrapper">
                     <div className="textContentHome">
                         <h3 id='TextContent'>
@@ -30,10 +30,6 @@ const Home = () => {
                 </div>
             </div>
         </section>
-
-        
-
-        
         </>
        
     );
