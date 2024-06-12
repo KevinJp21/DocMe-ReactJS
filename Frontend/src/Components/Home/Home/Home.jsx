@@ -2,11 +2,23 @@ import React from 'react';
 import HomeBG from '../../../assets/img/DocMe_Home BG.png';
 import MedVideoChat from '../../../assets/img/MedicoVideoChat.webp'
 import MedAbout from '../../../assets/img/DoctorIMGAbout.png'
+import LogoSanitas from '../../../assets/logos/EPS Sanitas.svg'
+import LogoSura from '../../../assets/logos/Grupo Sura.svg'
+import LogoFamisanar from '../../../assets/logos/LogoFamisanar.webp'
+import LogoNuevaEPS from '../../../assets/logos/Nueva Eps.svg'
+import LogoCompensar from '../../../assets/logos/Compensar.svg'
 import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
-
+    const epsLogos = [
+        LogoSanitas,
+        LogoSura,
+        LogoFamisanar,
+        LogoNuevaEPS,
+        LogoCompensar,
+        LogoNuevaEPS
+    ];
     return (
         <>
             <section className='ContainerHome' style={{ backgroundImage: `url(${HomeBG})` }}>
@@ -70,6 +82,16 @@ const Home = () => {
                             <h3 id='TextContent'>
                                 Ellos confian en DocMe
                             </h3>
+                        </div>
+                    </div>
+
+                    <div className="CarouselEPS">
+                    <div className="CarouselTrack">
+                            {epsLogos.concat(epsLogos).map((logo, index) => (
+                                <div className="EPSLogo" key={index}>
+                                    <img src={logo} alt={`Logo EPS ${index + 1}`} />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

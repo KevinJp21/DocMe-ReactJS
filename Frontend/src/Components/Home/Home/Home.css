@@ -168,28 +168,63 @@
 
 /*--Seccion EPS's*/
 
-
-.ContainerEPS{
-    padding: 0 20px 0 20px;
+.ContainerEPS {
+    padding: 0 20px;
 }
 
-.ContentEPS{
+.ContentEPS {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.textContenEPS h3{
+.textContentEPS h3 {
     margin-bottom: 10px;
-    text-wrap:balance;
+    text-wrap: balance;
     text-align: center;
 }
 
-.EPSTextWrapper h3{
+.EPSTextWrapper h3 {
     color: var(--blue-font);
     font-size: min(40px, 10vw);
     font-weight: 500;
 }
+
+.CarouselEPS {
+    max-width: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.CarouselTrack {
+    display: flex;
+    align-items: center;
+    animation: scroll 10s linear infinite;
+    width: calc(100% * 2);
+}
+
+.EPSLogo {
+    flex: 0 0 auto;
+    width: 200px;
+    margin: 0 10px;
+}
+
+.EPSLogo img {
+    width: 150px;
+    height: auto;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 
 @media screen and (max-width: 670px) {
