@@ -166,6 +166,32 @@
     font-weight: 400;
 }
 
+/*--Seccion EPS's*/
+
+
+.ContainerEPS{
+    padding: 0 20px 0 20px;
+}
+
+.ContentEPS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textContenEPS h3{
+    margin-bottom: 10px;
+    text-wrap:balance;
+    text-align: center;
+}
+
+.EPSTextWrapper h3{
+    color: var(--blue-font);
+    font-size: min(40px, 10vw);
+    font-weight: 500;
+}
+
+
 @media screen and (max-width: 670px) {
     
     .AboutContent{

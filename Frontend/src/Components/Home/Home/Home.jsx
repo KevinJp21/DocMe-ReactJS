@@ -62,6 +62,18 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <section className='ContainerEPS mt-5'>
+                <div className="ContentEPS">
+                    <div className='EPSTextWrapper'>
+                        <div className="textContentEPS">
+                            <h3 id='TextContent'>
+                                Ellos confian en DocMe
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
 
     );
