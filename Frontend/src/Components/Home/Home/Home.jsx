@@ -1,13 +1,42 @@
-import React from 'react'
-import NavBar from '../Navbar/NavBar'
-const Home = () => {
-  return (
-    <div id='wrapper'>
-        <NavBar />
-        <main></main>
-        <footer></footer>
-    </div>
-  )
-}
+import React from 'react';
+import HomeBG from '../../../assets/img/DocMe_Home BG.png';
+import MedVideoChat from '../../../assets/img/MedicoVideoChat.webp'
+import { Link } from 'react-router-dom';
+import './Home.css';
 
-export default Home
+const Home = () => {
+
+    return (
+        <>
+         <section className='ContainerHome'>
+            <div className="ContentHome" style={{ backgroundImage: `url(${HomeBG})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="HomeTextWrapper">
+                    <div className="textContentHome">
+                        <h3 id='TextContent'>
+                            Para una atención médica de calidad, los colombianos confían en
+                            <br />
+                            DocMe para gestionar sus citas.
+                            <span style={{ color: 'var(--blue)' }}> Cuidamos de ti, donde estés.</span>
+                        </h3>
+                    </div>
+                </div>
+
+                <div className="AppoBTNContainer">
+                    <Link className="LinkContentHome Appo HomeBTN" to="/DocMe/login"><span className='linkText'>Agenda tu Cita</span></Link>
+                </div>
+
+                <div className="imgMedHome">
+                    <img src={MedVideoChat} alt="medico en video llamada" />
+                </div>
+            </div>
+        </section>
+
+        
+
+        
+        </>
+       
+    );
+};
+
+export default Home;

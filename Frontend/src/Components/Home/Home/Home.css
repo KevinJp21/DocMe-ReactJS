@@ -1,0 +1,85 @@
+.ContainerHome{
+    padding: 50px 0 0 0;
+    background-color: var(--bg-color);
+    
+}
+
+.ContentHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+}
+
+.textContentHome h3{
+    margin-bottom: 35px;
+}
+
+.HomeTextWrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 50px 0 50px;
+}
+
+.HomeTextWrapper h3{
+    color: var(--blue-font);
+    font-size: min(40px, 10vw);
+    font-weight: 600;
+}
+
+.AppoBTNContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.HomeBTN{
+    background-color: var(--blue-font);
+    height: 55px;
+    width: 241px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease;
+    border:1px solid var(--blue-font);
+    text-decoration: none;
+}
+
+.HomeBTN:hover{
+    background-color: transparent;
+    border:1px solid var(--blue-font);
+}
+
+.HomeBTN span{
+    text-decoration: none;
+    color: var(--white-font);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .3s ease;
+}
+
+.HomeBTN span:hover{
+    color: var(--blue-font);
+}
+
+.imgMedHome{
+    width: 100%;
+    margin-top: 61px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.imgMedHome img{
+    object-fit: cover;
+    height: 580px;
+    min-width: 50%;
+    border-radius: 15px;
+    border: 10px solid var(--white);
+}
+
+
+

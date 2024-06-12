@@ -4,7 +4,7 @@ import { AuthContext } from './Components/AuthContext/AuthContext';
 import Dashboard from './Components/Dashboard/Dashboard';
 import LoginForm from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
-import Home from './Components/Home/Home/Home';
+import Main from './Components/Home/Main/Main';
 
 function App() {
   const { isLoggedIn, loading, userRole } = useContext(AuthContext);
@@ -22,7 +22,7 @@ function App() {
         <Route path="/DocMe/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={dashboardPath} />} />
         <Route path="/DocMe/signup" element={!isLoggedIn ? <SignUp /> : <Navigate to={dashboardPath} />} />
         <Route path={dashboardPath} element={isLoggedIn ? <Dashboard /> : <Navigate to="/DocMe/login" />} />
-        <Route path="/DocMe/home" element={<Home />}/>
+        <Route path="/DocMe/home" element={<Main />}/>
         <Route path="*" element={<Navigate to={isLoggedIn ? dashboardPath : "/DocMe/home"} />} />
       </Routes>
     </Router>
