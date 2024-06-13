@@ -7,6 +7,7 @@ import LogoSura from '../../../assets/logos/Grupo Sura.svg'
 import LogoFamisanar from '../../../assets/logos/LogoFamisanar.webp'
 import LogoNuevaEPS from '../../../assets/logos/Nueva Eps.svg'
 import LogoCompensar from '../../../assets/logos/Compensar.svg'
+import ChatBotGreeting from '../../../assets/Animations/DocMe Chatbot.gif'
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -17,7 +18,12 @@ const Home = () => {
         LogoFamisanar,
         LogoNuevaEPS,
         LogoCompensar,
-        
+        LogoSanitas,
+        LogoSura,
+        LogoFamisanar,
+        LogoNuevaEPS,
+        LogoCompensar
+
     ];
     return (
         <>
@@ -96,13 +102,37 @@ const Home = () => {
                         </div>
                         <div className="LogoSlider">
                             {epsLogos.map((logo, index) => (
-                                <div className="contentLogo"  >
-                                    <img key={index} src={logo} alt={`Logo EPS ${index + 1}`} />
+                                <div className="contentLogo" key={index}  >
+                                    <img src={logo} alt={`Logo EPS ${index + 1}`} />
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section className='ContainerChatBotHome'>
+                <div className="ContentChatBotHome">
+                    <div className='ChatBotTextWrapper'>
+                        <div className="textContentChatBot">
+                            <h3 id='TextContent'>
+                                Estamos aquí para ti. Habla con nuestro asistente de salud
+                            </h3>
+                        </div>
+
+                        <div className="PTextChatBotHome">
+                            <p>
+                                Nuestro asistente de salud está disponible para responder tus preguntas y guiarte en el proceso de gestión de citas médicas. Con DocMe, recibirás la atención y el soporte que necesitas, cuando lo necesitas. No importa la hora ni el lugar, estamos aquí para asegurarnos de que tu salud siempre sea una prioridad.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div className='ContainerAnimatadCharBotHome'>
+                        <img src={ChatBotGreeting} alt="Chatbot" />
+                    </div>
+
+                </div>
+
             </section>
         </>
 
