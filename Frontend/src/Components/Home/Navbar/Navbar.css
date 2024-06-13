@@ -166,7 +166,7 @@ header{
         flex-direction: column;
         padding: 20px;
         height: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
         
     }
 

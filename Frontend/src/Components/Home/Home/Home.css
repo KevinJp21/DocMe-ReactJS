@@ -1,6 +1,6 @@
 /*--Seccion Home--*/
 .ContainerHome{
-    padding: 0 20px 0 20px;
+    padding: 0 20px 60px 20px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center right;
@@ -91,7 +91,7 @@
 /*--Seccion About--*/
 
 .ContainerAbout{
-    padding: 0 20px 0 20px;
+    padding: 60px 20px 60px 20px;
 }
 
 .ContentAbout{
@@ -169,7 +169,7 @@
 /*--Seccion EPS's*/
 
 .ContainerEPS {
-    padding: 0 20px;
+    padding: 60px 0 60px 0;
 }
 
 .ContentEPS {
@@ -190,39 +190,52 @@
     font-weight: 500;
 }
 
-.CarouselEPS {
-    max-width: 80%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.CarouselTrack {
-    display: flex;
-    align-items: center;
-    animation: scroll 10s linear infinite;
-    width: calc(100% * 2);
-}
-
-.EPSLogo {
-    flex: 0 0 auto;
-    width: 200px;
-    margin: 0 10px;
-}
-
-.EPSLogo img {
-    width: 150px;
-    height: auto;
-}
-
-@keyframes scroll {
-    0% {
+@keyframes slideLogo{
+    from{
         transform: translateX(0);
     }
-    100% {
-        transform: translateX(-50%);
+    to{
+        transform: translateX(-100%);
     }
+}
+
+.CarouselLogosEPS{
+    overflow: hidden;
+    width: 100%;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.CarouselLogosEPS::before,
+.CarouselLogosEPS::after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.CarouselLogosEPS::before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+.CarouselLogosEPS::after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.LogoSlider{
+    display: inline-flex;
+    align-items: center;
+    animation: slideLogo 15s infinite linear;
+    
+}
+
+.contentLogo img{
+    width: 150px;
+    margin: 0 40px;
 }
 
 
@@ -244,4 +257,9 @@
     .AboutBTNContainer{
         justify-content: center;
     }
+
+    .CarouselLogosEPS::before,
+    .CarouselLogosEPS::after{
+        width: 100px;
+}
 }

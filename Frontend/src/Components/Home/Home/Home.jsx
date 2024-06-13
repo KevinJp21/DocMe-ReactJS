@@ -17,7 +17,7 @@ const Home = () => {
         LogoFamisanar,
         LogoNuevaEPS,
         LogoCompensar,
-        LogoNuevaEPS
+        
     ];
     return (
         <>
@@ -44,7 +44,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='ContainerAbout mt-5'>
+            <section className='ContainerAbout'>
                 <div className='ContentAbout'>
                     <div className='AboutTextWrapper'>
                         <div className="textContentAbout">
@@ -61,6 +61,7 @@ const Home = () => {
                                     Somos DocMe, una plataforma innovadora dedicada a mejorar la gestión de citas médicas en Colombia. Desde nuestros inicios, nos hemos comprometido a facilitar la interacción entre pacientes y EPSs, garantizando un acceso más eficiente y cómodo a servicios de salud.
                                 </p>
                             </div>
+
                             <div className="AboutBTNContainer">
                                 <Link className="LinkContentHome HomeBTN" to="/DocMe/#"><span className='linkText'>Saber Más</span></Link>
                             </div>
@@ -75,7 +76,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='ContainerEPS mt-5'>
+            <section className='ContainerEPS'>
                 <div className="ContentEPS">
                     <div className='EPSTextWrapper'>
                         <div className="textContentEPS">
@@ -85,11 +86,18 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="CarouselEPS">
-                    <div className="CarouselTrack">
-                            {epsLogos.concat(epsLogos).map((logo, index) => (
-                                <div className="EPSLogo" key={index}>
+                    <div className="CarouselLogosEPS">
+                        <div className="LogoSlider">
+                            {epsLogos.map((logo, index) => (
+                                <div className="contentLogo" key={index} >
                                     <img src={logo} alt={`Logo EPS ${index + 1}`} />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="LogoSlider">
+                            {epsLogos.map((logo, index) => (
+                                <div className="contentLogo"  >
+                                    <img key={index} src={logo} alt={`Logo EPS ${index + 1}`} />
                                 </div>
                             ))}
                         </div>
