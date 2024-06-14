@@ -1,33 +1,25 @@
 import React from 'react';
-import HomeBG from '../../../assets/img/DocMe_Home BG.png';
-import MedVideoChat from '../../../assets/img/MedicoVideoChat.webp'
-import MedAbout from '../../../assets/img/DoctorIMGAbout.png'
-import LogoSanitas from '../../../assets/logos/EPS Sanitas.svg'
-import LogoSura from '../../../assets/logos/Grupo Sura.svg'
-import LogoFamisanar from '../../../assets/logos/LogoFamisanar.webp'
-import LogoNuevaEPS from '../../../assets/logos/Nueva Eps.svg'
-import LogoCompensar from '../../../assets/logos/Compensar.svg'
-import ChatBotGreeting from '../../../assets/Animations/DocMe Chatbot.gif'
+import Assets from '../../../assets/Assets';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
     const epsLogos = [
-        LogoSanitas,
-        LogoSura,
-        LogoFamisanar,
-        LogoNuevaEPS,
-        LogoCompensar,
-        LogoSanitas,
-        LogoSura,
-        LogoFamisanar,
-        LogoNuevaEPS,
-        LogoCompensar
+        Assets.logos.LogoSanitas,
+        Assets.logos.LogoSura,
+        Assets.logos.LogoFamisanar,
+        Assets.logos.LogoNuevaEPS,
+        Assets.logos.LogoCompensar,
+        Assets.logos.LogoSanitas,
+        Assets.logos.LogoSura,
+        Assets.logos.LogoFamisanar,
+        Assets.logos.LogoNuevaEPS,
+        Assets.logos.LogoCompensar
 
     ];
     return (
         <>
-            <section className='ContainerHome' style={{ backgroundImage: `url(${HomeBG})` }}>
+            <section className='ContainerHome' style={{ backgroundImage: `url(${Assets.images.HomeBG})` }}>
                 <div className="ContentHome">
                     <div className="HomeTextWrapper">
                         <div className="textContentHome">
@@ -45,7 +37,9 @@ const Home = () => {
                     </div>
 
                     <div className="imgMedHome">
-                        <img src={MedVideoChat} alt="medico en video llamada" />
+                        <img src={Assets.images.MedVideoChat} alt="medico en video llamada" />
+
+
                     </div>
                 </div>
             </section>
@@ -75,7 +69,7 @@ const Home = () => {
 
                         <div className="imgAbout">
                             <div className="imgContent">
-                                <img src={MedAbout} alt="" />
+                                <img src={Assets.images.MedAbout} alt="" />
                             </div>
                         </div>
                     </div>
@@ -126,11 +120,60 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-                    
+
                     <div className='ContainerAnimatadCharBotHome'>
-                        <img src={ChatBotGreeting} alt="Chatbot" />
+                        <img src={Assets.animations.ChatBotGreeting} alt="Chatbot" />
                     </div>
 
+                </div>
+
+            </section>
+
+            <section className='ContainerServicesHome'>
+                <div className="ContentServicesHome">
+                    <div className='ServicesTextWrapper'>
+                        <div className="textContentServices">
+                            <h3 id='TextContent'>
+                                Nuestros Servicios
+                            </h3>
+                        </div>
+
+                        <div className="PTextServicesHome">
+                            <p>
+                                DocMe te ofrece una solución integral para gestionar tus citas médicas y recibir atención de calidad desde la comodidad de tu hogar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='CardServicesHome'>
+                    <div className="CardService">
+                        <div className="imgCardService">
+                            <img src={Assets.icons.CalendarIcon} alt="" />
+                        </div>
+                        <div className="CardContentService">
+                            <div className="cardServiceTitle">
+                                <h4>Gestión de Citas Médicas</h4>
+                            </div>
+                            <div className="CardServiceDescription">
+                                <p>Agenda y gestiona tus citas médicas de manera sencilla y rápida, sin necesidad de trasladarte ni esperar largas filas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="CardService">
+                        <div className="imgCardService">
+                            <img src={Assets.icons.LocationIcon} alt="" />
+                        </div>
+                        <div className="CardContentService">
+                            <div className="cardServiceTitle">
+                                <h4>Recomendación de Centros de Atención Cercanos</h4>
+                            </div>
+                            <div className="CardServiceDescription">
+                                <p>Te recomendamos el centro de atención más cercano para tu comodidad y rapidez en el acceso a los servicios de salud.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </section>
