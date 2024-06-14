@@ -174,6 +174,34 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="CardService">
+                        <div className="imgCardService">
+                            <img src={Assets.icons.ChatBotIcon} alt="" />
+                        </div>
+                        <div className="CardContentService">
+                            <div className="cardServiceTitle">
+                                <h4>DocMe ChatBot</h4>
+                            </div>
+                            <div className="CardServiceDescription">
+                                <p>Consulta sobre tus citas, síntomas y más. Recibe respuestas verificadas por profesionales de la salud a través de nuestro chatbot.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="CardService">
+                        <div className="imgCardService">
+                            <img src={Assets.icons.ClinicHistoryIcon} alt="" />
+                        </div>
+                        <div className="CardContentService">
+                            <div className="cardServiceTitle">
+                                <h4>Historial Médico</h4>
+                            </div>
+                            <div className="CardServiceDescription">
+                                <p>Accede a tu historial médico completo de manera segura y organizada. Consulta resultados de exámenes y tratamientos previos.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </section>
@@ -183,3 +211,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

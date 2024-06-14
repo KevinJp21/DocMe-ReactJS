@@ -18,6 +18,8 @@ import ChatBotGreeting from './Animations/DocMe Chatbot.gif';
 //íconos
 import CalendarIcon  from './icons/calendar.svg';
 import LocationIcon from './icons/location-plus.svg';
+import ChatBotIcon from './icons/ChatBot.svg'
+import ClinicHistoryIcon from './icons/clinic-history.svg'
 
 
 const Assets = {
@@ -39,6 +41,8 @@ const Assets = {
   icons: {
     CalendarIcon,
     LocationIcon,
+    ChatBotIcon,
+    ClinicHistoryIcon,
   },
 };
 

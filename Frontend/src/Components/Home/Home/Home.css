@@ -338,12 +338,12 @@
 .CardService{
     display: flex;
     align-items: center;
-    gap: 50px;
-    width: 80%;
+    gap: 20px;
+    width: 60%;
     height: 100%;
     padding: 20px;
     border-radius: 20px;
-    background: var(--light-black);
+    background: var(--bg-gray);
 
 }
 
@@ -375,7 +375,7 @@
 }
 
 .cardServiceTitle h4{
-    color: var(--light-color-font);
+    color: var(--blue-font);
     font-size: min(25px, 7vw);
     font-weight:600;
 }
@@ -414,6 +414,6 @@
 @media screen and (max-width: 600px){
     .CardService{
         flex-direction: column !important;
-
+        width: 100%;
     }
 }
