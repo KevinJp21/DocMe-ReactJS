@@ -33,7 +33,7 @@ const Home = () => {
                     </div>
 
                     <div className="AppoBTNContainer">
-                        <Link className="LinkContentHome Appo HomeBTN" to="/DocMe/login"><span className='linkText'>Agenda tu Cita</span></Link>
+                        <Link className="LinkContentHome Appo HomeBTN" to="/login"><span className='linkText'>Agenda tu Cita</span></Link>
                     </div>
 
                     <div className="imgMedHome">
@@ -63,7 +63,7 @@ const Home = () => {
                             </div>
 
                             <div className="AboutBTNContainer">
-                                <Link className="LinkContentHome HomeBTN" to="/DocMe/#"><span className='linkText'>Saber Más</span></Link>
+                                <Link className="LinkContentHome HomeBTN" to="/#"><span className='linkText'>Saber Más</span></Link>
                             </div>
                         </div>
 

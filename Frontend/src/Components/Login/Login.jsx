@@ -17,7 +17,7 @@ function LoginForm() {
     // Observamos los cambios en isLoggedIn y userRole
     useEffect(() => {
         if (isLoggedIn && userRole) {
-            navigate(`/DocMe/${userRole}/dashboard`);
+            navigate(`/${userRole}/dashboard`);
         }
     }, [isLoggedIn, userRole, navigate]);
 
@@ -90,7 +90,7 @@ function LoginForm() {
                     </div>
                     <button className="btn btnLogin" type="submit" disabled={loading}>Iniciar sesión</button>
                     <a className="link" href="/recovery_pass">¿Olvidaste tu contraseña?</a>
-                    <span>¿No tienes cuenta? <Link className="signUp" to="/DocMe/signup">Regístrate aquí</Link></span>
+                    <span>¿No tienes cuenta? <Link className="signUp" to="/signup">Regístrate aquí</Link></span>
                 </form>
             </div>
         </div>

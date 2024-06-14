@@ -14,7 +14,7 @@ export const useLogout = () => {
 
         if (response.ok) {
             setIsLoggedIn(false);
-            navigate('/DocMe/login');
+            navigate('/home');
         } else {
             console.error('Failed to logout');
         }
