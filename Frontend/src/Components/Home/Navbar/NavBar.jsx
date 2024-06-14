@@ -14,15 +14,15 @@ const NavBar = () => {
         <header>
             <nav className='NavBarHome'>
                 <div className="containerNavHome">
-                    <Link className='LogoHome' to="/DocMe/home"><img className='img-fluid' src={LogoDocmeSVG} alt="DocMe Logo" /></Link>
+                    <Link className='LogoHome' to="/home"><img className='img-fluid' src={LogoDocmeSVG} alt="DocMe Logo" /></Link>
                     <div className={`navHome ${menuOpen ? 'NavHomeOpen' : ''}`}>
                         <ul className="menuHome">
-                            <li><Link className="LinkNavHome About" to="/DocMe/#"><span className='linkText'>Quienes Somos</span></Link></li>
-                            <li><Link className="LinkNavHome HowWork" to="/DocMe/#"><span className='linkText'>Cómo Funciona</span></Link></li>
-                            <li><Link className="LinkNavHome Contact" to="/DocMe/#"><span className='linkText'>Contactanos</span></Link></li>
-                            <li><Link className="LinkNavHome LoginBTN" to="/DocMe/login"><span className='linkText'>Iniciar Sesión</span></Link></li>
-                            <li><Link className="LinkNavHome SignUpBTN" to="/DocMe/signup"><span className='linkText'>Regístrate</span></Link></li>
-                            <li className='BTNStart ms-2'><Link className="LinkNavHome StartNow" to="/DocMe/login"><span className='linkText'>¡Comienza Ahora!</span></Link></li>
+                            <li><Link className="LinkNavHome About" to="/#"><span className='linkText'>Quienes Somos</span></Link></li>
+                            <li><Link className="LinkNavHome HowWork" to="/#"><span className='linkText'>Cómo Funciona</span></Link></li>
+                            <li><Link className="LinkNavHome Contact" to="/#"><span className='linkText'>Contactanos</span></Link></li>
+                            <li><Link className="LinkNavHome LoginBTN" to="/login"><span className='linkText'>Iniciar Sesión</span></Link></li>
+                            <li><Link className="LinkNavHome SignUpBTN" to="/signup"><span className='linkText'>Regístrate</span></Link></li>
+                            <li className='BTNStart ms-2'><Link className="LinkNavHome StartNow" to="/login"><span className='linkText'>¡Comienza Ahora!</span></Link></li>
                         </ul>
                     </div>
                     <div className={`hamburger ${menuOpen ? 'NavHomeOpen' : ''}`} onClick={toggleMenu}>
