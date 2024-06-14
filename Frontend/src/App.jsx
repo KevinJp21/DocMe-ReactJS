@@ -16,17 +16,17 @@ function App() {
   }
 
   // Construye la ruta del dashboard basado en el rol
-  const dashboardPath = `/DocMe/${userRole}/dashboard`;
+  const dashboardPath = `/${userRole}/dashboard`;
 
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/DocMe/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={dashboardPath} />} />
-          <Route path="/DocMe/signup" element={!isLoggedIn ? <SignUp /> : <Navigate to={dashboardPath} />} />
-          <Route path={dashboardPath} element={isLoggedIn ? <Dashboard /> : <Navigate to="/DocMe/login" />} />
-          <Route path="/DocMe/home" element={<Main />} />
-          <Route path="*" element={<Navigate to={isLoggedIn ? dashboardPath : "/DocMe/home"} />} />
+          <Route path="/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={dashboardPath} />} />
+          <Route path="/signup" element={!isLoggedIn ? <SignUp /> : <Navigate to={dashboardPath} />} />
+          <Route path={dashboardPath} element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route path="/home" element={<Main />} />
+          <Route path="*" element={<Navigate to={isLoggedIn ? dashboardPath : "/home"} />} />
         </Routes>
       </Suspense>
 
