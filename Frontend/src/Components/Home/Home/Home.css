@@ -162,6 +162,7 @@
 
 .AboutTextContent p{
     color: var(--blue-font);
+    font-weight: 300 !important;
     font-size: min(20px, 5vw);
     font-weight: 400;
 }
@@ -268,7 +269,8 @@
     margin: 0;
     text-wrap:balance;
     text-align: center;
-    color: var(--light-color-font);
+    color: var(--blue-font);
+    font-weight:300;
     font-size: 16px;
     font-weight: 300;
 }
@@ -321,7 +323,8 @@
     margin: 0;
     text-wrap:balance;
     text-align: center;
-    color: var(--light-color-font);
+    color: var(--blue-font);
+    font-weight:300;
     font-size: 16px;
     font-weight: 300;
 }
@@ -381,7 +384,8 @@
 }
 
 .CardServiceDescription p{
-    color: var(--light-color-font);
+    color: var(--blue-font);
+    font-weight:300;
     font-size: min(15px, 5vw);
 }
 
