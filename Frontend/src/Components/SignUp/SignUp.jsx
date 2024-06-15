@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
-import LogoDocmeSVG from '../../assets/img/DocMe_logo.png';
+import Assets from '../../assets/Assets';
 
 function SignUp() {
     const [formData, setFormData] = useState({
@@ -65,7 +65,7 @@ function SignUp() {
 
     return (
         <div className="containerSignUp">
-            <img className="img-fluid logoIMG" src={LogoDocmeSVG} alt="Logo DocMe" />
+            <img className="logoIMG" src={Assets.logos.LogoDocMe} alt="Logo DocMe" />
             <div className="SignUpContent">
                 <form onSubmit={handleSignUp} className='SignUpForm'>
                     <h3>Registro</h3>

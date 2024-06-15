@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthContext";
 import './Login.css';
-import LogoDocmeSVG from '../../assets/img/DocMe_logo.png';
+import Assets from "../../assets/Assets";
 import { Link } from "react-router-dom";
 
 function LoginForm() {
@@ -55,7 +55,7 @@ function LoginForm() {
 
     return (
         <div className="containerForm">
-            <img src={LogoDocmeSVG} alt="Logo DocMe" className="img-fluid logoIMG" />
+            <img src={Assets.logos.LogoDocMe} alt="Logo DocMe" className="logoIMG" />
             <div className="contentLogin">
                 <form className="FormLogin" onSubmit={handleLogin}>
                     {errMsg && <div style={{ color: "#FF0000", textAlign: "left", fontSize: "20px" }}>{errMsg}</div>}
