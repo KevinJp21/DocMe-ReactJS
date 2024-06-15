@@ -462,7 +462,6 @@
 .ContentFigureHW img{
     position: relative;
     bottom: 0.3px;
-
     max-width: 100%;
     border-radius: 0% 0% 46% 50.5% / 0% 59% 55% 42%;
 }
@@ -471,6 +470,7 @@
 
 
 @media screen and (max-width: 670px) {
+
 
     .AboutContent {
         gap: 20px;
@@ -500,11 +500,30 @@
     .IMGHowWorkHome{
         width: 100%;
     }
+
+    .ContainerFigureHome{
+        margin-top: 40px;
+    }
+
+    .HeaderHWHome{
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .CardService {
         flex-direction: column !important;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .ContainerFigureHome{
+        margin: 0;
+    }
+    .ContentFigureHW img {
+        position: relative;
+        bottom: .5px;
+        border-radius: 0% 0% 46% 50.5% / 0% 59% 50% 45%;
     }
 }
