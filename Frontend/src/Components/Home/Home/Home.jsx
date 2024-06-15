@@ -203,7 +203,24 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
 
+            <section className='ContainerHowWorkHome'>
+                <div className="WrapperHowWorkHome">
+                    <div className='HeaderHWHome'>
+                        <h6>CÓMO FUNCIONA</h6>
+                        <h2>Acceder a servicios de salud nunca fue más fácil con DocMe</h2>
+                        <p>DocMe está revolucionando el acceso a la salud. Obtén la atención médica que necesitas en solo 5 pasos sencillos.</p>
+                    </div>
+                </div>
+
+                <div className='IMGHowWorkHome'>
+                    <div className="ContainerFigureHome">
+                        <div className="ContentFigureHW">
+                            <img src={Assets.images.HowWorkIMG} alt="Chica con telefono" />
+                        </div>
+                    </div>
+                </div>
             </section>
         </>
 

@@ -9,6 +9,7 @@
 
 :root{
   --azul-bg: #164757;
+  --blue-dark:#97D9EE;
   --light-black: #1E2229;
   --bg-gray:#F6F7FB;
   --white-font: #DEDEDE;
@@ -18,7 +19,7 @@
   --white: #fff;
   --green:#128F8B;
   --lead: hsl(162, 2%, 56%);
-  --blue: #1B81FE;
+  --blue: #1a82fe;
   --violet: hsl(272, 92%, 32%);
   --text-white: hsl(0, 0%, 100%);
   --text-light-gray:hsl(0, 0%, 90%);

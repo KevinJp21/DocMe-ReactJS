@@ -1,59 +1,59 @@
 /*--Seccion Home--*/
-.ContainerHome{
+.ContainerHome {
     padding: 0 20px 60px 20px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center right;
-    background-position-y:-250px ;
-    
+    background-position: center right;
+    background-position-y: -250px;
+
 }
 
-.ContentHome{
+.ContentHome {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.textContentHome h3{
+.textContentHome h3 {
     margin-bottom: 35px;
-    text-wrap:balance;
+    text-wrap: balance;
 }
 
-.HomeTextWrapper{
+.HomeTextWrapper {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.HomeTextWrapper h3{
+.HomeTextWrapper h3 {
     color: var(--blue-font);
     font-size: min(40px, 8vw);
     font-weight: 600;
 }
 
-.AppoBTNContainer{
+.AppoBTNContainer {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.HomeBTN{
+.HomeBTN {
     background-color: var(--blue-font);
     height: 55px;
     width: 241px;
     border-radius: 20px;
     cursor: pointer;
     transition: .3s ease;
-    border:1px solid var(--blue-font);
+    border: 1px solid var(--blue-font);
     text-decoration: none;
 }
 
-.HomeBTN:hover{
+.HomeBTN:hover {
     background-color: transparent;
-    border:1px solid var(--blue-font);
+    border: 1px solid var(--blue-font);
 }
 
-.HomeBTN span{
+.HomeBTN span {
     text-decoration: none;
     color: var(--white-font);
     width: 100%;
@@ -64,11 +64,11 @@
     transition: color .3s ease;
 }
 
-.HomeBTN span:hover{
+.HomeBTN span:hover {
     color: var(--blue-font);
 }
 
-.imgMedHome{
+.imgMedHome {
     width: 100%;
     height: 100%;
     margin-top: 61px;
@@ -78,7 +78,7 @@
 
 }
 
-.imgMedHome img{
+.imgMedHome img {
     object-fit: cover;
     max-height: 580px;
     min-height: 314px;
@@ -90,29 +90,29 @@
 
 /*--Seccion About--*/
 
-.ContainerAbout{
+.ContainerAbout {
     padding: 60px 20px 60px 20px;
 }
 
-.ContentAbout{
+.ContentAbout {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.textContentAbout h3{
+.textContentAbout h3 {
     margin-bottom: 10px;
-    text-wrap:balance;
+    text-wrap: balance;
     text-align: center;
 }
 
-.AboutTextWrapper h3{
+.AboutTextWrapper h3 {
     color: var(--blue-font);
     font-size: min(35px, 8vw);
     font-weight: 600;
 }
 
-.AboutContent{
+.AboutContent {
     max-width: 1100px;
     display: flex;
     justify-content: center;
@@ -121,26 +121,26 @@
     padding: 20px;
 }
 
-.AboutTextContent{
+.AboutTextContent {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.AboutBTNContainer{
+.AboutBTNContainer {
     width: 100%;
     display: flex;
 }
 
-.imgAbout{
+.imgAbout {
     width: 50%;
     background-color: var(--blue-font);
     clip-path: circle();
-    
+
 }
 
-.imgContent{
+.imgContent {
     width: 100%;
     height: 100%;
     display: flex;
@@ -149,18 +149,18 @@
 }
 
 
-.imgAbout img{
+.imgAbout img {
     max-width: 100%;
     height: auto;
 }
 
-.textContentAbout p{
+.textContentAbout p {
     margin: 0;
-    text-wrap:balance;
+    text-wrap: balance;
     text-align: left;
 }
 
-.AboutTextContent p{
+.AboutTextContent p {
     color: var(--blue-font);
     font-weight: 300 !important;
     font-size: min(20px, 5vw);
@@ -191,16 +191,17 @@
     font-weight: 600;
 }
 
-@keyframes slideLogo{
-    from{
+@keyframes slideLogo {
+    from {
         transform: translateX(0);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
 
-.CarouselLogosEPS{
+.CarouselLogosEPS {
     overflow: hidden;
     width: 100%;
     padding: 60px 0;
@@ -209,7 +210,7 @@
 }
 
 .CarouselLogosEPS::before,
-.CarouselLogosEPS::after{
+.CarouselLogosEPS::after {
     position: absolute;
     top: 0;
     width: 250px;
@@ -218,23 +219,24 @@
     z-index: 2;
 }
 
-.CarouselLogosEPS::before{
+.CarouselLogosEPS::before {
     left: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
 }
-.CarouselLogosEPS::after{
+
+.CarouselLogosEPS::after {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
-.LogoSlider{
+.LogoSlider {
     display: inline-flex;
     align-items: center;
     animation: slideLogo 10s infinite linear;
-    
+
 }
 
-.contentLogo img{
+.contentLogo img {
     width: 150px;
     margin: 0 40px;
 }
@@ -252,7 +254,7 @@
     align-items: center;
 }
 
-.textContentChatBot h3{
+.textContentChatBot h3 {
     margin-bottom: 10px;
     text-align: center;
 }
@@ -264,27 +266,27 @@
 }
 
 
-.PTextChatBotHome p{
+.PTextChatBotHome p {
     padding: 20px;
     margin: 0;
-    text-wrap:balance;
+    text-wrap: balance;
     text-align: center;
     color: var(--blue-font);
-    font-weight:300;
+    font-weight: 300;
     font-size: 16px;
     font-weight: 300;
 }
 
-.ContainerAnimatadCharBotHome{
-        max-width: 100%;
-        height: 100%;
-        margin-top: 61px;
-        display: flex;
-        justify-content: center;
-        align-items: end;
+.ContainerAnimatadCharBotHome {
+    max-width: 100%;
+    height: 100%;
+    margin-top: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
-.ContainerAnimatadCharBotHome video{
+.ContainerAnimatadCharBotHome video {
     object-fit: contain;
     max-width: 433px;
     min-width: 50%;
@@ -297,39 +299,39 @@
 
 /*--Seccion servicios--*/
 
-.ContainerServicesHome{
+.ContainerServicesHome {
     padding: 60px 20px 60px 20px;
 }
 
-.ContentServicesHome{
+.ContentServicesHome {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.textContentServices h3{
+.textContentServices h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.ServicesTextWrapper h3{
+.ServicesTextWrapper h3 {
     color: var(--blue-font);
     font-size: min(35px, 8vw);
     font-weight: 600;
 }
 
-.PTextServicesHome p{
+.PTextServicesHome p {
     padding: 20px;
     margin: 0;
-    text-wrap:balance;
+    text-wrap: balance;
     text-align: center;
     color: var(--blue-font);
-    font-weight:300;
+    font-weight: 300;
     font-size: 16px;
     font-weight: 300;
 }
 
-.CardServicesHome{
+.CardServicesHome {
     margin-top: 61px;
     display: flex;
     flex-wrap: wrap;
@@ -338,7 +340,7 @@
     align-content: center;
 }
 
-.CardService{
+.CardService {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -350,73 +352,158 @@
 
 }
 
-.CardService:nth-child(odd){
+.CardService:nth-child(odd) {
     flex-direction: row;
 }
 
-.CardService:nth-child(even){
+.CardService:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.imgCardService{
+.imgCardService {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imgCardService img{
+.imgCardService img {
     width: 90px;
 
 }
 
-.CardContentService{
+.CardContentService {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 
-.cardServiceTitle h4{
+.cardServiceTitle h4 {
     color: var(--blue-font);
     font-size: min(25px, 7vw);
-    font-weight:600;
+    font-weight: 600;
 }
 
-.CardServiceDescription p{
+.CardServiceDescription p {
     color: var(--blue-font);
-    font-weight:300;
-    font-size: min(15px, 5vw);
+    font-weight: 300;
+    font-size: min(16px, 5vw);
 }
+
+/*--Seccion como funciona--*/
+.ContainerHowWorkHome{
+    padding: 176px 20px 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0), var(--bg-color));
+}
+
+.HeaderHWHome h6{
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.HeaderHWHome h2{
+    color: var(--blue-font);
+    font-size: min(40px, 8vw);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.HeaderHWHome p{
+    color: var(--blue-font);
+    font-weight: 300;
+    font-size: min(16px, 5vw);
+}
+
+
+
+
+
+.WrapperHowWorkHome{
+    width: 50%;
+}
+
+.IMGHowWorkHome{
+    width: 50%;
+}
+
+.ContainerFigureHome{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.IMGHowWorkHome{
+    height: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ContentFigureHW {
+    display: flex;
+    align-items: end;
+    max-width: 100%;
+    max-height: 350px;
+    background-color: var(--blue-dark);
+    -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -webkit-border-radius: 60% 50% 50% 50% / 60% 60% 40% 40%;
+    border-radius: 50% 50% 50% 56% / 60% 60% 60% 47%;
+
+}
+
+.ContentFigureHW img{
+    position: relative;
+    bottom: 0.3px;
+
+    max-width: 100%;
+    border-radius: 0% 0% 46% 50.5% / 0% 59% 55% 42%;
+}
+
 
 
 
 @media screen and (max-width: 670px) {
-    
-    .AboutContent{
+
+    .AboutContent {
         gap: 20px;
     }
 
-    .AboutTextContent{
+    .AboutTextContent {
         width: 100%;
     }
 
-    .imgAbout{
+    .imgAbout {
         width: 100%;
     }
 
-    .AboutBTNContainer{
+    .AboutBTNContainer {
         justify-content: center;
     }
 
     .CarouselLogosEPS::before,
-    .CarouselLogosEPS::after{
+    .CarouselLogosEPS::after {
         width: 100px;
+    }
+
+    .WrapperHowWorkHome{
+        width: 100%;
+    }
+    
+    .IMGHowWorkHome{
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 600px){
-    .CardService{
+@media screen and (max-width: 600px) {
+    .CardService {
         flex-direction: column !important;
         width: 100%;
     }

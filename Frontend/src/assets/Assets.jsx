@@ -4,6 +4,7 @@ import React from 'react';
 import HomeBG from './img/DocMe_Home BG.webp';
 import MedVideoChat from './img/MedicoVideoChat.webp';
 import MedAbout from './img/DoctorIMGAbout.webp';
+import HowWorkIMG from './img/HowWorkHome.webp'
 
 //logotipos
 import LogoSanitas from './logos/EPS Sanitas.svg';
@@ -28,6 +29,7 @@ const Assets = {
     HomeBG,
     MedVideoChat,
     MedAbout,
+    HowWorkIMG,
   },
   logos: {
     LogoDocMe,
