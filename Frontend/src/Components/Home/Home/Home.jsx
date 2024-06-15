@@ -212,6 +212,50 @@ const Home = () => {
                         <h3>Acceder a servicios de salud nunca fue más fácil con DocMe</h3>
                         <p>DocMe está revolucionando el acceso a la salud. Obtén la atención médica que necesitas en solo 5 pasos sencillos.</p>
                     </div>
+
+                    <div className="ContentHWHome">
+                        <div className="CardHWHome">
+                            <div className="imgCardHW">
+                                <img src={Assets.icons.CalendarIcon} alt="" />
+                            </div>
+                            <div className="CardContentHW">
+                                <div className="cardHWTitle">
+                                    <h4>Agendamiento de Citas</h4>
+                                </div>
+                                <div className="CardHWDescription">
+                                    <p>Elige la fecha y hora que mejor te convengan para tus citas médicas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="CardHWHome">
+                            <div className="imgCardHW">
+                                <img src={Assets.icons.CalendarIcon} alt="" />
+                            </div>
+                            <div className="CardContentHW">
+                                <div className="cardHWTitle">
+                                    <h4>Escoge a tu Médico</h4>
+                                </div>
+                                <div className="CardHWDescription">
+                                    <p>Encuentra y elige al médico indicado para tú cita.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="CardHWHome">
+                            <div className="imgCardHW">
+                                <img src={Assets.icons.CalendarIcon} alt="" />
+                            </div>
+                            <div className="CardContentHW">
+                                <div className="cardHWTitle">
+                                    <h4>Notificaciones</h4>
+                                </div>
+                                <div className="CardHWDescription">
+                                    <p>Recibirás confirmaciones y recordatorios automáticos para que no olvides tus citas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='IMGHowWorkHome'>

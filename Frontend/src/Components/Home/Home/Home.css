@@ -396,6 +396,7 @@
     padding: 176px 20px 60px 20px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0), var(--bg-color));
 }
@@ -409,7 +410,7 @@
 
 .HeaderHWHome h3{
     color: var(--blue-font);
-    font-size: min(40px, 8vw);
+    font-size: min(40px, 7vw);
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -426,10 +427,12 @@
 
 .WrapperHowWorkHome{
     width: 50%;
+    padding: 20px;
 }
 
 .IMGHowWorkHome{
     width: 50%;
+
 }
 
 .ContainerFigureHome{
@@ -464,6 +467,47 @@
     bottom: 0.3px;
     max-width: 100%;
     border-radius: 0% 0% 46% 50.5% / 0% 59% 55% 42%;
+}
+
+.ContentHWHome{
+    margin-top: 20px;
+}
+
+.CardHWHome{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.imgCardHW{
+    min-width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--white-font);
+}
+
+.imgCardHW img{
+    width: 30px;
+}
+
+
+.cardHWTitle h4{
+    color: var(--blue-font);
+    font-size: min(24px, 7vw);
+    font-weight: 500;
+}
+
+.CardHWDescription p{
+    color: var(--blue-font);
+    font-weight: 300;
+    font-size: min(16px, 5vw);
+    margin-top: 10px;
 }
 
 
@@ -526,4 +570,5 @@
         bottom: .5px;
         border-radius: 0% 0% 46% 50.5% / 0% 59% 50% 45%;
     }
+
 }
