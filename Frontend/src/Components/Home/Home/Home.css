@@ -79,7 +79,7 @@
 }
 
 .imgMedHome img {
-    object-fit: contain;
+    object-fit: cover;
     max-height: 580px;
     min-height: 314px;
     min-width: 50%;
