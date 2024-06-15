@@ -1,9 +1,9 @@
 import React from 'react';
 
 //imágenes
-import HomeBG from './img/DocMe_Home BG.png';
+import HomeBG from './img/DocMe_Home BG.webp';
 import MedVideoChat from './img/MedicoVideoChat.webp';
-import MedAbout from './img/DoctorIMGAbout.png';
+import MedAbout from './img/DoctorIMGAbout.webp';
 
 //logotipos
 import LogoSanitas from './logos/EPS Sanitas.svg';
@@ -11,6 +11,7 @@ import LogoSura from './logos/Grupo Sura.svg';
 import LogoFamisanar from './logos/LogoFamisanar.webp';
 import LogoNuevaEPS from './logos/Nueva Eps.svg';
 import LogoCompensar from './logos/Compensar.svg';
+import LogoDocMe from './img/DocMe_logo.webp'
 
 //animaciones
 import ChatBotGreeting from './Animations/DocMe Chatbot.mp4';
@@ -29,6 +30,7 @@ const Assets = {
     MedAbout,
   },
   logos: {
+    LogoDocMe,
     LogoSanitas,
     LogoSura,
     LogoFamisanar,

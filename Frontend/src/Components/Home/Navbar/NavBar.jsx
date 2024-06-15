@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import LogoDocmeSVG from '../../../assets/img/DocMe_logo.png';
+import Assets from '../../../assets/Assets';
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const NavBar = () => {
         <header>
             <nav className='NavBarHome'>
                 <div className="containerNavHome">
-                    <Link className='LogoHome' to="/home"><img className='img-fluid' src={LogoDocmeSVG} alt="DocMe Logo" /></Link>
+                    <Link className='LogoHome' to="/home"><img src={Assets.logos.LogoDocMe} alt="DocMe Logo" /></Link>
                     <div className={`navHome ${menuOpen ? 'NavHomeOpen' : ''}`}>
                         <ul className="menuHome">
                             <li><Link className="LinkNavHome About" to="/#"><span className='linkText'>Quienes Somos</span></Link></li>
