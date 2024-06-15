@@ -13,7 +13,7 @@ import LogoNuevaEPS from './logos/Nueva Eps.svg';
 import LogoCompensar from './logos/Compensar.svg';
 
 //animaciones
-import ChatBotGreeting from './Animations/DocMe Chatbot.gif';
+import ChatBotGreeting from './Animations/DocMe Chatbot.mp4';
 
 //íconos
 import CalendarIcon  from './icons/calendar.svg';

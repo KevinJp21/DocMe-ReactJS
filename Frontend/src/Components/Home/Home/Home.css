@@ -284,7 +284,7 @@
         align-items: end;
 }
 
-.ContainerAnimatadCharBotHome img{
+.ContainerAnimatadCharBotHome video{
     object-fit: contain;
     max-width: 433px;
     min-width: 50%;

@@ -122,7 +122,7 @@ const Home = () => {
                     </div>
 
                     <div className='ContainerAnimatadCharBotHome'>
-                        <img src={Assets.animations.ChatBotGreeting} alt="Chatbot" />
+                        <video src={Assets.animations.ChatBotGreeting} alt="Chatbot" loop autoPlay muted />
                     </div>
 
                 </div>
