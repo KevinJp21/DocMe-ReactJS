@@ -464,6 +464,7 @@
 
 .ContentFigureHW img{
     object-fit: cover;
+    height: 100%;
     max-width: 100%;
 
 }
