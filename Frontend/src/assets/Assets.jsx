@@ -22,6 +22,9 @@ import CalendarIcon  from './icons/calendar.svg';
 import LocationIcon from './icons/location-plus.svg';
 import ChatBotIcon from './icons/ChatBot.svg'
 import ClinicHistoryIcon from './icons/clinic-history.svg'
+import DoctorIcon from './icons/doctorIcon.svg'
+import NotiIcon from './icons/notificationIcon.svg'
+import AppoIcon from './icons/appointmentIcon.svg'
 
 
 const Assets = {
@@ -47,6 +50,9 @@ const Assets = {
     LocationIcon,
     ChatBotIcon,
     ClinicHistoryIcon,
+    DoctorIcon,
+    NotiIcon,
+    AppoIcon,
   },
 };
 

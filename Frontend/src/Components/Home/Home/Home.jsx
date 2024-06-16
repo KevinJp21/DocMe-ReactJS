@@ -17,6 +17,36 @@ const Home = () => {
         Assets.logos.LogoCompensar
 
     ];
+
+    const CardHWContent = [//Contiene los detalles de las cards
+        {
+            icon: Assets.icons.CalendarIcon,
+            title: "Agendamiento de Citas",
+            description: "Elige la fecha y hora que mejor te convengan para tus citas médicas."
+        },
+        {
+            icon: Assets.icons.DoctorIcon,
+            title: "Escoge a tu Médico",
+            description: "Encuentra y elige al médico indicado para tú cita."
+        },
+        {
+            icon: Assets.icons.LocationIcon,
+            title: "Sugerencias de Centros de Atención",
+            description: "Basado en tu ubicación y necesidades, la plataforma te sugiere los centros de atención más cercanos y adecuados para ti."
+        },
+        {
+            icon: Assets.icons.NotiIcon,
+            title: "Notificaciones",
+            description: "Recibirás confirmaciones y recordatorios automáticos para que no olvides tus citas."
+        },
+        {
+            icon:Assets.icons.AppoIcon,
+            title:"Gestión de Citas",
+            description:"Visualiza, reprograma o cancela tus citas fácilmente desde la plataforma, manteniendo siempre un control claro de tu agenda médica."
+        }
+        
+    ];
+
     return (
         <>
             <section className='ContainerHome' style={{ backgroundImage: `url(${Assets.images.HomeBG})` }}>
@@ -214,47 +244,21 @@ const Home = () => {
                     </div>
 
                     <div className="ContentHWHome">
-                        <div className="CardHWHome">
-                            <div className="imgCardHW">
-                                <img src={Assets.icons.CalendarIcon} alt="" />
-                            </div>
-                            <div className="CardContentHW">
-                                <div className="cardHWTitle">
-                                    <h4>Agendamiento de Citas</h4>
+                        {CardHWContent.map((card, index) => (
+                            <div className="CardHWHome" key={index}>
+                                <div className="imgCardHW">
+                                    <img src={card.icon} alt="" />
                                 </div>
-                                <div className="CardHWDescription">
-                                    <p>Elige la fecha y hora que mejor te convengan para tus citas médicas.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="CardHWHome">
-                            <div className="imgCardHW">
-                                <img src={Assets.icons.CalendarIcon} alt="" />
-                            </div>
-                            <div className="CardContentHW">
-                                <div className="cardHWTitle">
-                                    <h4>Escoge a tu Médico</h4>
-                                </div>
-                                <div className="CardHWDescription">
-                                    <p>Encuentra y elige al médico indicado para tú cita.</p>
+                                <div className="CardContentHW">
+                                    <div className="cardHWTitle">
+                                        <h4>{card.title}</h4>
+                                    </div>
+                                    <div className="CardHWDescription">
+                                        <p>{card.description}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="CardHWHome">
-                            <div className="imgCardHW">
-                                <img src={Assets.icons.CalendarIcon} alt="" />
-                            </div>
-                            <div className="CardContentHW">
-                                <div className="cardHWTitle">
-                                    <h4>Notificaciones</h4>
-                                </div>
-                                <div className="CardHWDescription">
-                                    <p>Recibirás confirmaciones y recordatorios automáticos para que no olvides tus citas.</p>
-                                </div>
-                            </div>
-                        </div>
+                        ))};
                     </div>
                 </div>
 
