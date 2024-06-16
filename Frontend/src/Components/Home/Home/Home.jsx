@@ -40,11 +40,11 @@ const Home = () => {
             description: "Recibirás confirmaciones y recordatorios automáticos para que no olvides tus citas."
         },
         {
-            icon:Assets.icons.AppoIcon,
-            title:"Gestión de Citas",
-            description:"Visualiza, reprograma o cancela tus citas fácilmente desde la plataforma, manteniendo siempre un control claro de tu agenda médica."
+            icon: Assets.icons.AppoIcon,
+            title: "Gestión de Citas",
+            description: "Visualiza, reprograma o cancela tus citas fácilmente desde la plataforma, manteniendo siempre un control claro de tu agenda médica."
         }
-        
+
     ];
 
     return (
@@ -236,12 +236,12 @@ const Home = () => {
             </section>
 
             <section className='ContainerHowWorkHome'>
-                <div className="WrapperHowWorkHome">
                     <div className='HeaderHWHome'>
                         <h2>CÓMO FUNCIONA</h2>
                         <h3>Acceder a servicios de salud nunca fue más fácil con DocMe</h3>
                         <p>DocMe está revolucionando el acceso a la salud. Obtén la atención médica que necesitas en solo 5 pasos sencillos.</p>
                     </div>
+                <div className="WrapperHowWorkHome">
 
                     <div className="ContentHWHome">
                         {CardHWContent.map((card, index) => (
@@ -258,17 +258,20 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                        ))};
+                        ))}
                     </div>
-                </div>
 
-                <div className='IMGHowWorkHome'>
-                    <div className="ContainerFigureHome">
-                        <div className="ContentFigureHW">
-                            <img src={Assets.images.HowWorkIMG} alt="Chica con telefono" />
+
+                    <div className='IMGHowWorkHome'>
+                        <div className="ContainerFigureHome">
+                            <div className="ContentFigureHW">
+                                <img src={Assets.images.HowWorkIMG} alt="Chica con telefono" />
+                            </div>
                         </div>
                     </div>
+
                 </div>
+
             </section>
         </>
 

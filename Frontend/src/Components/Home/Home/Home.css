@@ -393,12 +393,18 @@
 
 /*--Seccion como funciona--*/
 .ContainerHowWorkHome{
-    padding: 176px 20px 60px 20px;
+    padding: 176px 5%  60px 5%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0), var(--bg-color));
+}
+
+.HeaderHWHome{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
 .HeaderHWHome h2{
@@ -422,54 +428,48 @@
 }
 
 
-
-
-
 .WrapperHowWorkHome{
-    width: 50%;
+    width: 100%;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 
 .IMGHowWorkHome{
     width: 50%;
-
 }
+
 
 .ContainerFigureHome{
+    display: flex;
+    align-items: center;
+    justify-content: end;
     height: 50vh;
-    display: flex;
-    align-items: center;
-}
-
-.IMGHowWorkHome{
-    height: 100%;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 .ContentFigureHW {
     display: flex;
-    align-items: end;
+    justify-content: center;
     max-width: 100%;
-    max-height: 350px;
+    height: 100%;
     background-color: var(--blue-dark);
-    -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    -webkit-border-radius: 60% 50% 50% 50% / 60% 60% 40% 40%;
-    border-radius: 50% 50% 50% 56% / 60% 60% 60% 47%;
-
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+    overflow: hidden;
 }
 
 .ContentFigureHW img{
-    position: relative;
-    bottom: 0.3px;
+    object-fit: cover;
     max-width: 100%;
-    border-radius: 0% 0% 46% 50.5% / 0% 59% 55% 42%;
+
 }
 
 .ContentHWHome{
+    width: 50%;
     margin-top: 20px;
 }
 
@@ -511,9 +511,24 @@
 }
 
 
+@media screen and (max-width: 1000px) {
 
+    
+    .ContainerFigureHome{
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .IMGHowWorkHome{
+        width: 100%;
+    }
+    
+    .ContentHWHome{
+        width: 100%;
+    }
+}
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 768px) {
 
 
     .AboutContent {
@@ -522,6 +537,10 @@
 
     .AboutTextContent {
         width: 100%;
+    }
+
+    .textContentAbout p{
+        text-align: center;
     }
 
     .imgAbout {
@@ -537,17 +556,6 @@
         width: 100px;
     }
 
-    .WrapperHowWorkHome{
-        width: 100%;
-    }
-    
-    .IMGHowWorkHome{
-        width: 100%;
-    }
-
-    .ContainerFigureHome{
-        margin-top: 40px;
-    }
 
     .HeaderHWHome{
         text-align: center;
@@ -566,10 +574,4 @@
         margin: 0;
         align-items: start;
     }
-    .ContentFigureHW img {
-        position: relative;
-        bottom: .5px;
-        border-radius: 0% 0% 46% 50.5% / 0% 59% 50% 45%;
-    }
-
 }
