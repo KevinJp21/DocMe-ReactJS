@@ -25,6 +25,10 @@ import ClinicHistoryIcon from './icons/clinic-history.svg'
 import DoctorIcon from './icons/doctorIcon.svg'
 import NotiIcon from './icons/notificationIcon.svg'
 import AppoIcon from './icons/appointmentIcon.svg'
+import user1 from './img/user1.webp'
+import user2 from './img/user2.webp'
+import user3 from './img/user3.webp'
+import user4 from './img/user4.webp'
 
 
 const Assets = {
@@ -33,6 +37,10 @@ const Assets = {
     MedVideoChat,
     MedAbout,
     HowWorkIMG,
+    user1,
+    user2,
+    user3,
+    user4,
   },
   logos: {
     LogoDocMe,

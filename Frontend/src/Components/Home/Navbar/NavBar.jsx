@@ -14,7 +14,7 @@ const NavBar = () => {
         <header>
             <nav className='NavBarHome'>
                 <div className="containerNavHome">
-                    <Link className='LogoHome' to="/home"><img src={Assets.logos.LogoDocMe} alt="DocMe Logo" /></Link>
+                    <Link className='LogoHome' to="/home"><img src={Assets.logos.LogoDocMe} alt="DocMe Logo" width={"150pxpx"} height={"73pxpx"}/></Link>
                     <div className={`navHome ${menuOpen ? 'NavHomeOpen' : ''}`}>
                         <ul className="menuHome">
                             <li><Link className="LinkNavHome About" to="/#"><span className='linkText'>Quienes Somos</span></Link></li>

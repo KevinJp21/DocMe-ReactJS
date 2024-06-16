@@ -238,6 +238,7 @@
 
 .contentLogo img {
     width: 150px;
+    object-fit: contain;
     margin: 0 40px;
 }
 

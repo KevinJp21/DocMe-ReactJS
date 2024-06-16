@@ -50,25 +50,25 @@ const Home = () => {
 
     const testimonials = [//Contiene los testimonios de los usuarios
         {
-            img: "https://c.pxhere.com/photos/e8/60/smile_profile_face_male_portrait_young_person_glasses-451653.jpg!d",
+            img: Assets.images.user1,
             text: "DocMe ha facilitado mucho el proceso de encontrar y agendar citas con especialistas. ¡Excelente servicio!",
             name: "Orlando Lotter",
             city: "Barranquilla"
         },
         {
-            img: "https://i.pinimg.com/736x/ba/fe/b7/bafeb72712354eac2d71d8b6639156a8.jpg",
+            img: Assets.images.user2,
             text: "Hablar con el chatbot de DocMe fue como tener una consulta inicial. Muy útil y fácil de usar.",
             name: "Andrea Zapata",
             city: "Cartagena"
         },
         {
-            img: "https://i.pinimg.com/736x/03/19/8d/03198defbf9905613bedbbdd2323228d.jpg",
+            img: Assets.images.user3,
             text: "La mejor plataforma para agendar citas médicas sin tener que salir de casa. ¡Muy recomendable!",
             name: "Carlos Gutierrez",
             city: "Medellín"
         },
         {
-            img: "https://i.pinimg.com/736x/6c/0b/b0/6c0bb09014da69cab469bed9e49732e8.jpg",
+            img: Assets.images.user4,
             text: "DocMe ha transformado mi forma de gestionar las citas médicas, haciendo todo mucho más fácil y rápido.",
             name: "Laura Pérez",
             city: "Bogotá"
@@ -166,7 +166,7 @@ const Home = () => {
                     </div>
 
                     <div className="imgMedHome">
-                        <img src={Assets.images.MedVideoChat} alt="medico en video llamada" />
+                        <img src={Assets.images.MedVideoChat} alt="medico en video llamada" width={"860px"} height={"580px"}/>
 
 
                     </div>
@@ -198,7 +198,7 @@ const Home = () => {
 
                         <div className="imgAbout">
                             <div className="imgContent">
-                                <img src={Assets.images.MedAbout} alt="" />
+                                <img src={Assets.images.MedAbout} alt="" width={"376px"} height={"236px"}/>
                             </div>
                         </div>
                     </div>
@@ -219,14 +219,14 @@ const Home = () => {
                         <div className="LogoSlider">
                             {epsLogos.map((logo, index) => (
                                 <div className="contentLogo" key={index} >
-                                    <img src={logo} alt={`Logo EPS ${index + 1}`} />
+                                    <img src={logo} alt={`Logo EPS ${index + 1}`} width={"160px"} height={"130px"} />
                                 </div>
                             ))}
                         </div>
                         <div className="LogoSlider">
                             {epsLogos.map((logo, index) => (
                                 <div className="contentLogo" key={index}  >
-                                    <img src={logo} alt={`Logo EPS ${index + 1}`} />
+                                    <img src={logo} alt={`Logo EPS ${index + 1}`} width={"160px"} height={"130px"} />
                                 </div>
                             ))}
                         </div>
@@ -278,7 +278,7 @@ const Home = () => {
                 <div className='CardServicesHome'>
                     <div className="CardService">
                         <div className="imgCardService">
-                            <img src={Assets.icons.CalendarIcon} alt="" />
+                            <img src={Assets.icons.CalendarIcon} alt="" width={"90px"} height={"90px"}/>
                         </div>
                         <div className="CardContentService">
                             <div className="cardServiceTitle">
@@ -292,7 +292,7 @@ const Home = () => {
 
                     <div className="CardService">
                         <div className="imgCardService">
-                            <img src={Assets.icons.LocationIcon} alt="" />
+                            <img src={Assets.icons.LocationIcon} alt="" width={"90px"} height={"90px"}/>
                         </div>
                         <div className="CardContentService">
                             <div className="cardServiceTitle">
@@ -306,7 +306,7 @@ const Home = () => {
 
                     <div className="CardService">
                         <div className="imgCardService">
-                            <img src={Assets.icons.ChatBotIcon} alt="" />
+                            <img src={Assets.icons.ChatBotIcon} alt="" width={"90px"} height={"90px"}/>
                         </div>
                         <div className="CardContentService">
                             <div className="cardServiceTitle">
@@ -320,7 +320,7 @@ const Home = () => {
 
                     <div className="CardService">
                         <div className="imgCardService">
-                            <img src={Assets.icons.ClinicHistoryIcon} alt="" />
+                            <img src={Assets.icons.ClinicHistoryIcon} alt="" width={"90px"} height={"90px"}/>
                         </div>
                         <div className="CardContentService">
                             <div className="cardServiceTitle">
@@ -346,7 +346,7 @@ const Home = () => {
                         {CardHWContent.map((card, index) => (
                             <div className="CardHWHome" key={index}>
                                 <div className="imgCardHW">
-                                    <img src={card.icon} alt="" />
+                                    <img src={card.icon} alt="" width={"30px"} height={"30px"}/>
                                 </div>
                                 <div className="CardContentHW">
                                     <div className="cardHWTitle">
@@ -364,7 +364,7 @@ const Home = () => {
                     <div className='IMGHowWorkHome'>
                         <div className="ContainerFigureHome">
                             <div className="ContentFigureHW">
-                                <img src={Assets.images.HowWorkIMG} alt="Chica con telefono" />
+                                <img src={Assets.images.HowWorkIMG} alt="Chica con telefono" width={"480px"} height={"480px"}/>
                             </div>
                         </div>
                     </div>
