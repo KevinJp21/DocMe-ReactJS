@@ -39,7 +39,7 @@
 }
 
 .imgFooter p{
-    color: var(--blue-font);
+    color: var(--blue-whiteBG);
     font-size: 16px;
     font-weight: 700;
     text-align: center;
@@ -53,7 +53,7 @@
 
 
 .col h3{
-    color: var(--blue);
+    color: var(--blue-whiteBG);
     font-size: min(18px, 8vw);
     font-weight: 600;
     margin-bottom: 16px;
@@ -102,14 +102,14 @@
 
 .col.Contact p a{
     text-decoration: none;
-    color: var(--blue);
+    color: var(--blue-whiteBG);
     font-size: 16px;
     font-weight: 500;
     transition: color .3s ease-out;
 }
 
 .col.Contact p a:hover{
-    color: var(--blue-hover);
+    color: var(--blue-font);
 }
 
 .Contact .LogosSocialMed{

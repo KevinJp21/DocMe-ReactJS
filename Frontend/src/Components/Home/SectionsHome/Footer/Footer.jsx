@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className='FooterContainer'>
             <div className="FooterContent">
                 <div className="col imgFooter">
-                    <img src={Assets.logos.LogoDocMe} />
+                    <img src={Assets.logos.LogoDocMe} alt='LogoDocMe'/>
                     <p>Tu salud, nuestra prioridad</p>
                 </div>
                 <div className="col LinksHome">
