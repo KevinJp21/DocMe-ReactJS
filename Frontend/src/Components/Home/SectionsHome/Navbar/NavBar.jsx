@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import Assets from '../../../assets/Assets';
+import Assets from '../../../../assets/Assets';
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);

@@ -1,0 +1,72 @@
+/*--CSS responsive--*/
+@media screen and (max-width: 1000px) {
+
+    
+    .ContainerFigureHome{
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .IMGHowWorkHome{
+        width: 100%;
+    }
+    
+    .ContentHWHome{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .AboutContent {
+        gap: 20px;
+    }
+
+    .AboutTextContent {
+        width: 100%;
+    }
+
+    .textContentAbout p{
+        text-align: center;
+    }
+
+    .imgAbout {
+        width: 100%;
+    }
+
+    .AboutBTNContainer {
+        justify-content: center;
+    }
+
+    .CarouselLogosEPS::before,
+    .CarouselLogosEPS::after {
+        width: 100px;
+    }
+
+
+    .HeaderHWHome{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .CardService {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .ContainerSliderTesti{
+
+        -ms-flex-order: 5;
+
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .ContainerFigureHome{
+        margin: 0;
+        align-items: start;
+    }
+}

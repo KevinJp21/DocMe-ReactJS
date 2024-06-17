@@ -1,0 +1,74 @@
+/*--Seccion EPS's*/
+
+.ContainerEPS {
+    padding: 60px 0 60px 0;
+}
+
+.ContentEPS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textContentEPS h3 {
+    margin-bottom: 10px;
+    text-wrap: balance;
+    text-align: center;
+}
+
+.EPSTextWrapper h3 {
+    color: var(--blue-font);
+    font-size: min(35px, 8vw);
+    font-weight: 600;
+}
+
+@keyframes slideLogo {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.CarouselLogosEPS {
+    overflow: hidden;
+    width: 100%;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.CarouselLogosEPS::before,
+.CarouselLogosEPS::after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.CarouselLogosEPS::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.CarouselLogosEPS::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.LogoSlider {
+    display: inline-flex;
+    align-items: center;
+    animation: slideLogo 10s infinite linear;
+
+}
+
+.contentLogo img {
+    width: 150px;
+    object-fit: contain;
+    margin: 0 40px;
+}

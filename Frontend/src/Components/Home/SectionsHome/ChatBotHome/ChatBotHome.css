@@ -1,0 +1,55 @@
+/*--Seccion DocMe ChatBot*/
+
+.ContainerChatBotHome {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0), var(--bg-color));
+    padding: 60px 20px 60px 20px;
+}
+
+.ContentChatBotHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textContentChatBot h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ChatBotTextWrapper h3 {
+    color: var(--blue-font);
+    font-size: min(35px, 8vw);
+    font-weight: 600;
+}
+
+
+.PTextChatBotHome p {
+    padding: 20px;
+    margin: 0;
+    text-wrap: balance;
+    text-align: center;
+    color: var(--blue-font);
+    font-weight: 300;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.ContainerAnimatadCharBotHome {
+    max-width: 100%;
+    height: 100%;
+    margin-top: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.ContainerAnimatadCharBotHome video {
+    object-fit: contain;
+    max-width: 433px;
+    min-width: 50%;
+    max-height: 852px;
+    border-radius: 15px;
+    border: 10px solid var(--white);
+    box-shadow: rgba(0, 0, 0, .24) 0px 10px 20px;
+
+}

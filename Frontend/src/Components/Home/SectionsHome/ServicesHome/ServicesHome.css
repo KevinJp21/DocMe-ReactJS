@@ -1,0 +1,93 @@
+/*--Seccion servicios--*/
+
+.ContainerServicesHome {
+    padding: 60px 20px 60px 20px;
+}
+
+.ContentServicesHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textContentServices h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ServicesTextWrapper h3 {
+    color: var(--blue-font);
+    font-size: min(35px, 8vw);
+    font-weight: 600;
+}
+
+.PTextServicesHome p {
+    padding: 20px;
+    margin: 0;
+    text-wrap: balance;
+    text-align: center;
+    color: var(--blue-font);
+    font-weight: 300;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.CardServicesHome {
+    margin-top: 61px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.CardService {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--bg-gray);
+
+}
+
+.CardService:nth-child(odd) {
+    flex-direction: row;
+}
+
+.CardService:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.imgCardService {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgCardService img {
+    width: 90px;
+
+}
+
+.CardContentService {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.cardServiceTitle h4 {
+    color: var(--blue-font);
+    font-size: min(25px, 7vw);
+    font-weight: 600;
+}
+
+.CardServiceDescription p {
+    color: var(--blue-font);
+    font-weight: 300;
+    font-size: min(16px, 5vw);
+}
