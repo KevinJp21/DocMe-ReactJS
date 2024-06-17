@@ -29,6 +29,8 @@ import user1 from './img/user1.webp'
 import user2 from './img/user2.webp'
 import user3 from './img/user3.webp'
 import user4 from './img/user4.webp'
+import GitHubIcon from './icons/LogoGitHub.svg'
+import LinkedinIcon from './icons/LinkedinIcon.svg'
 
 
 const Assets = {
@@ -61,6 +63,8 @@ const Assets = {
     DoctorIcon,
     NotiIcon,
     AppoIcon,
+    GitHubIcon,
+    LinkedinIcon,
   },
 };
 

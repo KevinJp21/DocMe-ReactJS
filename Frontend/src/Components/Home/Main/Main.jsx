@@ -10,6 +10,9 @@ const ServicesHome = lazy(() => import('../SectionsHome/ServicesHome/ServicesHom
 const HowWorkHome = lazy(() => import('../SectionsHome/HowWorkHome/HowWorkHome'));
 const Testimonials = lazy(() => import('../SectionsHome/Testimonials/Testimonials'));
 
+import Footer from '../SectionsHome/Footer/Footer';
+
+
 
 const LazyLoadSection = ({ component: Component, fallback, shouldLoad }) => { // Definición del componente funcional LazyLoadSection
 
@@ -78,7 +81,7 @@ const Main = () => {
                 <LazyLoadSection component={HowWorkHome} fallback={<div>Loading HowWorkHome...</div>} />
                 <LazyLoadSection component={Testimonials} fallback={<div>Loading Testimonials...</div>} />
             </main>
-            <footer></footer>
+            <Footer />
         </div>
     );
 };

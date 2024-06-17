@@ -1,0 +1,163 @@
+.FooterContainer{
+    padding: 100px 4% 60px ;
+    background: var(--bg-color);
+}
+
+.FooterContent{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FooterContent .col.imgFooter{
+    width: 33.3%;
+    padding: 0 12px 0 12px;
+}
+
+.FooterContent .col.LinksHome{
+    width: 33.3%;
+    padding: 0 12px 0 12px;
+}
+
+.FooterContent .col.Contact{
+    width: 33.3%;
+    padding: 0 12px 0 12px;
+}
+
+.imgFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.imgFooter img{
+    object-fit: contain;
+    max-width: 300px;
+    width: 90%;
+    max-height: 200px;
+    height: 100%;
+}
+
+.imgFooter p{
+    color: var(--blue-font);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.FooterContent .col.LinksHome{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.col h3{
+    color: var(--blue);
+    font-size: min(18px, 8vw);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.MenuNavFooter{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.MenuNavFooter li{
+    list-style: none;
+    padding-bottom: 14px;
+    width: 150px;
+}
+
+.MenuNavFooter li a{
+    text-decoration: none;
+    list-style: none;
+    color: var(--blue-font);
+    font-size: 12px;
+    font-weight: 500;
+    transition: color .3s ease-out;
+}
+
+.MenuNavFooter li a:hover{
+    color: var(--blue-hover);
+}
+
+.FooterContent .col.Contact{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.col.Contact p{
+    color: var(--blue-font);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    text-wrap:balance;
+}
+
+.col.Contact p a{
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color .3s ease-out;
+}
+
+.col.Contact p a:hover{
+    color: var(--blue-hover);
+}
+
+.Contact .LogosSocialMed{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.Contact .LogosSocialMed a{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Contact .LogosSocialMed a img{
+    width: 33px;
+}
+
+@media screen and (max-width: 1000px) {
+    .FooterContent{
+        row-gap: 20px;
+    }
+    .FooterContent .col.imgFooter{
+        width: 100%;
+    }
+    
+    .FooterContent .col.LinksHome{
+        width: 60%;
+        padding: 20px;
+    }
+    
+    .FooterContent .col.Contact{
+        width: 40%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .FooterContent .col.LinksHome{
+        width: 100%;
+        align-items: start;
+    }
+    
+    .FooterContent .col.Contact{
+        width: 100%;
+    }
+
+   
+  
+}
+
