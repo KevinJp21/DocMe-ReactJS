@@ -34,7 +34,7 @@ const LazyLoadSection = ({ component: Component, fallback, shouldLoad }) => { //
           {
               root: null, // Utiliza el viewport como el contenedor root
               rootMargin: '0px', // Sin margen adicional alrededor del root
-              threshold: 0.1, // Porcentaje del elemento que debe estar visible para activar la callback
+              threshold: 0.5, // Porcentaje del elemento que debe estar visible para activar la callback
           }
       );
 
