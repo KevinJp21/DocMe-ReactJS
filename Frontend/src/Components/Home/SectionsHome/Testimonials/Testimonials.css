@@ -118,3 +118,21 @@
     background-color: var(--blue-dark);
 
 }
+
+/*--CSS responsive--*/
+@media screen and (max-width: 1000px) {
+
+    
+    .ContainerFigureHome{
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .IMGHowWorkHome{
+        width: 100%;
+    }
+    
+    .ContentHWHome{
+        width: 100%;
+    }
+}

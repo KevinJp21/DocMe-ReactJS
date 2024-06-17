@@ -91,3 +91,12 @@
     font-weight: 300;
     font-size: min(16px, 5vw);
 }
+
+/*--CSS responsive--*/
+
+@media screen and (max-width: 600px) {
+    .CardService {
+        flex-direction: column !important;
+        width: 100%;
+    } 
+}

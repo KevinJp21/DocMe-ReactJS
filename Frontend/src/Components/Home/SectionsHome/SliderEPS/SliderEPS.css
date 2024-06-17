@@ -72,3 +72,28 @@
     object-fit: contain;
     margin: 0 40px;
 }
+
+/*--CSS responsive--*/
+@media screen and (max-width: 1000px) {
+
+    
+    .ContainerFigureHome{
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .IMGHowWorkHome{
+        width: 100%;
+    }
+    
+    .ContentHWHome{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .CarouselLogosEPS::before,
+    .CarouselLogosEPS::after {
+        width: 100px;
+    }
+}
