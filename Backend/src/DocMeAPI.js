@@ -13,6 +13,7 @@ const frontendURL = isProduction
   ? process.env.FRONTEND_URL_PROD
   : process.env.FRONTEND_URL_DEV;
 
+app.set('trust proxy', 1); // Para confiar en el primer encabezado X-Forwarded-*
 app.use(express.json());
 app.use(
   cors({
