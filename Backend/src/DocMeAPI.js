@@ -3,6 +3,9 @@ const cors = require('cors');
 const db = require('../config/config'); // Asegúrate de que la ruta sea correcta
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const isProduction = process.env.NODE_ENV === 'production';

@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthContext/AuthContext";
 import './Login.css';
 import Assets from "../../assets/Assets";
 import { Link } from "react-router-dom";
+import VariablesEnv from "../AuthContext/VariablesEnv";
 
 function LoginForm() {
     const [username, setUsername] = useState("");
@@ -27,7 +28,7 @@ function LoginForm() {
         setErrMsg("");
     
         try {
-            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+            const response = await fetch(`${VariablesEnv.backendURL}/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
