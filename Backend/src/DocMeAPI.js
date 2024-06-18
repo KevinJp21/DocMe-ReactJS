@@ -33,7 +33,7 @@ app.use(
       secure: isProduction,
       httpOnly: true,
       maxAge: 86400000, // Ejemplo: expira en 1 día
-      SameSite: none
+      sameSite: 'none'
     },
   })
 );
