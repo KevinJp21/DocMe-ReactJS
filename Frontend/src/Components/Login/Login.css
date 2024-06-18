@@ -1,78 +1,141 @@
-.containerForm{
-    min-height: 100vh;
-    padding: 60px 15px;
+.containerFormLogin{
+   min-height: 100vh;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+}
+
+.LoginWrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow-x: auto;
+    padding: 20px;
+    height: 737px;
+    max-width: 400px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .24) 0px 10px 20px;
     
 }
 
-.contentLogin{
+.LoginHeader{
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
     align-items: center;
-    text-align: center;
-    height: 600px;
-    background: #267089;
+    height: 33.3%;
+    width: 100%;
+}
 
+.LoginHeader img{
+    object-fit: contain;
+    max-width: 234px;
+    width: 100%;
+}
+
+.LoginHeader h3{
+    color: var(--blue-font);
+    font-size: min(25px, 7vw);
+    font-weight: 600;
+    text-align: center;
 }
 
 .contentLogin{
-    border-color: #226479;
-    border: 3px solid #226479;
-    border-bottom: 8px solid #226479;
-    padding: 30px 20px;
-    border-radius: 20px;
-}
-
-.contentLogin h3{
-    font-weight: 700;
-    font-size: 28px;
-    text-align: center;
-    line-height: 1.2;
-    width: 50%;
-    color: var(--text-white);
-}
-
-#inputLoginUser::placeholder, #inputLoginPass::placeholder{
-    color: rgb(175, 170, 170);
-    font-weight: bold;
-}
-
-
-
-.logoIMG{
-    height: 200px;
-
+    height: 50%;
+    width: 100%;
 }
 
 .FormLogin{
-    width: 353px;
-    height: 455px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    height: 100%;
+}
+
+.contentInputLogin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.contentInputLogin label{
+    color: var(--blue-font);
+    font-size: min(15px, 8vw);
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+.BodyInput input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 11.2px 11px;
+    border: 1px solid var(--blue-font);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: border .3s ease-in;
+}
+
+.BodyInput input:focus{
+    outline: none; 
+}
+
+.btnLogin{
+    width: 100%;
+    padding: 14px 11px;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: var(--blue-font);
+    color: var(--white-font);
+    font-size: 17px;
+    font-weight: 400;
+    border: 1px solid var(--blue-font);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.btnLogin:hover{
+    box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+   
+
+}
+
+.LoginFooter{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   height: 16,7%;
 }
 
-.contentLogin .contentInputLogin{
-    margin: 25px 0;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border-color);
+
+
+.LoginFooter{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    text-wrap: pretty;
 }
 
-.contentLogin .contentInputLogin{
-    width: 100%;
+.LoginFooter a{
+    text-decoration: none;
+    color: var(--blue);
+    transition: color .3s ease-in-out;
 }
 
-.contentInputLogin input{
-    width: 100%;
+.LoginFooter a:hover{
+    color: var(--blue-hover);
 }
 
-.contentLogin .contentInputLogin.dni{
-    margin-top: 0;
+.LoginFooter span{
+    color: var(--blue-font);
 }
 
 /* Para tener transparencia y cambiar el color de fondo al mismo tiempo cuando el navegador autocomplete los datos */
@@ -82,79 +145,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px transparent inset !important;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #ffffff;
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: inset 0 0 20px 20px #23232329;
-}
-
-.contentInputLogin .BodyInput input{
-    height: 100%;
-    border: none;
-    outline: none;
-    background: none;
-    padding: 0.5rem 0.7rem;
-    font-size: 1.2rem;
-    color: var(--text-white);
-    font-family: 'Poppins', sans-serif;
-}
-.contentInputLogin.pass{
-    margin-bottom: 4px;
-}
-.link{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    margin-top: 50px;
-    font-weight: bold;
-}
-.link:hover{
-    color: #25c3f8;
-    text-decoration:underline;
-}
-
-.signUp{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    margin-top: 2px;
-    font-weight: bold;
-
-}
-.signUp:hover{
-    color: #25c3f8;
-    text-decoration:underline;
-
-}
-.btnLogin{
-    display: block;
-    width: 100%;
-    height: 45px;
-    box-shadow:0px 5px 6px rgba(0, 0, 0, .3);;
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    background-image: linear-gradient(to right, var(--blue), var(--border-color),#176B87);
-    background-color: #00678E;
-    background-size: 200%;
-    font-size: 1.2rem;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    transition: .5s;
-}
-.btnLogin:hover{
-    background-position: right;
-}
-/*responsive para tablets y celulares*/
-/*tablet mas pequena*/
-@media screen and (max-width: 500px){
-    .contentLogin, .contentLogin .FormLogin{
-        width: 100%;
-    }
-
-    .contentLogin h3{
-        width: 100%;
-        font-size: 25px;
-    }
-
 }

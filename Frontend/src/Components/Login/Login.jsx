@@ -26,7 +26,7 @@ function LoginForm() {
         event.preventDefault();
         setLoading(true);
         setErrMsg("");
-    
+
         try {
             const response = await fetch(`${VariablesEnv.backendURL}/login`, {
                 method: "POST",
@@ -34,9 +34,9 @@ function LoginForm() {
                 credentials: "include",
                 body: JSON.stringify({ username, password }),
             });
-    
+
             const data = await response.json();
-    
+
             if (response.ok) {
                 setIsLoggedIn(true);
                 setUserRole(data.user.role);
@@ -51,48 +51,57 @@ function LoginForm() {
             setLoading(false);
         }
     };
-    
-    
+
+
 
     return (
-        <div className="containerForm">
-            <img src={Assets.logos.LogoDocMe} alt="Logo DocMe" className="logoIMG" />
-            <div className="contentLogin">
-                <form className="FormLogin" onSubmit={handleLogin}>
-                    {errMsg && <div style={{ color: "#FF0000", textAlign: "left", fontSize: "20px" }}>{errMsg}</div>}
-                    {loading && <div>Espere un momento...</div>}
+        <div className="containerFormLogin" style={{ backgroundImage: `url(${Assets.images.HomeBG})` }}>
+            <div className="LoginWrapper">
+                <div className="LoginHeader">
+                    <img src={Assets.logos.LogoDocMe} alt="Logo DocMe" className="logoIMG" width="234px" height="100px" />
                     <h3>Bienvenido a DocMe</h3>
-                    <div className="contentInputLogin ">
-                        <div className="BodyInput">
-                            <input
-                                type="text"
-                                name="user_name"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                autoComplete="off"
-                                placeholder="Usuario"
-                                id="inputLoginUser"
-                            />
+                    {errMsg && <div style={{ color: "#FF0000", textAlign: "center", fontSize: "15px", fontWeight: "400", textWrap:"pretty"}}>{errMsg}</div>}
+                    
+                </div>
+                <div className="contentLogin">
+                    <form className="FormLogin" onSubmit={handleLogin}>
+                      
+                        <div className="contentInputLogin ">
+                            <label htmlFor="name" title="Usuario">Usuario</label>
+                            <div className="BodyInput">
+                                <input
+                                    type="text"
+                                    name="user_name"
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    autoComplete="off"
+                                    placeholder="Usuario"
+                                    id="inputLoginUser"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div className="contentInputLogin mb-5">
-                        <div className="BodyInput">
-                            <input
-                                type="password"
-                                name="pass"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                                placeholder="Contraseña"
-                                autoComplete="current-password"
-                                id="inputLoginPass"
-                            />
+                        <div className="contentInputLogin">
+                        <label htmlFor="password" title="Correo electrónico">Contraseña</label>
+                            <div className="BodyInput">
+                                <input
+                                    type="password"
+                                    name="pass"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                    placeholder="Contraseña"
+                                    autoComplete="current-password"
+                                    id="inputLoginPass"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <button className="btn btnLogin" type="submit" disabled={loading}>Iniciar sesión</button>
-                    <a className="link" href="/recovery_pass">¿Olvidaste tu contraseña?</a>
+                        <button className="btn btnLogin" type="submit" disabled={loading}>Iniciar sesión</button>
+                    </form>
+                </div>
+                <div className="LoginFooter">
+                    <Link className="link" to="/recovery_pass">¿Olvidaste tu contraseña?</Link>
                     <span>¿No tienes cuenta? <Link className="signUp" to="/signup">Regístrate aquí</Link></span>
-                </form>
+                </div>
             </div>
         </div>
     );

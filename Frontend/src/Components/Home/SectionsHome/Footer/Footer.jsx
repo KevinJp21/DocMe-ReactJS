@@ -47,11 +47,11 @@ const Footer = () => {
                     <h3>Sigueme</h3>
                     <div className="LogosSocialMed">
                         <a href="https://github.com/KevinJp21" target="_blank">
-                            <img src={Assets.icons.GitHubIcon} alt="icono de github" />
+                            <img src={Assets.icons.GitHubIcon} alt="icono de github" width="30px" height="37.7px"/>
                         </a>
 
                         <a href="https://www.linkedin.com/in/kevin-julio-667280240/" target="_blank">
-                            <img src={Assets.icons.LinkedinIcon} alt="icono de github"/>
+                            <img src={Assets.icons.LinkedinIcon} alt="icono de github" width="30px" height="37.7px"/>
                         </a>
                     </div>
                 </div>
