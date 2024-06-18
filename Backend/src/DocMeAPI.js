@@ -30,7 +30,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: isProduction,
+      secure: true,
       httpOnly: true,
       maxAge: 86400000, // Ejemplo: expira en 1 día
     },
