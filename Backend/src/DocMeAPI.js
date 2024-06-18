@@ -3,12 +3,16 @@ const cors = require('cors');
 const db = require('../config/config'); // Asegúrate de que la ruta sea correcta
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
-
+const isProduction = process.env.NODE_ENV === 'production';
+const frontendURL = isProduction ? process.env.FRONTEND_URL_PROD : process.env.FRONTEND_URL_DEV;
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173'], // Asegúrate de ajustar esto según el dominio de tu frontend
+  origin: [frontendURL], // Asegúrate de ajustar esto según el dominio de tu frontend
   credentials: true // Permitir cookies
 }));
 app.use(cookieParser());

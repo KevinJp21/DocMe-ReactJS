@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
-
+import VariablesEnv from './VariablesEnv';
 export const AuthContext = createContext();
-
 export const AuthProvider = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userID, setUserID] = useState(null);
@@ -10,11 +9,13 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [userData, setUserData] = useState(null);
 
+
+
     useEffect(() => {
         const checkSession = async () => {
             setLoading(true);
             try {
-                const sessionResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/check-session`, {
+                const sessionResponse = await fetch(`${VariablesEnv.backendURL}/check-session`, {
                     method: 'GET',
                     credentials: 'include'
                 });
@@ -28,7 +29,7 @@ export const AuthProvider = ({ children }) => {
 
                 // Si el usuario está autenticado, entonces carga los datos del usuario
                 if (sessionData.isLoggedIn) {
-                    const userResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user-details`, {
+                    const userResponse = await fetch(`${VariablesEnv.backendURL}/user-details`, {
                         credentials: 'include'
                     });
                     if (!userResponse.ok) {
