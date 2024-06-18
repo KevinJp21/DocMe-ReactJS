@@ -9,7 +9,7 @@ function useFetchUsers() {
     useEffect(() => {
         async function fetchUserData() {
             try {
-                const response = await fetch('http://localhost:5000/user-details', {
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user-details`, {
                     credentials: 'include'
                 });
                 if (!response.ok) {

@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
         const checkSession = async () => {
             setLoading(true);
             try {
-                const sessionResponse = await fetch('http://localhost:5000/check-session', {
+                const sessionResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/check-session`, {
                     method: 'GET',
                     credentials: 'include'
                 });
@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
                 // Si el usuario está autenticado, entonces carga los datos del usuario
                 if (sessionData.isLoggedIn) {
-                    const userResponse = await fetch('http://localhost:5000/user-details', {
+                    const userResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user-details`, {
                         credentials: 'include'
                     });
                     if (!userResponse.ok) {

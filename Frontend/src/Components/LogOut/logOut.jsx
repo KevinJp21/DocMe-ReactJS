@@ -7,7 +7,7 @@ export const useLogout = () => {
     const navigate = useNavigate();
 
     const logout = async () => {
-        const response = await fetch('http://localhost:5000/logout', {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/logout`, {
             method: 'POST',
             credentials: 'include',
         });
