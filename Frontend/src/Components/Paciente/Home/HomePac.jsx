@@ -11,7 +11,7 @@ const HomePac = () => {
 
     return (
         <section className='HomePac'>
-         
+           Disponible en proximas actualizaciones
         </section>
     );
 }

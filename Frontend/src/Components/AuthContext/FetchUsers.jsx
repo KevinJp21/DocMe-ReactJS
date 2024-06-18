@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from 'react';
-
+import VariablesEnv from './VariablesEnv';
 function useFetchUsers() {
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -9,7 +8,7 @@ function useFetchUsers() {
     useEffect(() => {
         async function fetchUserData() {
             try {
-                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user-details`, {
+                const response = await fetch(`${VariablesEnv.backendURL}/user-details`, {
                     credentials: 'include'
                 });
                 if (!response.ok) {
