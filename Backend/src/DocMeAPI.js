@@ -13,6 +13,9 @@ const frontendURL = isProduction
   ? process.env.FRONTEND_URL_PROD
   : process.env.FRONTEND_URL_DEV;
 
+if (isProduction) {
+  app.set('trust proxy', 1); // Para confiar en el primer encabezado X-Forwarded-*
+}
 
 app.use(express.json());
 app.use(
@@ -31,13 +34,14 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: true,
+      secure: isProduction, // secure true solo en producción
       httpOnly: true,
       maxAge: 86400000, // Ejemplo: expira en 1 día
-      sameSite:"None",
+      sameSite: isProduction ? "None" : "Lax", // sameSite None solo en producción
     },
   })
 );
+
 
 app.get("/check-session", (req, res) => {
   if (req.session.userId) {
