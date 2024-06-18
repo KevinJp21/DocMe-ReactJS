@@ -46,14 +46,23 @@ const Footer = () => {
                     <p>Envianos un correo cuando quieras a <a href="mailto:support@docme.com">support@docme.com</a></p>
                     <h3>Sigueme</h3>
                     <div className="LogosSocialMed">
-                        <a href="https://github.com/KevinJp21">
+                        <a href="https://github.com/KevinJp21" target="_blank">
                             <img src={Assets.icons.GitHubIcon} alt="icono de github" />
                         </a>
 
-                        <a href="https://www.linkedin.com/in/kevin-julio-667280240/">
-                            <img src={Assets.icons.LinkedinIcon} alt="icono de github" />
+                        <a href="https://www.linkedin.com/in/kevin-julio-667280240/" target="_blank">
+                            <img src={Assets.icons.LinkedinIcon} alt="icono de github"/>
                         </a>
                     </div>
+                </div>
+            </div>
+            <div className="FooterFoo">
+                <div className="copyight">
+                    <p>
+                    © 2024 DocMe. Reservados todos los derechos. Política de privacidad</p>
+                </div>
+                <div className="Dev">
+                    <p>KevinJp21 | Frontend Developer</p>
                 </div>
             </div>
         </footer>
