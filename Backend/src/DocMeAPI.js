@@ -33,7 +33,9 @@ app.use(
     cookie: {
       secure: isProduction,
       httpOnly: true,
-      maxAge: 86400000, // Ejemplo: expira en 1 día
+      maxAge: 86400000,
+      domain: "https://docme-two.vercel.app",
+      path: "/", 
     },
   })
 );
