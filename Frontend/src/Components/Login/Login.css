@@ -17,7 +17,7 @@
     height: 737px;
     max-width: 400px;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--bg-gray);
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, .24) 0px 10px 20px;
     
@@ -125,13 +125,13 @@
 }
 
 .LoginFooter a{
-    text-decoration: none;
-    color: var(--blue);
-    transition: color .3s ease-in-out;
+    text-decoration:none;
+    color: var(--blue-font);
+    transition: all .3s ease-in-out;
 }
 
 .LoginFooter a:hover{
-    color: var(--blue-hover);
+    text-decoration: underline;
 }
 
 .LoginFooter span{
