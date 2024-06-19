@@ -55,6 +55,7 @@
 
 .FormSignUp {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding-top: 20px;
     height: 100%;
@@ -73,6 +74,7 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 24px;
 }
 
 .InputContent label{

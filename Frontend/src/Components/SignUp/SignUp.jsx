@@ -135,8 +135,9 @@ function SignUp() {
                                 <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} autoComplete="off" placeholder="Confirmar contraseña" />
                             </div>
                         </div>
+                        <button className="btnSignUp" type="submit">Registrarse</button>
                     </form>
-                    <button className="btnSignUp" type="submit">Registrarse</button>
+                    
                 </div>
                 <div className="FooterSignUp">
                     <Link className="link" to="/recoveryPassword">¿Olvidaste tu contraseña?</Link>
