@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
 import Assets from '../../assets/Assets';
+import { Link } from 'react-router-dom';
+import VariablesEnv from '../AuthContext/VariablesEnv';
 
 function SignUp() {
     const [formData, setFormData] = useState({
@@ -41,7 +43,7 @@ function SignUp() {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/signup', {
+            const response = await fetch(`${VariablesEnv.backendURL}/signup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -64,76 +66,82 @@ function SignUp() {
     };
 
     return (
-        <div className="containerSignUp">
-            <img className="logoIMG" src={Assets.logos.LogoDocMe} alt="Logo DocMe" />
-            <div className="SignUpContent">
-                <form onSubmit={handleSignUp} className='SignUpForm'>
-                    <h3>Registro</h3>
-                    {errMsg && <div style={{ color: '#FF0000', textAlign: 'center', fontSize: '20px' }}>{errMsg}</div>}
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="SignUpInput">
-                                <div className="div">
-                                    <input type="text" name="name" value={formData.name} onChange={handleChange} autoComplete="off" placeholder="Nombre" />
-                                </div>
-                            </div>
-
-                            <div className="SignUpInput">
-                                <div className="div">
-                                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} autoComplete="off" placeholder="Apellido" />
-                                </div>
-                            </div>
-
-                            <div className="SignUpInput">
-                                    <div className="div">
-                                        <input type="text" name="userName" value={formData.userName} onChange={handleChange} autoComplete="off" placeholder="Nombre de usuario" />
-                                    </div>
-                                </div>
-
-                                <div className="SignUpInput">
-                                    <div className="div">
-                                        <input type="text" name="phoneNum" value={formData.phoneNum} onChange={handleChange} autoComplete="off" placeholder="Numero de celular" />
-                                    </div>
-                                </div>
-
-                                                               
-                                <div className="SignUpInput">
-                                    <div className="div">
-                                        <input type="date" name="birthDate" value={formData.birthDate} onChange={handleChange} />
-                                    </div>
-                                </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="SignUpInput">
-                                <div className="div">
-                                    <input type="text" name="ID" value={formData.ID} onChange={handleChange} autoComplete="off" placeholder="Identificacion" />
-                                </div>
-                            </div>
-                            <div className="SignUpInput">
-                                <div className="div">
-                                    <input type="email" name="email" value={formData.email} onChange={handleChange} autoComplete="off" placeholder="Correo" />
-                                </div>
-                            </div>
-                            <div className="col-md-6 ContentPassword">
-                                <div className="SignUpInput">
-                                    <div className="div">
-                                        <input type="password" name="password" value={formData.password} onChange={handleChange} autoComplete="off" placeholder="Contraseña" />
-                                    </div>
-                                </div>
-                                <div className="SignUpInput">
-                                    <div className="div">
-                                        <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} autoComplete="off" placeholder="Confirmar contraseña" />
-                                    </div>
-                                </div>
+        <div className="containerFormSignUp" style={{ backgroundImage: `url(${Assets.images.HomeBG})` }}>
+            <div className="SignUpWrapper">
+                <div className="HeaderSignUp">
+                    <img className="logoIMG" src={Assets.logos.LogoDocMe} alt="Logo DocMe" />
+                    <h3>Crea tu cuenta</h3>
+                    {errMsg && <div style={{ color: "#FF0000", textAlign: "center", fontSize: "15px", fontWeight: "400", textWrap: "pretty" }}>{errMsg}</div>}
+                </div>
+                <div className="ContentSignUp">
+                    <form onSubmit={handleSignUp} className='FormSignUp'>
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Nombre">Nombre</label>
+                                <input type="text" name="name" value={formData.name} onChange={handleChange} autoComplete="off" placeholder="Nombre" />
                             </div>
                         </div>
-                        <div className="SignUpBTN mb-4">
-                            <button className="btn" type="submit">Registrarse</button>
+
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Apellido">Apellido</label>
+                                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} autoComplete="off" placeholder="Apellido" />
+                            </div>
                         </div>
-                        <a className="link" href="../frontend/recovery_pass.php">¿Olvidaste tu contraseña?</a>
-                        <span>¿Ya tienes cuenta? <a className="link" href="../index.php"> Inicia Sesión</a></span>
-                    </div>
-                </form>
+
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Nombre de usuario">Nombre de usuario</label>
+                                <input type="text" name="userName" value={formData.userName} onChange={handleChange} autoComplete="off" placeholder="Nombre de usuario" />
+                            </div>
+                        </div>
+
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Numero de telefono">Numero de telefono</label>
+                                <input type="text" name="phoneNum" value={formData.phoneNum} onChange={handleChange} autoComplete="off" placeholder="Numero de celular" />
+                            </div>
+                        </div>
+
+
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Fecha de nacimiento">Fecha de nacimiento</label>
+                                <input type="date" name="birthDate" value={formData.birthDate} onChange={handleChange} />
+                            </div>
+                        </div>
+
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Identificación">Identificación</label>
+                                <input type="text" name="ID" value={formData.ID} onChange={handleChange} autoComplete="off" placeholder="Identificación" />
+                            </div>
+                        </div>
+                        <div className="SignUpInput email">
+                            <div className="InputContent email">
+                                <label htmlFor="text" title="Correo">Correo</label>
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} autoComplete="off" placeholder="Correo" />
+                            </div>
+                        </div>
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Correo">Contraseña</label>
+                                <input type="password" name="password" value={formData.password} onChange={handleChange} autoComplete="off" placeholder="Contraseña" />
+                            </div>
+                        </div>
+                        <div className="SignUpInput">
+                            <div className="InputContent">
+                                <label htmlFor="text" title="Confirmar contraseña">Confirmar contraseña</label>
+                                <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} autoComplete="off" placeholder="Confirmar contraseña" />
+                            </div>
+                        </div>
+                    </form>
+                    <button className="btnSignUp" type="submit">Registrarse</button>
+                </div>
+                <div className="FooterSignUp">
+                    <Link className="link" to="/recoveryPassword">¿Olvidaste tu contraseña?</Link>
+                    <span>¿Ya tienes cuenta? <Link className="link" to="/login"> Inicia Sesión</Link></span>
+                </div>
             </div>
         </div>
     );

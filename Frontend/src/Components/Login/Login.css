@@ -1,15 +1,15 @@
-.containerFormLogin{
-   min-height: 100vh;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 20px;
+.containerFormLogin {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.LoginWrapper{
+.LoginWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,10 +20,10 @@
     background-color: var(--white);
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, .24) 0px 10px 20px;
-    
+
 }
 
-.LoginHeader{
+.LoginHeader {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,25 +33,25 @@
     width: 100%;
 }
 
-.LoginHeader img{
+.LoginHeader img {
     object-fit: contain;
     max-width: 234px;
     width: 100%;
 }
 
-.LoginHeader h3{
+.LoginHeader h3 {
     color: var(--blue-font);
     font-size: min(25px, 7vw);
     font-weight: 600;
     text-align: center;
 }
 
-.contentLogin{
+.contentLogin {
     height: 50%;
     width: 100%;
 }
 
-.FormLogin{
+.FormLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +59,7 @@
     height: 100%;
 }
 
-.contentInputLogin{
+.contentInputLogin {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -67,14 +67,14 @@
     margin-bottom: 24px;
 }
 
-.contentInputLogin label{
+.contentInputLogin label {
     color: var(--blue-font);
     font-size: min(15px, 8vw);
     font-weight: 400;
     padding-bottom: 8px;
 }
 
-.BodyInput input{
+.BodyInput input {
     width: 100%;
     border-radius: 10px;
     padding: 11.2px 11px;
@@ -82,11 +82,11 @@
     transition: border .3s ease-in;
 }
 
-.BodyInput input:focus{
-    outline: none; 
+.BodyInput input:focus {
+    outline: none;
 }
 
-.btnLogin{
+.btnLogin {
     width: 100%;
     padding: 14px 11px;
     margin-top: 30px;
@@ -100,45 +100,40 @@
     transition: all .3s ease-in-out;
 }
 
-.btnLogin:hover{
-    box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
-   
+.btnLogin:hover {
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+
 
 }
 
-.LoginFooter{
+.LoginFooter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   height: 16,7%;
-}
-
-
-
-.LoginFooter{
+    height: 16.7%;
     font-size: 15px;
     font-weight: 400;
     text-align: center;
     text-wrap: pretty;
 }
 
-.LoginFooter a{
+.LoginFooter a {
     color: var(--blue-font);
     transition: all .3s ease-in-out;
 }
 
-.LoginFooter a:hover{
+.LoginFooter a:hover {
     color: var(--blue);
 }
 
-.LoginFooter span{
+.LoginFooter span {
     color: var(--blue-font);
 }
 
 /* Para tener transparencia y cambiar el color de fondo al mismo tiempo cuando el navegador autocomplete los datos */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px transparent inset !important;

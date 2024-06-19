@@ -1,196 +1,153 @@
-.containerSignUp{
+.containerFormSignUp {
     min-height: 100vh;
-    padding: 60px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.SignUpWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow-x: auto;
-}
-
-.SignUpContent{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 900px;
-    background: #267089;
-}
-
-.SignUpContent{
-    border-color: #226479;
-    border: 3px solid #226479;
-    border-bottom: 8px solid #226479;
-    padding: 30px 50px;
+    padding: 20px;
+    background-color: var(--white);
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .24) 0px 10px 20px;
+    max-width: 700px;
+    min-height: 90vh;
+    width: 100%;
 }
 
-.SignUpContent h3{
-    font-size: 28px;
-    text-align: center;
-    line-height: 1.2;
-    width: 50%;
-    color: var(--text-white);
-}
-
-::placeholder{
-    color: rgb(175, 170, 170);
-}
-
-
-.logoIMG{
-    height: 200px;
-
-}
-
-.SignUpForm{
-    width: 1000px;
-    height: 700px;
+.HeaderSignUp {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+}
+
+.HeaderSignUp img {
+    object-fit: contain;
+    max-width: 234px;
+    width: 100%;
+}
+
+.HeaderSignUp h3 {
+    color: var(--blue-font);
+    font-size: min(25px, 7vw);
+    font-weight: 600;
+    text-align: center;
+}
+
+.ContentSignUp {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.col-6 .SignUpInput{
-    width: 100%;
-}
-
-.col-6 .div{
-    width: 100%;
-}
-
-.col-6 input{
-    width: 40vw;
-}
-.SignUpContent .SignUpInput{
-    position: relative;
-    margin: 25px 0;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.SignUpInput .div input{
+.FormSignUp {
     display: flex;
-    height: 100%;
-    border: none;
-    outline: none;
-    background: none;
-    padding: 0.5rem 0.7rem;
-    font-size: 1.2rem;
-    color: var(--text-white);
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-}
-
-.ContentPassword{
-    width: 100%;
-}
-
-.input-check{
-    display: flex;
-    justify-content: left;
-    text-align: left;
     flex-wrap: wrap;
-    gap: 20px;
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.SignUpInput {
+    width: 50%;
+}
+
+.SignUpInput.email{
+    width: 100%;
+}
+
+.InputContent{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.InputContent label{
+    color: var(--blue-font);
+    font-size: min(15px, 8vw);
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+
+.InputContent input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 11.2px 11px;
+    border: 1px solid var(--blue-font);
+    transition: border .3s ease-in;
+}
+
+.InputContent input:focus {
+    outline: none;
+}
+
+.InputContent.email input{
     
 }
 
-.recovery-pass{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    margin-top: 50px;
-}
-.recovery-pass:hover{
-    color: #25c3f8;
-    text-decoration:underline;
-}
-
-.link{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    margin-top: 2px;
-
-}
-.link:hover{
-    color: #25c3f8;
-    text-decoration:underline;
-
-}
-
-.SignUpBTN{
-    width: 100%;
-    height: 50px;
-    margin-top: 50px;
-}
-.SignUpBTN .btn{
-    width: 50%;
-    height: 50px;
-    box-shadow:0px 5px 6px rgba(0, 0, 0, .3);;
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    background-image: linear-gradient(to right, var(--blue), var(--border-color),#176B87);
-    background-color: #00678E;
-    background-size: 200%;
-    font-size: 1.2rem;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-
+.btnSignUp {
+    width: 70%;
+    padding: 12px 11px;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: var(--blue-font);
+    color: var(--white-font);
+    font-size: 17px;
+    font-weight: 400;
+    border: 1px solid var(--blue-font);
     cursor: pointer;
-    transition: .5s;
+    transition: all .3s ease-in-out;
 }
-.SignUpBTN .btn:hover{
-    background-position: right;
+
+
+.btnSignUp:hover {
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
 }
+
+.FooterSignUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18px;
+    height: 16.7%;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.FooterSignUp a{
+    color: var(--blue-font);
+    transition: all .3s ease-in-out;
+}
+
+.FooterSignUp a:hover{
+    color: var(--blue);
+}
+
+.FooterSignUp span {
+    color: var(--blue-font);
+}
+
 /*responsive para tablets y celulares*/
 /*tablet mas pequena*/
-@media screen and (max-width: 1000px){
-    .SignUpForm{
-        width: 500px;
-    }
-    .SignUpContent h3{
-        font-size: 1.5rem;
-        margin: 8px 0;
-    }
-
-    .SignUpBTN .btn{
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .SignUpContent{
-        height: 1200px;
-        width: 450px;
-    }
-
-    .SignUpForm{
-        width: 100%;
-    }
-
-    .SignUpBTN .btn{
-        width: 90%;
-    }
-}
-
 @media screen and (max-width: 500px) {
-    .SignUpContent{
-        height: 1200px;
-        width: 100%;
-    }
-
-    .SignUpForm h3{
-        font-size: 2px;
-
-    }
-
-    .SignUpForm{
-        width: 100%;
-    }
-
-    .SignUpBTN .btn{
+    .SignUpInput{
         width: 100%;
     }
 }
