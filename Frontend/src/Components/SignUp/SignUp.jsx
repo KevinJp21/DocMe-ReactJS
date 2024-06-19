@@ -77,28 +77,28 @@ function SignUp() {
                     <form onSubmit={handleSignUp} className='FormSignUp'>
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Nombre">Nombre</label>
+                                <label htmlFor="firstname" title="Nombre">Nombre</label>
                                 <input type="text" name="name" value={formData.name} onChange={handleChange} autoComplete="off" placeholder="Nombre" />
                             </div>
                         </div>
 
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Apellido">Apellido</label>
+                                <label htmlFor="lastname" title="Apellido">Apellido</label>
                                 <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} autoComplete="off" placeholder="Apellido" />
                             </div>
                         </div>
 
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Nombre de usuario">Nombre de usuario</label>
+                                <label htmlFor="username" title="Nombre de usuario">Nombre de usuario</label>
                                 <input type="text" name="userName" value={formData.userName} onChange={handleChange} autoComplete="off" placeholder="Nombre de usuario" />
                             </div>
                         </div>
 
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Numero de telefono">Numero de telefono</label>
+                                <label htmlFor="phonenumber" title="Numero de telefono">Numero de telefono</label>
                                 <input type="text" name="phoneNum" value={formData.phoneNum} onChange={handleChange} autoComplete="off" placeholder="Numero de celular" />
                             </div>
                         </div>
@@ -106,32 +106,32 @@ function SignUp() {
 
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Fecha de nacimiento">Fecha de nacimiento</label>
-                                <input type="date" name="birthDate" value={formData.birthDate} onChange={handleChange} />
+                                <label htmlFor="birthDate" title="Fecha de nacimiento">Fecha de nacimiento</label>
+                                <input type="date" id="birthDate" name="birthDate" value={formData.birthDate} onChange={handleChange} />
                             </div>
                         </div>
 
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Identificación">Identificación</label>
+                                <label htmlFor="id" title="Identificación">Identificación</label>
                                 <input type="text" name="ID" value={formData.ID} onChange={handleChange} autoComplete="off" placeholder="Identificación" />
                             </div>
                         </div>
                         <div className="SignUpInput email">
                             <div className="InputContent email">
-                                <label htmlFor="text" title="Correo">Correo</label>
+                                <label htmlFor="email" title="Correo">Correo</label>
                                 <input type="email" name="email" value={formData.email} onChange={handleChange} autoComplete="off" placeholder="Correo" />
                             </div>
                         </div>
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Correo">Contraseña</label>
+                                <label htmlFor="password" title="Correo">Contraseña</label>
                                 <input type="password" name="password" value={formData.password} onChange={handleChange} autoComplete="off" placeholder="Contraseña" />
                             </div>
                         </div>
                         <div className="SignUpInput">
                             <div className="InputContent">
-                                <label htmlFor="text" title="Confirmar contraseña">Confirmar contraseña</label>
+                                <label htmlFor="password" title="Confirmar contraseña">Confirmar contraseña</label>
                                 <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} autoComplete="off" placeholder="Confirmar contraseña" />
                             </div>
                         </div>
