@@ -8,7 +8,6 @@ DocMe is a web application designed to improve the accessibility and efficiency 
 - **Vite**: For fast and optimized front-end development.
 - **ExpressJS**: As the Node.js framework for backend development.
 - **MySQL**: To manage and store user information and medical appointments.
-- **Flask**: Backend framework for the chatbot, utilizing NLP with NLTK.
 
 ## Features
 
@@ -23,23 +22,29 @@ To clone and run this project, you'll need Git installed on your computer. From 
 # Clone this repository
 git clone https://github.com/KevinJp21/DocMe_ReactJS.git
 ```
-## For the frontend
-```Bash
-cd Frontend
+```bash
+# Clone this repository
+git clone https://github.com/yourusername/docme.git
+
+# Go into the Frontend directory
+cd docme/Frontend
 
 # Install dependencies
 npm install
 
 # Run the app
 npm run dev
-```
-## For the backend
-```Bash
-cd Backend
+
+# Go into the Backend directory
+cd docme/Backend
 
 # Install dependencies
 npm install
 
-# Run the app
+# Run the backend server
 node index.js
 ```
+
+## To access the chatbot go to the following repository and follow the instructions
+```bash
+https://github.com/KevinJp21/ChatBot
