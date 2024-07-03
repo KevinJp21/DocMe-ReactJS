@@ -46,5 +46,4 @@ node index.js
 ```
 
 ## To access the chatbot go to the following repository and follow the instructions
-```bash
-https://github.com/KevinJp21/ChatBot
+[Chatbot repository](https://github.com/KevinJp21/ChatBot)
