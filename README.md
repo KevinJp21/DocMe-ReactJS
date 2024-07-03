@@ -2,6 +2,14 @@
 
 DocMe is a web application designed to improve the accessibility and efficiency of scheduling medical appointments in Colombia. It integrates advanced features like personalized scheduling, urgent care management, and an AI chatbot to enhance the patient experience.
 
+## Demo
+
+[Link to Demo](https://docme-two.vercel.app/)
+
+## Project Image
+
+![RestauranteSCocina](https://portfolio-kj.vercel.app/assets/docme-BMunPNO5.webp)
+
 ## Technologies Used
 
 - **ReactJS**: For building a dynamic and modern user interface.
