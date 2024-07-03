@@ -55,3 +55,7 @@ node index.js
 
 ## To access the chatbot go to the following repository and follow the instructions
 [Chatbot repository](https://github.com/KevinJp21/ChatBot)
+
+## Author
+
+- [@KevinJp21](https://github.com/KevinJp21)
