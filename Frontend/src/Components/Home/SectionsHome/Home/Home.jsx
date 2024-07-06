@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <>
-            <section className='ContainerHome' style={{ backgroundImage: `url(${Assets.images.HomeBG})` }}>
+            <section className='ContainerHome' style={{ backgroundImage: `url(${Assets.images.HomeBG})`}}>
                 <div className="ContentHome">
                     <div className="HomeTextWrapper">
                         <div className="textContentHome">
@@ -25,7 +25,7 @@ const Home = () => {
                     </div>
 
                     <div className="imgMedHome">
-                        <img src={Assets.images.MedVideoChat} alt="medico en video llamada" width={"860px"} height={"580px"} />
+                        <img src={Assets.images.MedVideoChat} alt="medico en video llamada" width={"860px"} height={"580px"} loading="eager"/>
                     </div>
                 </div>
             </section>
