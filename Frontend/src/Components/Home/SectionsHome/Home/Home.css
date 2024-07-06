@@ -6,6 +6,7 @@
     background-position: center right;
     background-position-y: -250px;
 
+
 }
 
 .ContentHome {
@@ -14,8 +15,11 @@
     align-items: center;
 }
 
-.textContentHome h3 {
+.textContentHome h1 {
     margin-bottom: 35px;
+    color: var(--blue-font);
+    font-size: min(40px, 7vw);
+    font-weight: 600;
     text-wrap: balance;
 }
 
@@ -23,12 +27,6 @@
     display: flex;
     justify-content: center;
     text-align: center;
-}
-
-.HomeTextWrapper h3 {
-    color: var(--blue-font);
-    font-size: min(40px, 8vw);
-    font-weight: 600;
 }
 
 .AppoBTNContainer {
@@ -82,8 +80,14 @@
     object-fit: cover;
     max-height: 580px;
     min-height: 314px;
-    min-width: 50%;
+    max-width: 80vw;
     border-radius: 15px;
     border: 10px solid var(--white);
     box-shadow: rgba(0, 0, 0, .24) 0px 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .imgMedHome img {
+        max-height: 280px;
+    }
 }

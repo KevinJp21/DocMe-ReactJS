@@ -13,12 +13,12 @@ const Home = () => {
                 <div className="ContentHome">
                     <div className="HomeTextWrapper">
                         <div className="textContentHome">
-                            <h3 id='TextContent'>
+                            <h1 id='TextContent'>
                                 Para una atención médica de calidad, los colombianos confían en
                                 <br />
                                 DocMe para gestionar sus citas.
                                 <span style={{ color: 'var(--blue)' }}> Cuidamos de ti, donde estés.</span>
-                            </h3>
+                            </h1>
                         </div>
                     </div>
 
@@ -26,9 +26,9 @@ const Home = () => {
                         <Link className="LinkContentHome Appo HomeBTN" to="/login"><span className='linkText'>Agenda tu Cita</span></Link>
                     </div>
 
-                    <div className="imgMedHome">
+                    <picture className="imgMedHome">
                         <img src={MedVideoChat} alt="medico en video llamada" width={"860px"} height={"580px"} loading="eager"/>
-                    </div>
+                    </picture>
                 </div>
             </section>
         </>
