@@ -2,7 +2,7 @@ import React, { Suspense, lazy, useState, useRef, useEffect } from 'react';
 import NavBar from '../SectionsHome/Navbar/NavBar';
 import "./Main.css";
 
-const Home = lazy(() => import('../SectionsHome/Home/Home'));
+import Home from '../SectionsHome/Home/Home';
 const About = lazy(() => import('../SectionsHome/About/About'));
 const SliderEPS = lazy(() => import('../SectionsHome/SliderEPS/SliderEPS'));
 const ChatBotHome = lazy(() => import('../SectionsHome/ChatBotHome/ChatBotHome'));
@@ -13,57 +13,44 @@ const Testimonials = lazy(() => import('../SectionsHome/Testimonials/Testimonial
 import Footer from '../SectionsHome/Footer/Footer';
 
 
+const LazyLoadSection = ({ component: Component, fallback }) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
 
-const LazyLoadSection = ({ component: Component, fallback, shouldLoad }) => { // Definición del componente funcional LazyLoadSection
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setIsVisible(true);
+                observer.unobserve(entry.target);
+            }
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1,
+        });
 
-  const [isVisible, setIsVisible] = useState(false); // Estado para controlar la visibilidad del componente
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
 
-  const ref = useRef(null); // Referencia mutable para el elemento que se observará
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
 
-  useEffect(() => { // Efecto que se ejecuta cuando cambia shouldLoad o se monta el componente
-
-      if (shouldLoad) { // Si shouldLoad es true, establece isVisible a true y retorna
-          setIsVisible(true);
-          return;
-      }
-
-      const observer = new IntersectionObserver( // Creación de un IntersectionObserver para observar la visibilidad del elemento
-          ([entry]) => {
-              if (entry.isIntersecting) {//se vuelve true cuando el elemento es visible en el viewport
-                  setIsVisible(true); // Marca el componente como visible
-                  observer.disconnect(); // Desconecta el observer una vez que el componente es visible
-              }
-          },
-          {
-              root: null, // Utiliza el viewport como el contenedor root
-              rootMargin: '0px', // Sin margen adicional alrededor del root
-              threshold: .1, // Porcentaje del elemento que debe estar visible para activar la callback
-          }
-      );
-
-      if (ref.current) { // Si ref.current existe (el elemento está montado), observa ese elemento
-          observer.observe(ref.current);
-      }
-
-      return () => {// Cleanup: desconecta el observer cuando el componente se desmonta o shouldLoad cambia
-          if (ref.current) {
-              observer.unobserve(ref.current);
-          }
-      };
-  }, [shouldLoad]);
-
-  return ( // Renderiza el componente LazyLoadSection
-      <div ref={ref} className={`lazyLoadSectionHome ${isVisible ? 'visible' : ''}`}>
-
-          {isVisible ? ( // Si el componente es visible, renderiza el Componente dentro de Suspense
-              <Suspense fallback={fallback}>
-                  <Component />
-              </Suspense>
-          ) : (
-              fallback // Si no es visible, muestra el fallback
-          )}
-      </div>
-  );
+    return (
+        <div ref={ref} className={`lazyLoadSectionHome ${isVisible ? 'visible' : ''}`}>
+            {isVisible ? (
+                <Suspense fallback={fallback}>
+                    <Component />
+                </Suspense>
+            ) : (
+                fallback
+            )}
+        </div>
+    );
 };
 
 const Main = () => {
@@ -71,9 +58,7 @@ const Main = () => {
         <div id="wrapper">
             <NavBar />
             <main className="ContainerMain">
-                <Suspense fallback={<div>Loading Home...</div>}>
                     <Home />
-                </Suspense>
                 <LazyLoadSection component={About} fallback={<div className='fallback'>Loading About...</div>} />
                 <LazyLoadSection component={SliderEPS} fallback={<div className='fallback'>Loading SliderEPS...</div>} />
                 <LazyLoadSection component={ChatBotHome} fallback={<div className='fallback'>Loading ChatBotHome...</div>} />
