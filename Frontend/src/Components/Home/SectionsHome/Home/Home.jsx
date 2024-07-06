@@ -13,12 +13,12 @@ const Home = () => {
                 <div className="ContentHome">
                     <div className="HomeTextWrapper">
                         <div className="textContentHome">
-                            <h1 id='TextContent'>
+                            <h3 id='TextContent'>
                                 Para una atención médica de calidad, los colombianos confían en
                                 <br />
                                 DocMe para gestionar sus citas.
                                 <span style={{ color: 'var(--blue)' }}> Cuidamos de ti, donde estés.</span>
-                            </h1>
+                            </h3>
                         </div>
                     </div>
 
