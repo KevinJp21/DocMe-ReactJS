@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
-import Assets from '../../assets/Assets';
+import LogoDocMe from "../../assets/img/DocMe_logo.webp";
+import HomeBG from "../../assets/img/DocMe_Home BG.webp";
 import { Link } from 'react-router-dom';
 import VariablesEnv from '../AuthContext/VariablesEnv';
 
@@ -66,10 +67,10 @@ function SignUp() {
     };
 
     return (
-        <div className="containerFormSignUp" style={{ backgroundImage: `url(${Assets.images.HomeBG})` }}>
+        <div className="containerFormSignUp" style={{ backgroundImage: `url(${HomeBG})` }}>
             <div className="SignUpWrapper">
                 <div className="HeaderSignUp">
-                    <img className="logoIMG" src={Assets.logos.LogoDocMe} alt="Logo DocMe" />
+                    <img className="logoIMG" src={LogoDocMe} alt="Logo DocMe" />
                     <h3>Crea tu cuenta</h3>
                     {errMsg && <div style={{ color: "#FF0000", textAlign: "center", fontSize: "15px", fontWeight: "400", textWrap: "pretty" }}>{errMsg}</div>}
                 </div>

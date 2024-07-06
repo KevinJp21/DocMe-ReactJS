@@ -2,7 +2,8 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthContext";
 import './Login.css';
-import Assets from "../../assets/Assets";
+import LogoDocMe from "../../assets/img/DocMe_logo.webp";
+import HomeBG from "../../assets/img/DocMe_Home BG.webp";
 import { Link } from "react-router-dom";
 import VariablesEnv from "../AuthContext/VariablesEnv";
 
@@ -55,10 +56,10 @@ function LoginForm() {
 
 
     return (
-        <div className="containerFormLogin" style={{ backgroundImage: `url(${Assets.images.HomeBG})` }}>
+        <div className="containerFormLogin" style={{ backgroundImage: `url(${HomeBG})` }}>
             <div className="LoginWrapper">
                 <div className="LoginHeader">
-                    <img src={Assets.logos.LogoDocMe} alt="Logo DocMe" className="logoIMG" width="234px" height="100px" />
+                    <img src={LogoDocMe} alt="Logo DocMe" className="logoIMG" width="234px" height="100px" />
                     <h3>Bienvenido a DocMe</h3>
                     {errMsg && <div style={{ color: "#FF0000", textAlign: "center", fontSize: "15px", fontWeight: "400", textWrap:"pretty"}}>{errMsg}</div>}
                     
