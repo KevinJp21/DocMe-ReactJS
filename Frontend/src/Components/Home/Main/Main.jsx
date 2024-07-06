@@ -74,12 +74,12 @@ const Main = () => {
                 <Suspense fallback={<div>Loading Home...</div>}>
                     <Home />
                 </Suspense>
-                <LazyLoadSection component={About} fallback={<div>Loading About...</div>} />
-                <LazyLoadSection component={SliderEPS} fallback={<div>Loading SliderEPS...</div>} />
-                <LazyLoadSection component={ChatBotHome} fallback={<div>Loading ChatBotHome...</div>} />
-                <LazyLoadSection component={ServicesHome} fallback={<div>Loading ServicesHome...</div>} />
-                <LazyLoadSection component={HowWorkHome} fallback={<div>Loading HowWorkHome...</div>} />
-                <LazyLoadSection component={Testimonials} fallback={<div>Loading Testimonials...</div>} />
+                <LazyLoadSection component={About} fallback={<div className='fallback'>Loading About...</div>} />
+                <LazyLoadSection component={SliderEPS} fallback={<div className='fallback'>Loading SliderEPS...</div>} />
+                <LazyLoadSection component={ChatBotHome} fallback={<div className='fallback'>Loading ChatBotHome...</div>} />
+                <LazyLoadSection component={ServicesHome} fallback={<div className='fallback'>Loading ServicesHome...</div>} />
+                <LazyLoadSection component={HowWorkHome} fallback={<div className='fallback'>Loading HowWorkHome...</div>} />
+                <LazyLoadSection component={Testimonials} fallback={<div className='fallback'>Loading Testimonials...</div>} />
             </main>
             <Footer />
         </div>

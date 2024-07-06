@@ -57,5 +57,11 @@
   --border-color:hsla(0, 0%, 100%,0.25);
   --blur:blur(10px);
   --button-hover-color:hsla(0, 0%, 0%, 0.3);
-
 }
+
+
+.fallback{
+  height: 50vh;
+  opacity: 0;
+}
+
