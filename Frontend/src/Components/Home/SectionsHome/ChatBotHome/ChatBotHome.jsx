@@ -1,6 +1,6 @@
 import React from 'react'
 import './ChatBotHome.css'
-import Assets from '../../../../assets/Assets'
+import ChatBotGreeting from '../../../../assets/Animations/DocMe Chatbot.mp4'
 
 const ChatBotHome = () => {
     return (
@@ -21,7 +21,7 @@ const ChatBotHome = () => {
                 </div>
 
                 <div className='ContainerAnimatadCharBotHome'>
-                    <video src={Assets.animations.ChatBotGreeting} alt="Chatbot" loop autoPlay muted />
+                    <video src={ChatBotGreeting} alt="Chatbot" loop autoPlay muted />
                 </div>
 
             </div>

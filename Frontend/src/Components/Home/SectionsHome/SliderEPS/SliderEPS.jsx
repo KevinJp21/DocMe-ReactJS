@@ -1,20 +1,24 @@
 import React from 'react'
 import './SliderEPS.css'
-import Assets from '../../../../assets/Assets';
+import LogoSanitas from '../../../../assets/logos/EPS Sanitas.svg';
+import LogoSura from '../../../../assets/logos/Grupo Sura.svg';
+import LogoFamisanar from '../../../../assets/logos/LogoFamisanar.webp';
+import LogoNuevaEPS from '../../../../assets/logos/Nueva Eps.svg';
+import LogoCompensar from '../../../../assets/logos/Compensar.svg';
 
 const SliderEPS = () => {
 
     const epsLogos = [
-        Assets.logos.LogoSanitas,
-        Assets.logos.LogoSura,
-        Assets.logos.LogoFamisanar,
-        Assets.logos.LogoNuevaEPS,
-        Assets.logos.LogoCompensar,
-        Assets.logos.LogoSanitas,
-        Assets.logos.LogoSura,
-        Assets.logos.LogoFamisanar,
-        Assets.logos.LogoNuevaEPS,
-        Assets.logos.LogoCompensar
+        LogoSanitas,
+        LogoSura,
+        LogoFamisanar,
+        LogoNuevaEPS,
+        LogoCompensar,
+        LogoSanitas,
+        LogoSura,
+        LogoFamisanar,
+        LogoNuevaEPS,
+        LogoCompensar
 
     ];
     return (

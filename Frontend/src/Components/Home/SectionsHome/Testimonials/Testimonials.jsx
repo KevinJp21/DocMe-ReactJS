@@ -1,30 +1,34 @@
 import React, { useState, useEffect, useRef }  from 'react'
 import './Testimonials.css'
-import Assets from '../../../../assets/Assets';
+
+import user1 from '../../../../assets/img/user1.webp';
+import user2 from '../../../../assets/img/user2.webp';
+import user3 from '../../../../assets/img/user3.webp';
+import user4 from '../../../../assets/img/user4.webp';
 
 const Testimonials = () => {
 
     const testimonials = [//Contiene los testimonios de los usuarios
         {
-            img: Assets.images.user1,
+            img: user1,
             text: "DocMe ha facilitado mucho el proceso de encontrar y agendar citas con especialistas. ¡Excelente servicio!",
             name: "Orlando Lotter",
             city: "Barranquilla"
         },
         {
-            img: Assets.images.user2,
+            img: user2,
             text: "Hablar con el chatbot de DocMe fue como tener una consulta inicial. Muy útil y fácil de usar.",
             name: "Andrea Zapata",
             city: "Cartagena"
         },
         {
-            img: Assets.images.user3,
+            img: user3,
             text: "La mejor plataforma para agendar citas médicas sin tener que salir de casa. ¡Muy recomendable!",
             name: "Carlos Gutierrez",
             city: "Medellín"
         },
         {
-            img: Assets.images.user4,
+            img: user4,
             text: "DocMe ha transformado mi forma de gestionar las citas médicas, haciendo todo mucho más fácil y rápido.",
             name: "Laura Pérez",
             city: "Bogotá"

@@ -1,13 +1,15 @@
 import React from 'react';
-import Assets from '../../../../assets/Assets';
+import HomeBG from '../../../../assets/img/DocMe_Home BG.webp'
+import MedVideoChat from '../../../../assets/img/MedicoVideoChat.webp'
 import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
 
+
     return (
         <>
-            <section className='ContainerHome' style={{ backgroundImage: `url(${Assets.images.HomeBG})`}}>
+            <section className='ContainerHome' style={{ backgroundImage: `url(${HomeBG})`}}>
                 <div className="ContentHome">
                     <div className="HomeTextWrapper">
                         <div className="textContentHome">
@@ -25,7 +27,7 @@ const Home = () => {
                     </div>
 
                     <div className="imgMedHome">
-                        <img src={Assets.images.MedVideoChat} alt="medico en video llamada" width={"860px"} height={"580px"} loading="eager"/>
+                        <img src={MedVideoChat} alt="medico en video llamada" width={"860px"} height={"580px"} loading="eager"/>
                     </div>
                 </div>
             </section>

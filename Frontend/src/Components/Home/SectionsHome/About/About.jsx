@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './About.css'
-import Assets from '../../../../assets/Assets'
+import MedAbout from '../../../../assets/img/DoctorIMGAbout.webp'
 const About = () => {
     return (
         <section className='ContainerAbout'>
@@ -29,7 +29,7 @@ const About = () => {
 
                     <div className="imgAbout">
                         <div className="imgContent">
-                            <img src={Assets.images.MedAbout} alt="" width={"376px"} height={"236px"} />
+                            <img src={MedAbout} alt="" width={"376px"} height={"236px"} />
                         </div>
                     </div>
                 </div>

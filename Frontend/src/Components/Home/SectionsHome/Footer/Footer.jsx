@@ -1,13 +1,16 @@
 import React from 'react'
 import './Footer.css'
-import Assets from '../../../../assets/Assets'
+
+import LogoDocMe from '../../../../assets/img/DocMe_logo.webp'
+import GitHubIcon from '../../../../assets/icons/LogoGitHub.svg'
+import LinkedinIcon from '../../../../assets/icons//LinkedinIcon.svg'
 import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer className='FooterContainer'>
             <div className="FooterContent">
                 <div className="col imgFooter">
-                    <img src={Assets.logos.LogoDocMe} alt='LogoDocMe'/>
+                    <img src={LogoDocMe} alt='LogoDocMe'/>
                     <p>Tu salud, nuestra prioridad</p>
                 </div>
                 <div className="col LinksHome">
@@ -47,11 +50,11 @@ const Footer = () => {
                     <h3>Sigueme</h3>
                     <div className="LogosSocialMed">
                         <a href="https://github.com/KevinJp21" target="_blank">
-                            <img src={Assets.icons.GitHubIcon} alt="icono de github" width="30px" height="37.7px"/>
+                            <img src={GitHubIcon} alt="icono de github" width="30px" height="37.7px"/>
                         </a>
 
                         <a href="https://www.linkedin.com/in/kevin-julio-667280240/" target="_blank">
-                            <img src={Assets.icons.LinkedinIcon} alt="icono de github" width="30px" height="37.7px"/>
+                            <img src={LinkedinIcon} alt="icono de github" width="30px" height="37.7px"/>
                         </a>
                     </div>
                 </div>

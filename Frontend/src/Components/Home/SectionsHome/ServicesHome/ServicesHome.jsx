@@ -1,7 +1,9 @@
 import React from 'react'
 import './ServicesHome.css'
-import Assets from '../../../../assets/Assets'
-
+import CalendarIcon from '../../../../assets/icons/calendar.svg'
+import LocationIcon from '../../../../assets/icons/location-plus.svg'
+import ChatBotIcon from '../../../../assets/icons/ChatBot.svg'
+import ClinicHistoryIcon from '../../../../assets/icons/clinic-history.svg'
 const ServicesHome = () => {
     return (
         <section className='ContainerServicesHome'>
@@ -24,7 +26,7 @@ const ServicesHome = () => {
             <div className='CardServicesHome'>
                 <div className="CardService">
                     <div className="imgCardService">
-                        <img src={Assets.icons.CalendarIcon} alt="" width={"90px"} height={"90px"} />
+                        <img src={CalendarIcon} alt="" width={"90px"} height={"90px"} />
                     </div>
                     <div className="CardContentService">
                         <div className="cardServiceTitle">
@@ -38,7 +40,7 @@ const ServicesHome = () => {
 
                 <div className="CardService">
                     <div className="imgCardService">
-                        <img src={Assets.icons.LocationIcon} alt="" width={"90px"} height={"90px"} />
+                        <img src={LocationIcon} alt="" width={"90px"} height={"90px"} />
                     </div>
                     <div className="CardContentService">
                         <div className="cardServiceTitle">
@@ -52,7 +54,7 @@ const ServicesHome = () => {
 
                 <div className="CardService">
                     <div className="imgCardService">
-                        <img src={Assets.icons.ChatBotIcon} alt="" width={"90px"} height={"90px"} />
+                        <img src={ChatBotIcon} alt="" width={"90px"} height={"90px"} />
                     </div>
                     <div className="CardContentService">
                         <div className="cardServiceTitle">
@@ -66,7 +68,7 @@ const ServicesHome = () => {
 
                 <div className="CardService">
                     <div className="imgCardService">
-                        <img src={Assets.icons.ClinicHistoryIcon} alt="" width={"90px"} height={"90px"} />
+                        <img src={ClinicHistoryIcon} alt="" width={"90px"} height={"90px"} />
                     </div>
                     <div className="CardContentService">
                         <div className="cardServiceTitle">

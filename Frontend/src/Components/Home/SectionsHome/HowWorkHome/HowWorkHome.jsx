@@ -1,31 +1,36 @@
 import React from 'react'
 import './HowWorkHome.css'
-import Assets from '../../../../assets/Assets';
+import CalendarIcon from '../../../../assets/icons/calendar.svg';
+import DoctorIcon from '../../../../assets/icons/doctorIcon.svg';
+import LocationIcon from '../../../../assets/icons/location-plus.svg';
+import NotiIcon from '../../../../assets/icons/notificationIcon.svg';
+import AppoIcon from '../../../../assets/icons/appointmentIcon.svg';
+import HowWorkIMG from '../../../../assets/img/HowWorkHome.webp'
 const HowWorkHome = () => {
 
     const CardHWContent = [//Contiene los detalles de las cards
         {
-            icon: Assets.icons.CalendarIcon,
+            icon: CalendarIcon,
             title: "Agendamiento de Citas",
             description: "Elige la fecha y hora que mejor te convengan para tus citas médicas."
         },
         {
-            icon: Assets.icons.DoctorIcon,
+            icon: DoctorIcon,
             title: "Escoge a tu Médico",
             description: "Encuentra y elige al médico indicado para tú cita."
         },
         {
-            icon: Assets.icons.LocationIcon,
+            icon: LocationIcon,
             title: "Sugerencias de Centros de Atención",
             description: "Basado en tu ubicación y necesidades, la plataforma te sugiere los centros de atención más cercanos y adecuados para ti."
         },
         {
-            icon: Assets.icons.NotiIcon,
+            icon: NotiIcon,
             title: "Notificaciones",
             description: "Recibirás confirmaciones y recordatorios automáticos para que no olvides tus citas."
         },
         {
-            icon: Assets.icons.AppoIcon,
+            icon: AppoIcon,
             title: "Gestión de Citas",
             description: "Visualiza, reprograma o cancela tus citas fácilmente desde la plataforma, manteniendo siempre un control claro de tu agenda médica."
         }
@@ -63,7 +68,7 @@ const HowWorkHome = () => {
                 <div className='IMGHowWorkHome'>
                     <div className="ContainerFigureHome">
                         <div className="ContentFigureHW">
-                            <img src={Assets.images.HowWorkIMG} alt="Chica con telefono" width={"480px"} height={"480px"} />
+                            <img src={HowWorkIMG} alt="Chica con telefono" width={"480px"} height={"480px"} />
                         </div>
                     </div>
                 </div>
