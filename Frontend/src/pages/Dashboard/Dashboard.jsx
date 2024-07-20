@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../../components/AuthContext/AuthContext';
+import { AuthContext } from '../../components/Hooks/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Patient from '../Patient/DashboardPat';
 import { useLogout } from '../../components/LogOut/logOut';

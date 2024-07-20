@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { AuthContext } from '../AuthContext/AuthContext';
+import { AuthContext } from '../Hooks/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import VariablesEnv from '../AuthContext/variablesEnv';
+import VariablesEnv from '../Hooks/variablesEnv';
 
 export const useLogout = () => {
     const { setIsLoggedIn } = useContext(AuthContext);

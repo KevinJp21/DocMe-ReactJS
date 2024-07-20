@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import './ChatBot.css';
-import useFetchUsers from '../AuthContext/fetchUsers';
+import useFetchUsers from '../Hooks/fetchUsers';
 
 const ChatBot = () => {
     const [message, setMessage] = useState('');
