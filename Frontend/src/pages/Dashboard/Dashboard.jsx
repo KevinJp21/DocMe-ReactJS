@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../../components/Hooks/AuthContext';
+import { AuthContext } from '../../Components/AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Patient from '../Patient/DashboardPat';
-import { useLogout } from '../../components/LogOut/logOut';
+import { useLogout } from '../../Components/LogOut/logOut';
 
 
 const Dashboard = () => {

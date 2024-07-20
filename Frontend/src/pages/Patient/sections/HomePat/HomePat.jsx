@@ -1,5 +1,5 @@
 import React from 'react';
-import useFetchUsers from '../../../../components/Hooks/fetchUsers';
+import useFetchUsers from '../../../../Components/AuthContext/fetchUsers';
 import './HomePat.css';
 
 

@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../components/Hooks/AuthContext";
+import { AuthContext } from "../../Components/AuthContext/AuthContext";
 import './Login.css';
 import LogoDocMe from "../../assets/img/DocMe_logo.webp";
 import HomeBG from "../../assets/img/DocMe_Home BG.webp";
 import { Link } from "react-router-dom";
-import VariablesEnv from "../../components/Hooks/variablesEnv";
+import VariablesEnv from "../../Components/AuthContext/variablesEnv";
 
 function LoginForm() {
     const [username, setUsername] = useState("");

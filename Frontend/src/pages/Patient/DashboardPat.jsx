@@ -1,7 +1,7 @@
 import React from 'react'
-import { useLogout } from '../../components/LogOut/logOut'
+import { useLogout } from '../../Components/LogOut/logOut'
 import HomePage from './sections/HomePat/HomePat'
-import ChatBot from '../../components/ChatBot/ChatBot'
+import ChatBot from '../../Components/ChatBot/ChatBot'
 
 
 const Patient = () => {

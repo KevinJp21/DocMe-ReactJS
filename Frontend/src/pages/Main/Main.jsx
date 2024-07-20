@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useState, useRef, useEffect } from 'react';
-import NavBar from '../../components/Navbar/NavBar';
+import NavBar from '../../Components/Navbar/NavBar';
 import "./Main.css";
 
 import Home from '../../sections/Home/Home';
@@ -10,7 +10,7 @@ const ServicesHome = lazy(() => import('../../sections/ServicesHome/ServicesHome
 const HowWorkHome = lazy(() => import('../../sections/HowWorkHome/HowWorkHome'));
 const Testimonials = lazy(() => import('../../sections/Testimonials/Testimonials'));
 
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../Components/Footer/Footer';
 
 
 const LazyLoadSection = ({ component: Component, fallback }) => {
