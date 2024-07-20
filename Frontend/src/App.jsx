@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthContext } from './components/AuthContext/authContext';
+import { AuthContext } from './components/AuthContext/AuthContext';
 
 
 const Dashboard = lazy(() => import('./pages/Dashboard/Dashboard'));
