@@ -57,14 +57,14 @@ app.get("/check-session", (req, res) => {
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
-    return res.status(400).send("Username and password are required");
+    return res.status(400).json({ message: "ingrese un usuario y una contraseña" });
   }
 
   const sql = `SELECT ID_Usu, u.User_Name, u.Password, r.Rol FROM usuarios u JOIN roles r ON r.ID_Rol = u.ID_Rol WHERE User_Name = ?`;
   db.query(sql, [username], (err, result) => {
     if (err) throw err;
     if (result.length === 0) {
-      return res.status(401).send("Usuario o contraseña incorrectos");
+      return res.status(400).json({ message: "Usuario o contraseña incorrectos" });
     }
 
     const user = result[0];
@@ -81,7 +81,7 @@ app.post("/login", (req, res) => {
         },
       });
     } else {
-      res.status(401).send("Usuario o contraseña incorrectos");
+      res.status(401).json({ message: "Usuario o Contraseña incorrectos" });
     }
   });
 });

@@ -31,7 +31,7 @@ function SignUp() {
 
     const validatePasswords = () => {
         if (formData.password !== formData.confirmPassword) {
-            alert('Las contraseñas deben ser iguales en ambos campos.');
+            setErrMsg('Las contraseñas deben ser iguales en ambos campos.');
             return false;
         }
         return true;
@@ -57,11 +57,8 @@ function SignUp() {
             if (!response.ok) {
                 throw new Error(data.message || 'Error al registrar usuario');
             }
-
-            console.log('Registro exitoso:', data);
             navigate('/login');
         } catch (error) {
-            console.error('Error de registro:', error);
             setErrMsg(error.message);
         }
     };
