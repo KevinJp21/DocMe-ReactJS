@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import VariablesEnv from './VariablesEnv';
+import VariablesEnv from './variablesEnv';
 function useFetchUsers() {
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(true);

@@ -1,12 +1,12 @@
 import React, { lazy, Suspense, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthContext } from './Components/AuthContext/AuthContext';
+import { AuthContext } from './components/AuthContext/authContext';
 
 
-const Dashboard = lazy(() => import('./Components/Dashboard/Dashboard'));
-const LoginForm = lazy(() => import('./Components/Login/Login'));
-const SignUp = lazy(() => import('./Components/SignUp/SignUp'));
-const Main = lazy(() => import('./Components/Home/Main/Main'));
+const Dashboard = lazy(() => import('./pages/Dashboard/Dashboard'));
+const LoginForm = lazy(() => import('./pages/Login/Login'));
+const SignUp = lazy(() => import('./pages/SignUp/SignUp'));
+const Main = lazy(() => import('./pages/Main/Main'));
 
 function App() {
   const { isLoggedIn, loading, userRole } = useContext(AuthContext);

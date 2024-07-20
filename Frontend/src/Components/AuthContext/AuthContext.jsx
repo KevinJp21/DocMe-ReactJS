@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import VariablesEnv from './VariablesEnv';
+import VariablesEnv from './variablesEnv';
 export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
