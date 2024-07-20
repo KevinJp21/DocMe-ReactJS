@@ -21,10 +21,6 @@ const About = () => {
                                 Somos DocMe, una plataforma innovadora dedicada a mejorar la gestión de citas médicas en Colombia. Desde nuestros inicios, nos hemos comprometido a facilitar la interacción entre pacientes y EPSs, garantizando un acceso más eficiente y cómodo a servicios de salud.
                             </p>
                         </div>
-
-                        <div className="AboutBTNContainer">
-                            <Link className="LinkContentHome HomeBTN" to="/#"><span className='linkText'>Saber Más</span></Link>
-                        </div>
                     </div>
 
                     <div className="imgAbout">

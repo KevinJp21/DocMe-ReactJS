@@ -60,10 +60,6 @@ const Footer = () => {
                 </div>
             </div>
             <div className="FooterFoo">
-                <div className="copyight">
-                    <p>
-                    © 2024 DocMe. Reservados todos los derechos. Política de privacidad</p>
-                </div>
                 <div className="Dev">
                     <p>KevinJp21 | Frontend Developer</p>
                 </div>

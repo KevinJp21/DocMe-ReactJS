@@ -120,7 +120,9 @@
 
 /*--CSS responsive--*/
 @media screen and (max-width: 1000px) {
-
+    .WrapperHowWorkHome{
+        flex-direction: column-reverse;
+    }
     
     .ContainerFigureHome{
         justify-content: center;
@@ -134,11 +136,10 @@
     .ContentHWHome{
         width: 100%;
     }
-}
 
-@media screen and (max-width: 768px) {
     .HeaderHWHome{
-        text-align:center;
+        text-align: center;
+        text-wrap:balance;
     }
 }
 

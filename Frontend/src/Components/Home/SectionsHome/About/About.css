@@ -38,11 +38,6 @@
     gap: 20px;
 }
 
-.AboutBTNContainer {
-    width: 100%;
-    display: flex;
-}
-
 .imgAbout {
     width: 50%;
     background-color: var(--blue-font);
@@ -81,6 +76,7 @@
 
     .AboutContent {
         gap: 20px;
+        flex-direction: column-reverse;
     }
 
     .AboutTextContent {
@@ -93,9 +89,5 @@
 
     .imgAbout {
         width: 100%;
-    }
-
-    .AboutBTNContainer {
-        justify-content: center;
     }
 }

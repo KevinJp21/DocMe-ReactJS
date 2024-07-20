@@ -1,6 +1,6 @@
 .lazyLoadSectionHome{
     opacity: 0;
-    transform: translateY(60%);
+    transform: trancslateY(60%);
     transition: opacity 1s ease-out, transform .8s ease;
 }
 
