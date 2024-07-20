@@ -4,7 +4,7 @@ import './SignUp.css';
 import LogoDocMe from "../../assets/img/DocMe_logo.webp";
 import HomeBG from "../../assets/img/DocMe_Home BG.webp";
 import { Link } from 'react-router-dom';
-import VariablesEnv from '../AuthContext/VariablesEnv';
+import VariablesEnv from '../../components/AuthContext/variablesEnv';
 
 function SignUp() {
     const [formData, setFormData] = useState({
