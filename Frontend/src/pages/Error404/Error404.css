@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    height: 80vh;
 }
 
 .ErrorContainer h4{
@@ -19,8 +20,8 @@
     text-align: center;
     text-wrap: balance;
     line-height: 1;
-    color: var(--blue-font);
-    opacity: .6;
+    color: var(--blue-font-light);
+    
 }
 
 .ErrorContainer .BTNSBackHome{
