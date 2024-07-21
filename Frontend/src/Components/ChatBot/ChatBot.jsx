@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import './ChatBot.css';
 import useFetchUsers from '../AuthContext/fetchUsers';
 
+
 const ChatBot = () => {
     const [message, setMessage] = useState('');
     const [conversation, setConversation] = useState([]);
@@ -9,6 +10,7 @@ const ChatBot = () => {
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const {userData} = useFetchUsers();
+    const APIChatbot = import.meta.env.VITE_CHATBOT_API_URL;
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -51,7 +53,7 @@ const ChatBot = () => {
         setMessage('');
 
         try {
-            const response = await fetch('http://localhost:8080/message', {
+            const response = await fetch(`${APIChatbot}/message`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
