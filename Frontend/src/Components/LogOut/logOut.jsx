@@ -15,7 +15,7 @@ export const useLogout = () => {
 
         if (response.ok) {
             setIsLoggedIn(false);
-            navigate('/home');
+            navigate('/');
         } else {
             console.error('Failed to logout');
         }
