@@ -1,4 +1,5 @@
 import React, { Suspense, lazy, useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import "./Main.css";
 import Layout from '../../layout/Layout';
 import Home from '../../sections/Home/Home';
@@ -53,15 +54,27 @@ const LazyLoadSection = ({ component: Component, fallback }) => {
 
 const Main = () => {
     return (
-        <Layout>
-            <Home />
-            <LazyLoadSection component={About} fallback={<div className='fallback'>Loading About...</div>} />
-            <LazyLoadSection component={SliderEPS} fallback={<div className='fallback'>Loading SliderEPS...</div>} />
-            <LazyLoadSection component={ChatBotHome} fallback={<div className='fallback'>Loading ChatBotHome...</div>} />
-            <LazyLoadSection component={ServicesHome} fallback={<div className='fallback'>Loading ServicesHome...</div>} />
-            <LazyLoadSection component={HowWorkHome} fallback={<div className='fallback'>Loading HowWorkHome...</div>} />
-            <LazyLoadSection component={Testimonials} fallback={<div className='fallback'>Loading Testimonials...</div>} />
-        </Layout>
+        <>
+            <Helmet prioritizeSeoTags>
+
+                <title>DocMe | Inicio</title>
+                <meta
+                    name="description"
+                    content="DocMe es una plataforma innovadora dedicada a mejorar la gestión de citas médicas en Colombia"
+                />
+            </Helmet>
+
+            <Layout>
+                <Home />
+                <LazyLoadSection component={About} fallback={<div className='fallback'>Loading About...</div>} />
+                <LazyLoadSection component={SliderEPS} fallback={<div className='fallback'>Loading SliderEPS...</div>} />
+                <LazyLoadSection component={ChatBotHome} fallback={<div className='fallback'>Loading ChatBotHome...</div>} />
+                <LazyLoadSection component={ServicesHome} fallback={<div className='fallback'>Loading ServicesHome...</div>} />
+                <LazyLoadSection component={HowWorkHome} fallback={<div className='fallback'>Loading HowWorkHome...</div>} />
+                <LazyLoadSection component={Testimonials} fallback={<div className='fallback'>Loading Testimonials...</div>} />
+            </Layout>
+        </>
+
     );
 };
 

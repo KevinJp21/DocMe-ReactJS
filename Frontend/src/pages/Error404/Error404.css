@@ -1,0 +1,50 @@
+.ErrorContainer{
+    padding: 60px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ErrorContainer h4{
+    font-size: 33px;
+    color: var(--blue-font);
+    text-align: center;
+    line-height: 1;
+}
+
+.ErrorContainer p{
+    font-size: 16px;
+    text-align: center;
+    text-wrap: balance;
+    line-height: 1;
+    color: var(--blue-font);
+    opacity: .6;
+}
+
+.ErrorContainer .BTNSBackHome{
+    background-color: var(--blue-font);
+    height: 45px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease;
+    border:1px solid var(--blue-font);
+}
+
+.ErrorContainer .BTNSBackHome a{
+    color: var(--white-font);
+    text-decoration: none;
+}
+
+.ErrorContainer img{
+    width: 100%;
+    max-height: 215px;
+    height: 100%;
+    object-fit: contain;
+}
+
