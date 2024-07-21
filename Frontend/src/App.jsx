@@ -25,7 +25,7 @@ function App() {
             <Route path="/login" element={!isLoggedIn ? <LoginForm /> : <Navigate to={dashboardPath} />} />
             <Route path="/signup" element={!isLoggedIn ? <SignUp /> : <Navigate to={dashboardPath} />} />
             <Route path={dashboardPath} element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />} />
-            <Route path="/home" element={<Main />} />
+            <Route path="/" element={<Main />} />
             <Route path="/page-not-found" element={<Error404 />} />
             <Route path="*" element={isLoggedIn ? <Navigate to={dashboardPath} replace /> : <Error404 />}
             />
