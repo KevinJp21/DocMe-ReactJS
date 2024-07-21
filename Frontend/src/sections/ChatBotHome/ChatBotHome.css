@@ -3,12 +3,15 @@
 .ContainerChatBotHome {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0), var(--bg-color));
     padding: 60px 20px 60px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .ContentChatBotHome {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1700px;
 }
 
 .textContentChatBot h3 {
@@ -46,7 +49,7 @@
 .ContainerAnimatadCharBotHome video {
     object-fit: contain;
     max-width: 433px;
-    min-width: 50%;
+    width: 100%;
     max-height: 852px;
     border-radius: 15px;
     border: 10px solid var(--white);

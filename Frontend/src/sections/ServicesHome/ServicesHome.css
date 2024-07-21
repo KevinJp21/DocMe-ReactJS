@@ -2,6 +2,9 @@
 
 .ContainerServicesHome {
     padding: 60px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .ContentServicesHome {
@@ -39,22 +42,24 @@
     gap: 20px;
     justify-content: center;
     align-content: center;
+    max-width: 1700px;
 }
 
 .CardService {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 20px;
-    width: 60%;
+    width: 80%;
     height: 100%;
     padding: 20px;
     border-radius: 20px;
     background: var(--bg-gray);
-
 }
 
 .CardService:nth-child(odd) {
     flex-direction: row;
+
 }
 
 .CardService:nth-child(even) {

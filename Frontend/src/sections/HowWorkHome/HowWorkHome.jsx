@@ -38,41 +38,44 @@ const HowWorkHome = () => {
     ];
 
     return (
-        <section className='ContainerHowWorkHome'>
-            <div className='HeaderHWHome'>
-                <h2>CÓMO FUNCIONA</h2>
-                <h3>Acceder a servicios de salud nunca fue más fácil con DocMe</h3>
-                <p>DocMe está revolucionando el acceso a la salud. Obtén la atención médica que necesitas en solo 5 pasos sencillos.</p>
-            </div>
-            <div className="WrapperHowWorkHome">
-
-                <div className="ContentHWHome">
-                    {CardHWContent.map((card, index) => (
-                        <div className="CardHWHome" key={index}>
-                            <div className="imgCardHW">
-                                <img src={card.icon} alt="" width={"30px"} height={"30px"} />
-                            </div>
-                            <div className="CardContentHW">
-                                <div className="cardHWTitle">
-                                    <h4>{card.title}</h4>
-                                </div>
-                                <div className="CardHWDescription">
-                                    <p>{card.description}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+        <section className='SectionHowWorkHome'>
+            <div className="ContainerHowWorkHome">
+                <div className='HeaderHWHome'>
+                    <h2>CÓMO FUNCIONA</h2>
+                    <h3>Acceder a servicios de salud nunca fue más fácil con DocMe</h3>
+                    <p>DocMe está revolucionando el acceso a la salud. Obtén la atención médica que necesitas en solo 5 pasos sencillos.</p>
                 </div>
+                <div className="WrapperHowWorkHome">
+
+                    <div className="ContentHWHome">
+                        {CardHWContent.map((card, index) => (
+                            <div className="CardHWHome" key={index}>
+                                <div className="imgCardHW">
+                                    <img src={card.icon} alt="" width={"30px"} height={"30px"} />
+                                </div>
+                                <div className="CardContentHW">
+                                    <div className="cardHWTitle">
+                                        <h4>{card.title}</h4>
+                                    </div>
+                                    <div className="CardHWDescription">
+                                        <p>{card.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
 
-                <div className='IMGHowWorkHome'>
-                    <div className="ContainerFigureHome">
-                        <div className="ContentFigureHW">
-                            <img src={HowWorkIMG} alt="Chica con telefono" width={"480px"} height={"480px"} />
+                    <div className='IMGHowWorkHome'>
+                        <div className="ContainerFigureHome">
+                            <div className="ContentFigureHW">
+                                <img src={HowWorkIMG} alt="Chica con telefono" width={"480px"} height={"480px"} />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
     )
 }
