@@ -18,7 +18,7 @@ const Error404 = () => {
                     <picture><img src={error404IMG} alt="Imagen de error 404 - pagina no encontrada" width="500px" height="215px" loading="lazy" decoding="async" /></picture>
                     <h4>No pudimos encontrar esta pagina</h4>
                     <p>La pagina que estas buscando no existe o ha sido eliminada</p>
-                    <button className="BTNSBackHome"><Link to="home"><span>Regresar al inicio</span></Link></button>
+                    <button className="BTNSBackHome"><Link to="/"><span>Regresar al inicio</span></Link></button>
                 </div>
 
             </Layout>
